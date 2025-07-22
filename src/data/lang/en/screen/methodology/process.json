@@ -1,0 +1,54 @@
+{
+  "title": "Our 6-Step Process",
+  "subtitle": "Each project follows our carefully crafted methodology to ensure success",
+  "steps": [
+    {
+      "id": 1,
+      "title": "Discovery & Planning",
+      "description": "We begin by thoroughly understanding your business objectives and challenges",
+      "image": "https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg",
+      "icon": "🔍",
+      "color": "bg-blue-100 text-blue-600"
+    },
+    {
+      "id": 2,
+      "title": "Research Design",
+      "description": "Custom methodology development tailored to your specific needs",
+      "image": "https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg",
+      "icon": "📝",
+      "color": "bg-purple-100 text-purple-600"
+    },
+    {
+      "id": 3,
+      "title": "Data Collection",
+      "description": "Rigorous primary and secondary research from multiple sources",
+      "image": "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg",
+      "icon": "📊",
+      "color": "bg-green-100 text-green-600"
+    },
+    {
+      "id": 4,
+      "title": "Analysis & Insights",
+      "description": "Advanced analytics to uncover meaningful patterns and opportunities",
+      "image": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg",
+      "icon": "🧠",
+      "color": "bg-yellow-100 text-yellow-600"
+    },
+    {
+      "id": 5,
+      "title": "Strategy Development",
+      "description": "Actionable recommendations tailored to your business context",
+      "image": "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
+      "icon": "🚀",
+      "color": "bg-red-100 text-red-600"
+    },
+    {
+      "id": 6,
+      "title": "Implementation Support",
+      "description": "Ongoing guidance to ensure successful execution",
+      "image": "https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg",
+      "icon": "🤝",
+      "color": "bg-indigo-100 text-indigo-600"
+    }
+  ]
+}

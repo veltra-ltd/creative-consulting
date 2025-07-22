@@ -1,0 +1,493 @@
+{
+  "navItems": [
+    { "title": "Home", "link": "/" },
+    { "title": "About", "link": "/about" },
+    {
+      "title": "Solutions",
+      "link": "/solutions",
+      "child": [
+        { "title": "Market Research", "link": "/solutions/market-research" },
+        { "title": "Social Research", "link": "/solutions/social-research" },
+        {
+          "title": "Fieldwork & Data Collection",
+          "link": "/solutions/fieldwork"
+        },
+        {
+          "title": "Political Research & Public Opinion Polls",
+          "link": "/solutions/political-research"
+        },
+        {
+          "title": "Customized Research Solutions",
+          "link": "/solutions/customized-research"
+        },
+        {
+          "title": "Data Analytics & Strategic Consulting",
+          "link": "/solutions/data-analytics"
+        },
+        {
+          "title": "Survey Scripting & Programming",
+          "link": "/solutions/survey-scripting"
+        },
+        {
+          "title": "Retail & Distributor Audit",
+          "link": "/solutions/retail-audit"
+        },
+        {
+          "title": "Call Center for Telephonic Survey",
+          "link": "/solutions/telephonic-survey"
+        },
+        {
+          "title": "Media Research",
+          "link": "/solutions/media-research"
+        },
+        { "title": "Brand Research", "link": "/solutions/brand-besearch" },
+
+        {
+          "title": "Business Intelligence Services & Solutions",
+          "link": "/solutions/business-intelligence-services-&-solutions"
+        },
+        {
+          "title": "Business-to-business (B2B)",
+          "link": "/services/business-to-business"
+        },
+        {
+          "title": "Children / Youth's Research",
+          "link": "/services/children-youth-research"
+        },
+        {
+          "title": "Consumer Research",
+          "link": "/services/consumer-research"
+        },
+        {
+          "title": "Corporate Image Research",
+          "link": "/services/corporate-image-research"
+        },
+        {
+          "title": "Customer Satisfaction Studies",
+          "link": "/services/customer-satisfaction-studies"
+        },
+        {
+          "title": "Demographic Research",
+          "link": "/services/demographic-research"
+        },
+        {
+          "title": "Employee Research",
+          "link": "/services/employee-research"
+        },
+        {
+          "title": "Ethnographic Research",
+          "link": "/services/ethnographic-research"
+        },
+        {
+          "title": "Focus Groups Facilities",
+          "link": "/services/focus-groups-facilities"
+        },
+        {
+          "title": "Image Studies",
+          "link": "/services/image-studies"
+        },
+        {
+          "title": "International Studies",
+          "link": "/services/international-studies"
+        },
+        {
+          "title": "Knowledge Management",
+          "link": "/services/knowledge-management"
+        },
+        {
+          "title": "Modeling & Predictive Research",
+          "link": "/services/modeling-predictive-research"
+        },
+        {
+          "title": "Online/Mobile Panel",
+          "link": "/services/online-mobile-panel"
+        },
+        {
+          "title": "Pricing Studies",
+          "link": "/services/pricing-studies"
+        },
+        {
+          "title": "Projective Techniques",
+          "link": "/services/projective-techniques"
+        },
+        {
+          "title": "Psychographic Research",
+          "link": "/services/psychographic-research"
+        },
+        {
+          "title": "Psychological / Motivational Research",
+          "link": "/services/psychological-motivational-research"
+        },
+        {
+          "title": "Reputation Research",
+          "link": "/services/reputation-research"
+        },
+        {
+          "title": "Scenario Planning",
+          "link": "/services/scenario-planning"
+        },
+        {
+          "title": "Segmentation Research",
+          "link": "/services/segmentation-research"
+        },
+        {
+          "title": "Semiotic and Cultural Analysis",
+          "link": "/services/semiotic-cultural-analysis"
+        },
+        {
+          "title": "Senior Citizen / Mid-life Research",
+          "link": "/services/senior-citizen-mid-life-research"
+        },
+        {
+          "title": "Social Research",
+          "link": "/services/social-research"
+        },
+        {
+          "title": "Syndicated Research",
+          "link": "/services/syndicated-research"
+        },
+        {
+          "title": "Tracking Studies",
+          "link": "/services/tracking-studies"
+        },
+        {
+          "title": "Validation Services",
+          "link": "/services/validation-services"
+        },
+        {
+          "title": "Website Usability",
+          "link": "/services/website-usability"
+        }
+      ]
+    },
+    {
+      "title": "Industries",
+      "link": "/industries",
+      "child": [
+        { "title": "Personal Care", "link": "/industries/personal-care" },
+        { "title": "Tobacco", "link": "/industries/tobacco" },
+        { "title": "Smartphones", "link": "/industries/smartphones" },
+        { "title": "Home Care", "link": "/industries/home-care" },
+        { "title": "Food & Beverages", "link": "/industries/food-beverages" },
+        { "title": "Automotive", "link": "/industries/automotive" },
+        { "title": "Property", "link": "/industries/property" },
+        {
+          "title": "Financial Services",
+          "link": "/industries/financial-services"
+        },
+        { "title": "Electronics", "link": "/industries/electronics" },
+        {
+          "title": "Healthcare & Contraception",
+          "link": "/industries/healthcare"
+        },
+        {
+          "title": "Telecommunication",
+          "link": "/industries/telecommunication"
+        },
+        {
+          "title": "Home Appliances & Furnishing",
+          "link": "/industries/home-appliances"
+        },
+        { "title": "Travel Services", "link": "/industries/travel-services" },
+        {
+          "title": "Material Construction",
+          "link": "/industries/material-construction"
+        },
+        {
+          "title": "Public Transportation",
+          "link": "/industries/public-transportation"
+        },
+        { "title": "E-Commerce", "link": "/industries/e-commerce" },
+        { "title": "Agriculture", "link": "/industries/agriculture" },
+        {
+          "title": "Advertising / Public Relations",
+          "link": "/services/advertising-public-relations"
+        },
+        { "title": "Agriculture", "link": "/services/agriculture" },
+        { "title": "Airlines", "link": "/services/airlines" },
+        { "title": "Apparel / Clothing", "link": "/services/apparel-clothing" },
+        {
+          "title": "Association Membership",
+          "link": "/services/association-membership"
+        },
+        { "title": "Automotive", "link": "/services/automotive" },
+        { "title": "Beverages", "link": "/services/beverages" },
+        { "title": "Casinos/Gambling", "link": "/services/casinos-gambling" },
+        {
+          "title": "Catering / Hospitality",
+          "link": "/services/catering-hospitality"
+        },
+        {
+          "title": "Charity / Non-profit",
+          "link": "/services/charity-non-profit"
+        },
+        { "title": "Chemicals", "link": "/services/chemicals" },
+        { "title": "Confectionery", "link": "/services/confectionery" },
+        { "title": "Consultancy", "link": "/services/consultancy" },
+        { "title": "Consumer Services", "link": "/services/consumer-services" },
+        {
+          "title": "Cosmetics / Hygiene",
+          "link": "/services/cosmetics-hygiene"
+        },
+        { "title": "Demographics", "link": "/services/demographics" },
+        { "title": "Detergents", "link": "/services/detergents" },
+        { "title": "Direct Marketing", "link": "/services/direct-marketing" },
+        {
+          "title": "Durables / Electrical Goods",
+          "link": "/services/durables-electrical-goods"
+        },
+        { "title": "Education", "link": "/services/education" },
+        { "title": "Energy / Utilities", "link": "/services/energy-utilities" },
+        { "title": "Entertainment", "link": "/services/entertainment" },
+        {
+          "title": "Environment & Ecology",
+          "link": "/services/environment-ecology"
+        },
+        { "title": "Exercise & Fitness", "link": "/services/exercise-fitness" },
+        { "title": "Fashion Industry", "link": "/services/fashion-industry" },
+        {
+          "title": "Financial Services",
+          "link": "/services/financial-services"
+        },
+        {
+          "title": "Fragrance Industry",
+          "link": "/services/fragrance-industry"
+        },
+        {
+          "title": "Gay & Lesbian Market",
+          "link": "/services/gay-lesbian-market"
+        },
+        {
+          "title": "IT / Software / Hardware",
+          "link": "/services/it-software-hardware"
+        },
+        { "title": "Legal / Lawyers", "link": "/services/legal-lawyers" },
+        {
+          "title": "Logistics / Mail / Transportation",
+          "link": "/services/logistics-mail-transportation"
+        },
+        { "title": "Media", "link": "/services/media" },
+        { "title": "New Products", "link": "/services/new-products" },
+        {
+          "title": "Non-Profit / Fund Raising",
+          "link": "/services/non-profit-fund-raising"
+        },
+        {
+          "title": "Pet Owners / Foods / Supplies",
+          "link": "/services/pet-owners-foods-supplies"
+        },
+        { "title": "Petrol / Oil / Gas", "link": "/services/petrol-oil-gas" },
+        {
+          "title": "Political Polling / Planning",
+          "link": "/services/political-polling-planning"
+        },
+        {
+          "title": "Public Sector / Government",
+          "link": "/services/public-sector-government"
+        },
+        { "title": "Publishing", "link": "/services/publishing" },
+        { "title": "Real Estate", "link": "/services/real-estate" },
+        { "title": "Retail / Wholesale", "link": "/services/retail-wholesale" },
+        {
+          "title": "Service Industries",
+          "link": "/services/service-industries"
+        },
+        {
+          "title": "Social Development Organisations",
+          "link": "/services/social-development-organisations"
+        },
+        { "title": "Technology", "link": "/services/technology" },
+        {
+          "title": "Telecommunications",
+          "link": "/services/telecommunications"
+        }
+      ]
+    },
+    {
+      "title": "Services",
+      "link": "/services",
+      "child": [
+        {
+          "title": "Quantitative Research Services",
+          "link": "/services/quantitative"
+        },
+        {
+          "title": "Qualitative Research Services",
+          "link": "/services/qualitative"
+        },
+        {
+          "title": "Desk Research (Secondary Research)",
+          "link": "/services/desk-research"
+        },
+        { "title": "Fieldwork Services", "link": "/services/fieldwork" },
+        {
+          "title": "Advanced Analytics & Data Modeling",
+          "link": "/services/advanced-analytics"
+        },
+        { "title": "Brand Research", "link": "/services/brand-research" },
+        {
+          "title": "Customer Experience (CX) Research",
+          "link": "/services/cx-research"
+        },
+        {
+          "title": "Product and Innovation Research",
+          "link": "/services/product-innovation"
+        },
+        {
+          "title": "Market Feasibility and Entry Studies",
+          "link": "/services/feasibility-entry"
+        },
+        {
+          "title": "Media & Advertising Research",
+          "link": "/services/media-research"
+        },
+        {
+          "title": "Social and Policy Research",
+          "link": "/services/social-policy"
+        },
+        {
+          "title": "Technology and UX Research",
+          "link": "/services/ux-research"
+        },
+        {
+          "title": "Business-to-Business (B2B) Research",
+          "link": "/services/b2b"
+        },
+        { "title": "Healthcare Research", "link": "/services/healthcare" },
+        { "title": "Mystery Shopping", "link": "/services/mystery-shopping" },
+        {
+          "title": "Data Visualization & Reporting",
+          "link": "/services/data-visualization"
+        },
+        {
+          "title": "Translation and Localization Services",
+          "link": "/services/translation"
+        },
+        {
+          "title": "Competitive Intelligence",
+          "link": "/services/competitive-intelligence"
+        },
+
+        {
+          "title": "Analytical Services (Big Data, Data Mining, Statistical Analysis)",
+          "link": "/services/analytical-services"
+        },
+        {
+          "title": "Biometrics Research (Eye Tracking, Neuroscience, Wearables)",
+          "link": "/services/biometrics-research"
+        },
+        {
+          "title": "Consultancy (Advertising, B2B, Consumer Research)",
+          "link": "/services/consultancy"
+        },
+        {
+          "title": "Data Collection / Field Services (CATI, CAWI, FGD, IDI, PAPI, CAPI)",
+          "link": "/services/data-collection"
+        },
+        {
+          "title": "Mobile Research (Mobile Panels, Surveys, Ethnography)",
+          "link": "/services/mobile-research"
+        },
+        {
+          "title": "Panels & Communities",
+          "link": "/services/panels-communities"
+        },
+        {
+          "title": "Qualitative (Focus Groups, IDIs, Semiotics)",
+          "link": "/services/qualitative"
+        },
+        {
+          "title": "Quantitative (CATI, CAWI, Online, PAPI)",
+          "link": "/services/quantitative"
+        },
+        {
+          "title": "Social Media Research",
+          "link": "/services/social-media-research"
+        },
+        {
+          "title": "Support Services (Incentives, SaaS Platforms, Scanning Services)",
+          "link": "/services/support-services"
+        },
+        {
+          "title": "Analytical Services",
+          "link": "/services/analytical-services"
+        },
+        {
+          "title": "Biometrics Research",
+          "link": "/services/biometrics-research"
+        },
+        {
+          "title": "Consultancy",
+          "link": "/services/consultancy"
+        },
+        {
+          "title": "Data Collection / Field Services",
+          "link": "/services/data-collection-field-services"
+        },
+        {
+          "title": "Mobile Research",
+          "link": "/services/mobile-research"
+        },
+        {
+          "title": "Panels",
+          "link": "/services/panels"
+        },
+        {
+          "title": "Research Software",
+          "link": "/services/research-software"
+        },
+        {
+          "title": "Social Media Research",
+          "link": "/services/social-media-research"
+        },
+        {
+          "title": "Support Service Provider",
+          "link": "/services/support-service-provider"
+        }
+      ]
+    },
+    {
+      "title": "Methodology",
+      "link": "/methodology",
+      "child": [
+        {
+          "title": "Door-to-Door Interview (CAPI/PAPI)",
+          "link": "/methodology/door-to-door"
+        },
+        { "title": "Central Location Test (CLT)", "link": "/methodology/clt" },
+        {
+          "title": "Self Completion Interview (CASI)",
+          "link": "/methodology/casi"
+        },
+        {
+          "title": "Computer-assisted telephone interviewing (CATI)",
+          "link": "/methodology/cati"
+        },
+        { "title": "Home Placement Test (HUT)", "link": "/methodology/hut" },
+        { "title": "Car Clinic / Bike Clinic", "link": "/methodology/clinic" },
+        { "title": "Census", "link": "/methodology/census" },
+        {
+          "title": "Web Surveys (Offline Recruitment & Online Completion)",
+          "link": "/methodology/web-surveys"
+        },
+        { "title": "Focus Group Discussion (FGD)", "link": "/methodology/fgd" },
+        { "title": "In-Depth Interview (IDI)", "link": "/methodology/idi" },
+        {
+          "title": "In-Home Visit/ Observation",
+          "link": "/methodology/in-home"
+        },
+        {
+          "title": "Mystery Shopping",
+          "link": "/methodology/mystery-shopping"
+        },
+        { "title": "Online Survey", "link": "/methodology/online-survey" },
+        { "title": "FGD/IDI Online", "link": "/methodology/fgd-idi-online" },
+        { "title": "Online Bulletin", "link": "/methodology/online-bulletin" },
+        { "title": "Quick Poll", "link": "/methodology/quick-poll" }
+      ]
+    },
+    { "title": "Blogs", "link": "/blogs" },
+    { "title": "FAQ", "link": "/faq" }
+  ],
+  "btnText": "Contact Us"
+}

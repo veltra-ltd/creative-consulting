@@ -1,0 +1,45 @@
+{
+    "hero": {
+      "heading": "Market Research <span class='text-blue-200'>FAQs</span>",
+      "text": "Find answers to common questions about our market research services and methodologies.",
+      "backgroundImage": "/images/research-hero.jpg",
+      "firstButton": {
+        "name": "Contact Our Team",
+        "link": "/contact"
+      },
+      "secondButton": {
+        "name": "Our Services",
+        "link": "/services"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What is market research, and why is it important for my business?",
+        "answer": "Market research helps you understand your customers, competitors, and industry trends, enabling data-driven decisions for growth, innovation, and customer satisfaction."
+      },
+      {
+        "question": "What types of market research do you offer?",
+        "answer": "We offer both quantitative (surveys, structured interviews) and qualitative (focus groups, in-depth interviews, ethnographic studies) research across various sectors."
+      },
+      {
+        "question": "Which industries do you specialize in?",
+        "answer": "We have expertise in FMCG, healthcare, finance, telecom, construction, garments, and retail, among others."
+      },
+      {
+        "question": "Do you offer both B2C and B2B research?",
+        "answer": "Yes, we conduct both consumer and business-to-business research tailored to your specific target audiences."
+      },
+      {
+        "question": "Can you help design the questionnaire or discussion guide?",
+        "answer": "Absolutely. Our research consultants will work with you to develop effective questionnaires and guides aligned with your objectives."
+      }
+    ],
+    "cta": {
+      "title": "Still have questions?",
+      "description": "Our research experts are ready to provide personalized answers and discuss how we can support your specific needs.",
+      "button": {
+        "name": "Get in Touch",
+        "link": "/contact"
+      }
+    }
+  }

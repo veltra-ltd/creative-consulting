@@ -1,0 +1,21 @@
+{
+  "title": "Our Approach",
+  "subtitle": "Methodologies that deliver measurable results",
+  "items": [
+    {
+      "icon": "🎯",
+      "title": "Precision Targeting",
+      "description": "Customized solutions that address your specific business challenges and objectives"
+    },
+    {
+      "icon": "🔄",
+      "title": "Agile Methodology",
+      "description": "Flexible approaches that adapt to your evolving needs and market conditions"
+    },
+    {
+      "icon": "📈",
+      "title": "Results-Driven",
+      "description": "Focus on delivering measurable impact and tangible business outcomes"
+    }
+  ]
+}

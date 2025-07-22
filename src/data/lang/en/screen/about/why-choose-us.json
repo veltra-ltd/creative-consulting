@@ -1,0 +1,30 @@
+{
+  "heading": "Why Choose Creative Consulting Services Limited?",
+  "features": [
+    {
+      "title": "11+ Years Experience",
+      "icon": "FaChartLine"
+    },
+    {
+      "title": "Trusted by leading brands, NGOs, and research firms",
+      "icon": "FaUsers"
+    },
+    {
+      "title": "Nationwide network of experienced interviewers and field supervisors",
+      "icon": "FaGlobe"
+    },
+    {
+      "title": "Flexible and scalable operations tailored to your project",
+      "icon": "FaShieldAlt"
+    },
+    {
+      "title": "Transparent processes, ethical standards, and strong data accuracy",
+      "icon": "FaClipboardCheck"
+    },
+    {
+      "title": "Actionable Insights",
+      "icon": "FaSearch"
+    }
+  ],
+  "text": "At CCSL, we don’t just deliver data — we deliver clarity, direction, and impact."
+}

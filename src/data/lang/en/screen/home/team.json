@@ -1,0 +1,38 @@
+[
+  {
+    "id": "team-1",
+    "name": "Dr. Sarah Chen",
+    "position": "Chief Research Officer",
+    "bio": "15+ years in market analytics with PhD in Data Science",
+    "expertise": [
+      "Statistical Modeling",
+      "Consumer Behavior",
+      "Data Visualization"
+    ],
+    "image": "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg"
+  },
+  {
+    "id": "team-2",
+    "name": "Michael Rodriguez",
+    "position": "Director of Client Strategy",
+    "bio": "Specializes in translating data into actionable business strategies",
+    "expertise": ["Market Entry", "Competitive Analysis", "Strategic Planning"],
+    "image": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
+  },
+  {
+    "id": "team-3",
+    "name": "Priya Patel",
+    "position": "Head of Qualitative Research",
+    "bio": "Expert in ethnographic studies and focus group methodologies",
+    "expertise": ["Consumer Insights", "UX Research", "Brand Perception"],
+    "image": "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg"
+  },
+  {
+    "id": "team-4",
+    "name": "David Kim",
+    "position": "Senior Data Scientist",
+    "bio": "Develops custom analytics models for complex research questions",
+    "expertise": ["Machine Learning", "Predictive Analytics", "Big Data"],
+    "image": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+  }
+]

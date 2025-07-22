@@ -1,0 +1,21 @@
+{
+  "title": "Our Research Approach",
+  "subtitle": "Custom methodologies for each industry's unique requirements",
+  "methods": [
+    {
+      "icon": "🔍",
+      "title": "Industry-Specific Frameworks",
+      "description": "Tailored research models that account for each sector's regulatory environment, competitive landscape, and consumer behaviors."
+    },
+    {
+      "icon": "📊",
+      "title": "Cross-Industry Benchmarking",
+      "description": "Comparative analysis that identifies best practices and innovation opportunities across different markets."
+    },
+    {
+      "icon": "🚀",
+      "title": "Future-Focused Insights",
+      "description": "Predictive modeling and trend analysis to anticipate market shifts before they happen."
+    }
+  ]
+}
