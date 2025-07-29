@@ -261,9 +261,9 @@ export const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-gray-100 border-t border-gray-800">
-      <div className="container mx-auto px-4 py-16 sm:py-20 lg:py-24">
+      <div className="container mx-auto px-4 pt-8 sm:pb-6 lg:pt-16 lg:pb-6">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:gap-12 gap-6 lg:gap-8 sm:mb-16 mb-3">
           {/* Contact Column */}
           <div className="space-y-8">
             <motion.h3
@@ -271,12 +271,12 @@ export const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-xl font-semibold tracking-tight text-white"
+              className="sm:text-xl text-[16px] mb-4 font-semibold tracking-tight text-white"
             >
               Global Office
             </motion.h3>
 
-            <ul className="space-y-4">
+            <ul className="sm:space-y-4 space-y-3">
               <motion.li
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -327,13 +327,13 @@ export const Footer = () => {
             </ul>
 
             {/* Social Media */}
-            <div className="space-y-4 pt-4">
+            <div className="space-y-4 sm:pt-4 pt-0">
               <motion.h3
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="text-xl font-semibold tracking-tight text-white"
+                className="sm:text-xl text-[16px] mb-4 font-semibold tracking-tight text-white"
               >
                 Follow Us:
               </motion.h3>
@@ -404,7 +404,7 @@ export const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-xl font-semibold tracking-tight text-white"
+              className="sm:text-xl text-[16px] mb-4 font-semibold tracking-tight text-white"
             >
               Solutions
             </motion.h3>
@@ -450,7 +450,7 @@ export const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-xl font-semibold tracking-tight text-white"
+              className="sm:text-xl text-[16px] mb-4 font-semibold tracking-tight text-white"
             >
               Industries
             </motion.h3>
@@ -503,12 +503,12 @@ export const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-xl font-semibold tracking-tight text-white"
+              className="sm:text-xl text-[16px] mb-4 font-semibold tracking-tight text-white"
             >
               Company
             </motion.h3>
 
-            <ul className="space-y-3 mb-6">
+            <ul className="space-y-3 sm:mb-6 mb-2">
               {["About Us", "Careers", "Locations", "Contact Us"].map(
                 (item, index) => (
                   <motion.li
@@ -530,7 +530,7 @@ export const Footer = () => {
               )}
             </ul>
 
-            <div className="space-y-3">
+            {/* <div className="space-y-3">
               <motion.h4
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -559,7 +559,7 @@ export const Footer = () => {
                   </motion.li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -573,8 +573,8 @@ export const Footer = () => {
         />
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-6">
+        <div className="sm:pt-8 pt-3 py-3 sm:py-0 flex sm:flex-row flex-col justify-between items-center sm:gap-0 gap-4">
+          {/* <div className="flex items-center gap-6">
             <Link href="/" className="inline-block">
               <Image
                 src="/logo-white.png"
@@ -593,10 +593,10 @@ export const Footer = () => {
             >
               &copy; {currentYear} Creative Console. All rights reserved.
             </motion.p>
-          </div>
+          </div> */}
 
           <motion.div
-            className="flex gap-6 text-xs"
+            className="flex sm:gap-10 gap-2 text-xs"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -604,23 +604,32 @@ export const Footer = () => {
           >
             <Link
               href="/privacy-policy"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-white text-sm! sm:text-[16px] transition-colors underline"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms-of-service"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-white text-sm! sm:text-[16px] transition-colors underline"
             >
-              Terms of Service
+              Terms & Conditions
             </Link>
             <Link
               href="/cookie-policy"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-white text-sm! sm:text-[16px] transition-colors underline"
             >
               Cookie Policy
             </Link>
           </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className=" text-gray-400 sm:text-[16px] text-sm"
+          >
+            &copy; {currentYear} Creative Console. All rights reserved.
+          </motion.p>
         </div>
       </div>
     </footer>
