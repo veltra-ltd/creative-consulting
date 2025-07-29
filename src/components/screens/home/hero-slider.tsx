@@ -124,7 +124,7 @@ const HeroSlider = ({
   return (
     <div
       ref={sliderRef}
-      className="relative w-full md:max-h-[500px] h-screen max-h-[900px] min-h-[550px] overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800"
+      className="relative w-full sm:h-screen h-[70vh] sm:max-h-[900px] max-h-[600px] sm:min-h-[550px] min-h-[400px] overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800"
       aria-roledescription="carousel"
       aria-label="Hero slider"
     >
@@ -147,11 +147,11 @@ const HeroSlider = ({
       {/* Content */}
       <div
         ref={contentRef}
-        className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8"
+        className="relative z-10 h-full flex flex-col sm:justify-center justify-normal sm:pt-0 pt-5.5 items-center text-center px-4 sm:px-6 lg:px-8"
       >
         <div className="container mx-auto max-w-6xl">
           <h1
-            className="font-bold text-white mb-6 leading-tight scroll-m-20 text-4xl tracking-tight lg:text-5xl"
+            className="font-bold text-white sm:mb-6 mb-3 leading-tight scroll-m-20 text-2xl tracking-tight sm:text-5xl"
             aria-live="polite"
           >
             {displayText}
@@ -169,13 +169,15 @@ const HeroSlider = ({
           )}
 
           {currentSlide.btnText && currentSlide.link && (
-            <Button
-              href={currentSlide.link}
-              variant="primaryLink"
-              className="mt-6 px-8 py-4 text-lg font-semibold"
-            >
-              {currentSlide.btnText}
-            </Button>
+            <div className="px-14 sm:px-0">
+              <Button
+                href={currentSlide.link}
+                variant="primaryLink"
+                className="mt-6 sm:px-8 px-2 sm:py-4 py-2.5 sm:text-lg text-sm font-semibold"
+              >
+                {currentSlide.btnText}
+              </Button>
+            </div>
           )}
         </div>
       </div>
@@ -183,7 +185,7 @@ const HeroSlider = ({
       {/* Navigation Dots */}
       <div
         ref={dotsRef}
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10 flex space-x-3"
+        className="absolute sm:bottom-12 bottom-6 left-1/2 transform -translate-x-1/2  z-10 flex space-x-3"
         role="group"
         aria-label="Slide navigation dots"
       >
