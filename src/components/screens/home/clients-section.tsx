@@ -34,7 +34,7 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-white py-20 md:py-28 lg:py-36"
+      className="relative overflow-hidden bg-white py-7 sm:py-20 md:py-28 lg:py-36"
       aria-labelledby="clients-heading"
     >
       {/* Gradient background */}
@@ -76,14 +76,14 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
         <SectionHeading
           title={title}
           description={subtitle}
-          className="mb-16 md:mb-20 lg:mb-24"
+          className="sm:mb-16 mb-8 md:mb-20 lg:mb-24"
         />
 
         {/* Marquee */}
         <div
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="relative py-10 overflow-hidden select-none group"
+          className="relative sm:py-10 py-3 overflow-hidden select-none group"
         >
           <div className="absolute inset-0 z-10 pointer-events-none">
             <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent" />
@@ -128,13 +128,13 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
 
         {/* Swiper Testimonials */}
         {showTestimonials && testimonials.length > 0 && (
-          <div className="relative py-16">
+          <div className="relative sm:py-16 py-4">
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
               <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full opacity-20 blur-3xl" />
               <div className="absolute bottom-1/3 right-1/3 w-72 h-72 bg-purple-50 rounded-full opacity-20 blur-3xl" />
             </div>
 
-            <div className="container px-4 mx-auto mb-8 flex justify-end gap-4">
+            <div className="container pb-4 px-4 mx-auto mb-8 flex justify-end gap-4">
               <button
                 ref={prevRef}
                 aria-label="Previous testimonial"
@@ -162,10 +162,10 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
                 el: ".testimonial-pagination",
                 type: "bullets",
               }}
-              autoplay={{
-                delay: 7000,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 7000,
+              //   disableOnInteraction: false,
+              // }}
               loop={true}
               spaceBetween={30}
               slidesPerView={1}
@@ -178,13 +178,13 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
                 swiper.navigation.init();
                 swiper.navigation.update();
               }}
-              className="!pb-12"
+              className="sm:!pb-12 pb-0"
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id}>
-                  <div className="bg-white p-8 rounded-3xl border border-gray-100 hover:border-transparent shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="bg-white sm:p-8 p-4 rounded-3xl border border-gray-100 hover:border-transparent shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                     {/* Rating and Header */}
-                    <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+                    <div className="flex flex-wrap items-center justify-between gap-4 sm:mb-6 mb-4">
                       <div className="flex items-center">
                         {[...Array(5)].map((_, i) => (
                           <svg
@@ -222,24 +222,24 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
                     </div>
 
                     {/* Content */}
-                    <blockquote className="mb-8">
-                      <p className="text-gray-700 text-lg leading-relaxed font-medium">
+                    <blockquote className="sm:mb-8 mb-2">
+                      <p className="text-gray-700 sm:text-lg text-[16px] leading-relaxed font-medium">
                         &quot;{testimonial.content}&quot;
                       </p>
                     </blockquote>
 
                     {/* Metrics */}
                     {testimonial.metrics && testimonial.metrics.length > 0 && (
-                      <div className="flex flex-wrap gap-4 mb-8">
+                      <div className="flex  gap-4 sm:mb-8 mb-5">
                         {testimonial.metrics.map((metric, i) => (
                           <div
                             key={i}
-                            className="px-4 py-3 bg-gray-50 rounded-lg"
+                            className="px-4 py-3 bg-gray-50 rounded-lg w-1/2"
                           >
-                            <p className="text-2xl font-bold text-gray-900">
+                            <p className=" sm:text-2xl text-lg font-bold text-gray-900">
                               {metric.value}
                             </p>
-                            <p className="text-xs text-gray-500">
+                            <p className=" text-xs text-gray-500">
                               {metric.label}
                             </p>
                           </div>
@@ -249,9 +249,9 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
 
                     {/* Author */}
                     <div className="flex items-center">
-                      <div className="flex-shrink-0 mr-4">
+                      <div className="flex-shrink-0 sm:mr-4 mr-2">
                         {testimonial.avatar ? (
-                          <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-md">
+                          <div className="sm:w-14 w-12 sm:h-14 h-12  rounded-full overflow-hidden border-2 border-white shadow-md">
                             <Image
                               src={testimonial.avatar}
                               alt={testimonial.author}
@@ -261,8 +261,8 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
                             />
                           </div>
                         ) : (
-                          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center shadow-md">
-                            <span className="text-xl font-bold text-gray-600">
+                          <div className="sm:w-14 w-12 sm:h-14 h-12 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center shadow-md">
+                            <span className="sm:text-xl text-[16px] font-bold text-gray-600">
                               {testimonial.author.charAt(0)}
                             </span>
                           </div>
@@ -270,10 +270,10 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
                       </div>
 
                       <div className="flex-1 min-w-0">
-                        <p className="text-lg font-semibold text-gray-900 truncate">
+                        <p className="sm:text-lg text-[16px] font-semibold text-gray-900 truncate">
                           {testimonial.author}
                         </p>
-                        <div className="flex flex-wrap items-center gap-1">
+                        <div className="flex items-center gap-1">
                           <p className="text-sm text-gray-500 truncate">
                             {testimonial.position}
                           </p>
@@ -304,13 +304,13 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="testimonial-pagination flex justify-center gap-2 mt-6" />
+            <div className="testimonial-pagination flex justify-center gap-2 sm:mt-6 mt-3" />
           </div>
         )}
 
         {/* CTA */}
         {cta && (
-          <div className="text-center mt-20 md:mt-28">
+          <div className="text-center sm:mt-20 mt-3 md:mt-28">
             <Button href={cta.href} variant="primaryLink">
               {cta.text}
               <svg
