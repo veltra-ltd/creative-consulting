@@ -58,10 +58,12 @@ const AnimatedCard: React.FC<{ caseStudy: HomeCaseStudy; index: number }> = ({
             {caseStudy.industry}
           </span>
         </div>
-        <h3 className="text-xl font-semibold text-gray-800 mb-3">
+        <h3 className="sm:text-xl text-[16px] font-semibold text-black mb-3">
           {caseStudy.title}
         </h3>
-        <p className="text-gray-600 mb-4">{caseStudy.description}</p>
+        <p className="sm:text-[16px] text-sm text-black mb-4">
+          {caseStudy.description}
+        </p>
         <div className="space-y-2">
           {caseStudy.results.map((result, i) => (
             <div key={i} className="flex items-start gap-2">
@@ -89,7 +91,7 @@ const AnimatedCard: React.FC<{ caseStudy: HomeCaseStudy; index: number }> = ({
 
 const CaseStudies: React.FC<CaseStudiesProps> = ({ data }) => {
   return (
-    <section className="py-20 px-4 bg-gray-50 overflow-hidden">
+    <section className="sm:py-20 py-5 px-4 mt-5 sm:mt-0 bg-gray-50 overflow-hidden success-stories">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="Success Stories"
