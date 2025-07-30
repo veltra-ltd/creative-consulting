@@ -243,3 +243,13 @@ html.dark ::-webkit-scrollbar-thumb {
 .gradient-btn:active {
   opacity: 0.5;
 }
+.cvtwmy {
+  width: 150px !important;
+  height: 70px !important;
+}
+@media (max-width: 950px) {
+  .cvtwmy {
+    width: 140px !important;
+    height: 63px !important;
+  }
+}

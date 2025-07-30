@@ -73,11 +73,11 @@ const About = ({ data }: Props) => {
   return (
     <main
       ref={heroRef}
-      className="relative overflow-hidden bg-[#f6f4f0] pt-16 md:py-20 lg:py-28 xl:py-32"
+      className="relative overflow-hidden bg-[#f6f4f0] sm:pb-0 pb-6 pt-7 sm:pt-14 md:py-20 lg:py-28 xl:py-32"
       aria-labelledby="hero-heading"
     >
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="flex flex-col lg:flex-row flex-wrap md:flex-nowrap items-center lg:justify-between gap-8 w-full">
+        <div className="flex flex-col lg:flex-row flex-wrap md:flex-nowrap items-center lg:justify-between sm:gap-8 gap-0 w-full">
           {/* Content Section */}
           <div
             ref={contentRef}
@@ -86,7 +86,7 @@ const About = ({ data }: Props) => {
             <h2
               id="hero-heading"
               // className="text-[#1c1c1d] font-bold leading-[1.1] md:leading-[75px] tracking-tight text-4xl sm:text-3xl md:text-5xl xxl:text-[72px] mb-5 lg:mb-[20px] origin-[50%_50%]"
-              className="scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
+              className="scroll-m-20 sm:text-3xl text-2xl sm:mb-0 mb-3 font-semibold tracking-tight transition-colors first:mt-0"
               style={{ letterSpacing: "-1px" }}
             >
               {data.heading}
@@ -97,17 +97,19 @@ const About = ({ data }: Props) => {
               className="text-[#0f0f0f] font-normal leading-relaxed md:leading-[30px] text-lg sm:text-lg mb-8 sm:mb-10 lg:mb-[40px] w-full lg:w-[647px]"
             />
 
-            <ButtonComponent
-              onClick={() => router.push("/about")}
-              textOne={data.btnText}
-              textTwo="click here"
-            />
+            <div className="sm:block! hidden!">
+              <ButtonComponent
+                onClick={() => router.push("/about")}
+                textOne={data.btnText}
+                textTwo="click here"
+              />
+            </div>
           </div>
 
           {/* Image Section */}
           <div
             ref={imageRef}
-            className="w-full md:w-[calc(50%-32px)] lg:w-[45%] relative order-2 md:order-none mt-6 md:mt-0"
+            className="w-full md:w-[calc(50%-32px)] lg:w-[45%] relative order-2 md:order-none sm:mt-6 mt-0 md:mt-0"
           >
             <div className="relative w-full aspect-[4/3] lg:aspect-[5/4] xl:aspect-[3/2] z-10">
               <Image
@@ -152,6 +154,15 @@ const About = ({ data }: Props) => {
                 />
               </div>
             </div>
+          </div>
+        </div>
+        <div className="sm:hidden! block!">
+          <div className="flex justify-center mt-8">
+            <ButtonComponent
+              onClick={() => router.push("/about")}
+              textOne={data.btnText}
+              textTwo="click here"
+            />
           </div>
         </div>
       </div>

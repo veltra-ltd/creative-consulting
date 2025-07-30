@@ -32,8 +32,8 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 342 208"
-        height="208"
-        width="342"
+        height="70"
+        width="160"
         className="splash"
       >
         {/* All the path elements from the original SVG */}
@@ -122,7 +122,7 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({
         </svg>
 
         <div className="outline"></div>
-        <div className="content">
+        <div className="content text-[16px] sm:textl-[20px]">
           <span className="char state-1">
             {textOne.split("").map((letter, index) => (
               <span
