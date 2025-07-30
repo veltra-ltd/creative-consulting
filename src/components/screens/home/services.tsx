@@ -113,7 +113,7 @@ const Services = ({ data }: Props) => {
   return (
     <section
       ref={containerRef}
-      className="relative py-20 md:py-28 lg:py-36 bg-white"
+      className="relative sm:py-20 py-7 bg-white"
       aria-labelledby="services-heading"
     >
       <div className="absolute inset-0 overflow-hidden">
@@ -169,13 +169,13 @@ const Services = ({ data }: Props) => {
                   </motion.span>
                   <div className="flex flex-col">
                     <motion.h4
-                      className="text-lg md:text-xl font-semibold text-[#1c1c1d] mb-2 transition-colors duration-200"
+                      className="sm:text-lg text-[16px] font-semibold text-[#1c1c1d] mb-2 transition-colors duration-200"
                       variants={titleHoverVariants}
                     >
                       {service.title}
                     </motion.h4>
                     <motion.div variants={descHoverVariants}>
-                      <p className="text-gray-600 leading-relaxed text-sm md:text-base ">
+                      <p className="text-gray-600 leading-relaxed sm:text-[16px] text-sm md:text-base ">
                         {service.text}
                       </p>
                     </motion.div>
