@@ -15,7 +15,7 @@ interface OurMethodologyProps {
 
 const OurMethodology: React.FC<OurMethodologyProps> = ({ data }) => {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="sm:py-20 py-0 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -30,7 +30,7 @@ const OurMethodology: React.FC<OurMethodologyProps> = ({ data }) => {
           description="Proven approaches that deliver actionable insights"
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-4">
           {data.map((method, index) => {
             const IconComponent = iconMap[method.icon as keyof typeof iconMap];
             if (!IconComponent) {
@@ -51,10 +51,12 @@ const OurMethodology: React.FC<OurMethodologyProps> = ({ data }) => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    <h3 className="sm:text-xl text-[16px] font-semibold text-black mb-2">
                       {method.title}
                     </h3>
-                    <p className="text-gray-600 mb-4">{method.description}</p>
+                    <p className="sm:text-[16px] text-sm text-gray-600 mb-4">
+                      {method.description}
+                    </p>
                     <div className="space-y-2">
                       {method.benefits.map((benefit, i) => (
                         <div key={i} className="flex items-start gap-2">
