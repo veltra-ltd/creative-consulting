@@ -11,15 +11,15 @@ interface InsightsSectionProps {
 
 const InsightsSection: React.FC<InsightsSectionProps> = ({ posts }) => {
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="sm:py-20 py-5 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center sm:mb-12 mb-5">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+            className="sm:text-3xl text-2xl font-bold text-black sm:mb-4 mb-1"
           >
             Market Insights
           </motion.h2>
@@ -34,7 +34,7 @@ const InsightsSection: React.FC<InsightsSectionProps> = ({ posts }) => {
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-5">
           {posts.map((post, index) => (
             <motion.div
               key={post.id}
@@ -55,7 +55,7 @@ const InsightsSection: React.FC<InsightsSectionProps> = ({ posts }) => {
                 />
               </div>
 
-              <div className="p-6">
+              <div className="sm:p-6 p-4">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm font-medium text-primary">
                     {post.category}
@@ -68,17 +68,17 @@ const InsightsSection: React.FC<InsightsSectionProps> = ({ posts }) => {
                     })}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                <h3 className="sm:text-xl text-[16px] font-semibold text-gray-800 sm:mb-3 mb-1.5">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                <p className="text-gray-600 sm:mb-4 mb-1.5">{post.excerpt}</p>
                 <Link
                   href={`/insights/${post.id}`}
-                  className="inline-flex items-center text-primary font-medium hover:text-destructive transition-colors"
+                  className="sm:text-[16px] text-sm inline-flex items-center text-primary font-medium hover:text-destructive transition-colors"
                 >
                   Read More
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className="sm:w-4 w-3 h-4 ml-1"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -101,7 +101,7 @@ const InsightsSection: React.FC<InsightsSectionProps> = ({ posts }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-center mt-12"
+          className="text-center sm:mt-12 mt-6"
         >
           <Link
             href="/insights"
