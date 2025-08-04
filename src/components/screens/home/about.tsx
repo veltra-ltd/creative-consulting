@@ -73,7 +73,7 @@ const About = ({ data }: Props) => {
   return (
     <main
       ref={heroRef}
-      className="relative overflow-hidden bg-[#f6f4f0] sm:pb-0 pb-6 pt-7 sm:pt-14 md:py-20 lg:py-28 xl:py-32"
+      className="relative overflow-hidden bg-[#f6f4f0] sm:pb-0 pb-8.5 pt-7 sm:pt-0 lg:py-10"
       aria-labelledby="hero-heading"
     >
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
@@ -86,7 +86,7 @@ const About = ({ data }: Props) => {
             <h2
               id="hero-heading"
               // className="text-[#1c1c1d] font-bold leading-[1.1] md:leading-[75px] tracking-tight text-4xl sm:text-3xl md:text-5xl xxl:text-[72px] mb-5 lg:mb-[20px] origin-[50%_50%]"
-              className="scroll-m-20 sm:text-3xl text-2xl sm:mb-0 mb-3 font-semibold tracking-tight transition-colors first:mt-0"
+              className="scroll-m-20 sm:text-3xl text-2xl sm:mb-5 mb-3 font-semibold tracking-tight transition-colors first:mt-0"
               style={{ letterSpacing: "-1px" }}
             >
               {data.heading}
@@ -94,7 +94,7 @@ const About = ({ data }: Props) => {
 
             <p
               dangerouslySetInnerHTML={{ __html: data.text }}
-              className="text-[#0f0f0f] font-normal leading-relaxed md:leading-[30px] text-lg sm:text-lg mb-8 sm:mb-10 lg:mb-[40px] w-full lg:w-[647px]"
+              className="text-[#0f0f0f] font-normal leading-relaxed md:leading-[30px] text-lg sm:text-lg mb-8 sm:mb-10 lg:mb-[70px] w-full lg:w-[647px]"
             />
 
             <div className="sm:block! hidden!">

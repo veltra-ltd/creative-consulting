@@ -113,7 +113,7 @@ const Services = ({ data }: Props) => {
   return (
     <section
       ref={containerRef}
-      className="relative sm:py-20 py-7 bg-white"
+      className="relative sm:py-10 py-7 bg-white"
       aria-labelledby="services-heading"
     >
       <div className="absolute inset-0 overflow-hidden">

@@ -34,7 +34,7 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-white py-7 sm:py-20 md:py-28 lg:py-36"
+      className="relative overflow-hidden bg-white py-7 sm:py-20 md:py-28 lg:py-10"
       aria-labelledby="clients-heading"
     >
       {/* Gradient background */}
@@ -76,7 +76,7 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
         <SectionHeading
           title={title}
           description={subtitle}
-          className="sm:mb-16 mb-8 md:mb-20 lg:mb-24"
+          className="sm:mb-16 mb-8 md:mb-20 lg:mb-5"
         />
 
         {/* Marquee */}
@@ -128,7 +128,7 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
 
         {/* Swiper Testimonials */}
         {showTestimonials && testimonials.length > 0 && (
-          <div className="relative sm:py-16 py-4">
+          <div className="relative sm:py-8 py-4">
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
               <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full opacity-20 blur-3xl" />
               <div className="absolute bottom-1/3 right-1/3 w-72 h-72 bg-purple-50 rounded-full opacity-20 blur-3xl" />
@@ -310,7 +310,7 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
 
         {/* CTA */}
         {cta && (
-          <div className="text-center sm:mt-20 mt-3 md:mt-28">
+          <div className="text-center sm:mt-10 mt-3">
             <Button href={cta.href} variant="primaryLink">
               {cta.text}
               <svg

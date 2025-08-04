@@ -124,7 +124,7 @@ const HeroSlider = ({
   return (
     <div
       ref={sliderRef}
-      className="relative w-full sm:h-screen h-[70vh] sm:max-h-[900px] max-h-[600px] sm:min-h-[550px] min-h-[400px] overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800"
+      className="relative w-full sm:h-[78vh] h-[70vh] sm:max-h-[900px] max-h-[600px] sm:min-h-[550px] min-h-[400px] overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800"
       aria-roledescription="carousel"
       aria-label="Hero slider"
     >
@@ -147,7 +147,7 @@ const HeroSlider = ({
       {/* Content */}
       <div
         ref={contentRef}
-        className="relative z-10 h-full flex flex-col sm:justify-center justify-normal sm:pt-0 pt-5.5 items-center text-center px-4 sm:px-6 lg:px-8"
+        className="relative z-10 sm:h-[78%] h-full flex flex-col sm:justify-center justify-normal sm:pt-0 pt-5.5 items-center text-center px-4 sm:px-6 lg:px-8"
       >
         <div className="container mx-auto max-w-6xl">
           <h1

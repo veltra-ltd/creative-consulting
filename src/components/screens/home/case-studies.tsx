@@ -91,7 +91,7 @@ const AnimatedCard: React.FC<{ caseStudy: HomeCaseStudy; index: number }> = ({
 
 const CaseStudies: React.FC<CaseStudiesProps> = ({ data }) => {
   return (
-    <section className="sm:py-20 py-5 px-4 mt-5 sm:mt-0 bg-gray-50 overflow-hidden success-stories">
+    <section className="sm:py-8 py-5 px-4 mt-5 sm:mt-0 bg-gray-50 overflow-hidden success-stories">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="Success Stories"

@@ -11,9 +11,9 @@ interface InsightsSectionProps {
 
 const InsightsSection: React.FC<InsightsSectionProps> = ({ posts }) => {
   return (
-    <section className="sm:py-20 py-5 px-4 bg-gray-50">
+    <section className="sm:py-9 py-5 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center sm:mb-12 mb-5">
+        <div className="text-center sm:mb-8 mb-5">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ const InsightsSection: React.FC<InsightsSectionProps> = ({ posts }) => {
         >
           <Link
             href="/insights"
-            className="inline-flex px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-destructive transition-colors"
+            className="inline-flex sm:px-18 px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-destructive transition-colors"
           >
             View All Insights
           </Link>

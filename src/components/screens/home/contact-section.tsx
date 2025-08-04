@@ -9,7 +9,7 @@ interface ContactSectionProps {
 
 const ContactSection: React.FC<ContactSectionProps> = () => {
   return (
-    <section className="sm:py-20 py-6 px-4 bg-gray-600 text-white sm:mb-0 mb-6">
+    <section className="sm:py-20 py-6 px-4 bg-gray-600 text-white sm:mb-0 mb-6 hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 sm:gap-12 gap-2">
           <motion.div

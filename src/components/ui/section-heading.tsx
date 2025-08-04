@@ -19,11 +19,11 @@ export default function SectionHeading({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true, margin: "-100px" }}
-      className={`sm:mb-16 mb-6 text-center ${className}`}
+      className={`sm:mb-8 mb-6 text-center ${className}`}
     >
       <h2
         className="sm:text-4xl text-2xl font-bold text-transparent bg-clip-text 
-  bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three sm:mb-4 mb-1.5
+  bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three sm:mb-2 mb-1.5
   animate-glossy-gradient"
       >
         {title}
