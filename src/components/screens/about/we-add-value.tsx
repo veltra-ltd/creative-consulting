@@ -69,30 +69,30 @@ const WeAddValue = ({ data }: Props) => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-28 bg-gray-50">
+    <section ref={sectionRef} className="sm:py-5 py-3 bg-gray-50">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <motion.div
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center sm:max-w-[38rem] mx-auto sm:mb-8 mb-5"
           initial="hidden"
           animate={controls}
           variants={containerVariants}
         >
           <motion.h2
-            className="text-3xl sm:text-4xl font-bold  text-transparent bg-clip-text 
-  bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three mb-4
+            className="text-2xl sm:text-3xl font-bold  text-transparent bg-clip-text 
+  bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three
   animate-glossy-gradient mb-4 scroll-m-20 tracking-tight transition-colors first:mt-0"
             variants={itemVariants}
           >
             {data.heading}
           </motion.h2>
           <motion.p
-            className="text-lg text-gray-600"
+            className="sm:text-lg text-base text-gray-600 capitalize"
             dangerouslySetInnerHTML={{ __html: data.text }}
             variants={paragraphVariants}
           />
         </motion.div>
 
-        <List className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+        <List className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-5 mb-6">
           {data.valueItems.map((item, index) => (
             <motion.div
               key={index}
@@ -102,20 +102,22 @@ const WeAddValue = ({ data }: Props) => {
               animate={controls}
               variants={cardVariants}
             >
-              <ListItem className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-50 mb-4">
+              <ListItem className="bg-white p-5 sm:h-56 h-fit rounded-xl shadow-sm border border-gray-100">
+                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-50 mb-3">
                   <FaChartLine className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 scroll-m-20 tracking-tight">
+                <h3 className="sm:text-lg text-base font-semibold text-gray-900 mb-2 scroll-m-20 tracking-tight">
                   {item.title.split("—")[0]}
                 </h3>
-                <p className="text-gray-600">{item.text}</p>
+                <p className="sm:text-base text-sm text-gray-600">
+                  {item.text}
+                </p>
               </ListItem>
             </motion.div>
           ))}
         </List>
         <motion.p
-          className="text-lg text-gray-600"
+          className="sm:text-base text-sm text-gray-600 text-center capitalize"
           initial={{ y: 30, opacity: 0 }}
           animate={controls}
           variants={paragraphVariants}

@@ -78,12 +78,12 @@ const WhyChooseUs = ({ data }: Props) => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-28 bg-gray-50">
+    <section ref={sectionRef} className="sm:py-7 py-2 bg-gray-50">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center sm:max-w-[46rem] mx-auto sm:mb-7 mb-4">
           <motion.h2
-            className="choose-heading text-3xl sm:text-4xl font-bold  text-transparent bg-clip-text 
-  bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three mb-4
+            className="choose-heading text-2xl sm:text-3xl font-bold  text-transparent bg-clip-text 
+  bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three
   animate-glossy-gradient mb-4 scroll-m-20 tracking-tight transition-colors first:mt-0"
             initial="hidden"
             animate={controls}
@@ -93,7 +93,7 @@ const WhyChooseUs = ({ data }: Props) => {
           </motion.h2>
         </div>
 
-        <List className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <List className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-4">
           {data.features.map((item, index) => (
             <motion.div
               key={index}
@@ -103,11 +103,11 @@ const WhyChooseUs = ({ data }: Props) => {
               variants={featureVariants}
               custom={index}
             >
-              <ListItem className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+              <ListItem className="bg-white p-5 sm:h-[9.5rem] h-fit rounded-xl shadow-sm border border-gray-100">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-50 mb-4">
                   {iconMap[item.icon]}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 scroll-m-20 tracking-tight">
+                <h3 className="sm:text-lg text-base font-semibold text-gray-900 scroll-m-20 tracking-tight">
                   {item.title}
                 </h3>
               </ListItem>
@@ -115,9 +115,9 @@ const WhyChooseUs = ({ data }: Props) => {
           ))}
         </List>
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-5 capitalize">
           <motion.p
-            className="choose-footer text-xl text-gray-700 font-medium"
+            className="choose-footer sm:text-lg text-base text-gray-700 font-medium"
             initial="hidden"
             animate={controls}
             variants={footerVariants}

@@ -49,9 +49,9 @@ const Story = ({ data }: Props) => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-white" ref={containerRef}>
+    <section className="sm:py-10 py-7 bg-white" ref={containerRef}>
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="flex flex-col lg:flex-row sm:gap-12 gap-6 items-center">
           <motion.div
             className="lg:w-1/2 story-image"
             initial="hidden"
@@ -63,14 +63,14 @@ const Story = ({ data }: Props) => {
               alt="Our team"
               width={600}
               height={400}
-              className="rounded-xl shadow-lg"
+              className="rounded-xl shadow-lg w-full object-cover"
             />
           </motion.div>
           <div className="lg:w-1/2">
             <motion.h2
-              className="story-heading text-3xl sm:text-4xl font-bold  text-transparent bg-clip-text 
+              className="story-heading text-2xl sm:text-3xl font-bold  text-transparent bg-clip-text 
   bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three 
-  animate-glossy-gradient mb-6 scroll-m-20 tracking-tight transition-colors first:mt-0"
+  animate-glossy-gradient mb-0 scroll-m-20 tracking-tight transition-colors first:mt-0"
               initial="hidden"
               animate={controls}
               variants={variants}
@@ -79,7 +79,7 @@ const Story = ({ data }: Props) => {
               {data.heading}
             </motion.h2>
             <motion.p
-              className="story-text1 text-lg text-gray-600 mb-6 leading-7 [&:not(:first-child)]:mt-6"
+              className="story-text1 text-base text-gray-600 mb-2 leading-7 [&:not(:first-child)]:mt-2.5"
               dangerouslySetInnerHTML={{ __html: data.text1 }}
               initial="hidden"
               animate={controls}
@@ -87,7 +87,7 @@ const Story = ({ data }: Props) => {
               custom={0.4}
             />
             <motion.p
-              className="story-text2 text-lg text-gray-600 leading-7 [&:not(:first-child)]:mt-6"
+              className="story-text2 text-base text-gray-600 leading-7 [&:not(:first-child)]:mt-2.5"
               initial="hidden"
               animate={controls}
               variants={variants}
@@ -95,7 +95,7 @@ const Story = ({ data }: Props) => {
             >
               {data.text2}
             </motion.p>
-            <List className="mt-6 space-y-3">
+            <List className="mt-3 space-y-3">
               {data.stroyItems.map((item: StoryItem, index) => (
                 <motion.div
                   key={index}
@@ -123,7 +123,7 @@ const Story = ({ data }: Props) => {
               ))}
             </List>
             <motion.p
-              className="story-text3 text-lg text-gray-600 mt-6 leading-7 [&:not(:first-child)]:mt-6"
+              className="story-text3 text-base text-gray-600 mt-3 leading-7 [&:not(:first-child)]:mt-3"
               dangerouslySetInnerHTML={{ __html: data.text3 }}
               initial="hidden"
               animate={controls}
