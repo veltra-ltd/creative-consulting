@@ -597,7 +597,7 @@ import ProcessSection from "@/components/screens/solutions/process-section";
 // import DataVisualization from "@/components/screens/solutions/data-visualization";
 import SolutionsGrid from "@/components/screens/solutions/solutions-grid";
 // import { HeroSection } from "@/components/layouts/hero";
-import { MarketResearchHero } from "@/components/layouts/worldHero";
+// import { MarketResearchHero } from "@/components/layouts/worldHero";
 
 const SolutionsPage = async ({
   params,
@@ -621,7 +621,7 @@ const SolutionsPage = async ({
   return (
     <>
       {/* <HeroSection /> */}
-      <MarketResearchHero />
+      {/* <MarketResearchHero /> */}
       <SolutionsGrid data={solutionsData} />
       {/* <DataVisualization /> */}
       <ProcessSection data={processData} />

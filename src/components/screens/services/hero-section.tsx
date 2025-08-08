@@ -25,7 +25,7 @@ const floatingVariants = {
 
 export default function ServicesHero({ data }: ServicesHeroProps) {
   return (
-    <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 overflow-hidden">
+    <section className="relative sm:h-[80vh] h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 overflow-hidden">
       {/* Animated background elements */}
       <motion.div
         className="absolute inset-0 bg-[url('https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg')] bg-cover bg-center opacity-20"

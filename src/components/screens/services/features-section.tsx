@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ServiceFeature } from "@/types/lang";
+import SectionHeading from "@/components/ui/section-heading";
 
 interface FeaturesSectionProps {
   data: {
@@ -26,10 +27,10 @@ const featureVariants = {
 
 export default function FeaturesSection({ data }: FeaturesSectionProps) {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="sm:pt-6 pt-3 sm:pb-9 pb-3 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <motion.h2
+        <div className="text-center">
+          {/* <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -37,8 +38,14 @@ export default function FeaturesSection({ data }: FeaturesSectionProps) {
             className="text-4xl font-bold text-gray-900 mb-4"
           >
             {data.title}
-          </motion.h2>
-          <motion.p
+          </motion.h2> */}
+          <SectionHeading
+            title={data.title}
+            description={data.subtitle}
+            className="sm:mb-8 mb-4 capitalize"
+          />
+
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -46,7 +53,7 @@ export default function FeaturesSection({ data }: FeaturesSectionProps) {
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
             {data.subtitle}
-          </motion.p>
+          </motion.p> */}
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -64,12 +71,14 @@ export default function FeaturesSection({ data }: FeaturesSectionProps) {
               <div className="text-5xl mb-6 bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three bg-clip-text text-transparent">
                 {item.icon}
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              <h3 className="sm:text-lg text-base font-bold text-gray-800 mb-4">
                 {item.title}
               </h3>
-              <p className="text-gray-600">{item.description}</p>
+              <p className="text-gray-600 sm:text-base text-sm">
+                {item.description}
+              </p>
 
-              <div className="mt-6 pt-6 border-t border-gray-100">
+              {/* <div className="mt-6 pt-6 border-t border-gray-100">
                 <button className="text-sm font-medium text-primary/70 hover:text-primary flex items-center gap-2">
                   Read case study
                   <svg
@@ -85,7 +94,7 @@ export default function FeaturesSection({ data }: FeaturesSectionProps) {
                     />
                   </svg>
                 </button>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>
