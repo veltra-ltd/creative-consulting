@@ -529,7 +529,7 @@ const InteractiveEarth = () => {
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
 
       {/* Content overlay */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen sm:pt-0 pt-[16px] sm:pb-0 pb-6 px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 50 }}
@@ -537,7 +537,7 @@ const InteractiveEarth = () => {
           className="text-center max-w-4xl mx-auto"
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400"
+            className="sm:text-5xl text-2xl font-bold sm:mb-6 mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
@@ -546,7 +546,7 @@ const InteractiveEarth = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed"
+            className="sm:text-xl text-[16px] text-slate-300 sm:mb-8 mb-4 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
@@ -567,14 +567,14 @@ const InteractiveEarth = () => {
 
         {/* Filter controls */}
         <motion.div
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-4 sm:mb-12 mb-7"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
         >
           <button
             onClick={() => setActiveFilter("all")}
-            className={`px-4 py-2 rounded-full transition-all ${
+            className={`px-4 py-2 sm:text-[16px] text-sm rounded-full transition-all ${
               activeFilter === "all"
                 ? "bg-white/20 backdrop-blur-sm border border-white/30 text-white"
                 : "bg-white/5 hover:bg-white/10 border border-transparent text-slate-300"
@@ -584,7 +584,7 @@ const InteractiveEarth = () => {
           </button>
           <button
             onClick={() => setActiveFilter("client")}
-            className={`px-4 py-2 rounded-full transition-all ${
+            className={`px-4 py-2 sm:text-[16px] text-sm rounded-full transition-all ${
               activeFilter === "client"
                 ? "bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 text-blue-300"
                 : "bg-blue-500/5 hover:bg-blue-500/10 border border-transparent text-slate-300"
@@ -594,7 +594,7 @@ const InteractiveEarth = () => {
           </button>
           <button
             onClick={() => setActiveFilter("office")}
-            className={`px-4 py-2 rounded-full transition-all ${
+            className={`px-4 py-2 sm:text-[16px] text-sm rounded-full transition-all ${
               activeFilter === "office"
                 ? "bg-emerald-500/20 backdrop-blur-sm border border-emerald-400/30 text-emerald-300"
                 : "bg-emerald-500/5 hover:bg-emerald-500/10 border border-transparent text-slate-300"
@@ -607,7 +607,7 @@ const InteractiveEarth = () => {
             <select
               value={selectedRegion || ""}
               onChange={(e) => setSelectedRegion(e.target.value || null)}
-              className="px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-4 py-2 sm:text-[16px] text-sm rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="">All Regions</option>
               {regions.map((region) => (
@@ -622,7 +622,7 @@ const InteractiveEarth = () => {
         {/* Stats */}
         <motion.div
           ref={statsRef}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-3 sm:gap-8 gap-5 max-w-4xl mx-auto w-full sm:w-fit"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 50 }}
           transition={{ duration: 0.8, delay: 1.3 }}

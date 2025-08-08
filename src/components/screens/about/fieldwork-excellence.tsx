@@ -74,14 +74,14 @@ const FieldworkExcellence = ({ data }: Props) => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-28 bg-white">
+    <section ref={sectionRef} className="sm:py-7 py-3 bg-white">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="flex flex-col lg:flex-row sm:gap-12 gap-7 items-center">
           <div className="lg:w-1/2 order-2 lg:order-1">
             <motion.h2
-              className="field-heading text-3xl sm:text-4xl font-bold  text-transparent bg-clip-text 
-  bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three mb-4
-  animate-glossy-gradient mb-6 scroll-m-20 tracking-tight transition-colors first:mt-0"
+              className="field-heading sm:text-3xl text-2xl font-bold  text-transparent bg-clip-text 
+  bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three mb-2
+  animate-glossy-gradient scroll-m-20 tracking-tight transition-colors first:mt-0"
               initial="hidden"
               animate={controls}
               variants={headingVariants}
@@ -90,7 +90,7 @@ const FieldworkExcellence = ({ data }: Props) => {
             </motion.h2>
 
             <motion.p
-              className="field-text text-lg text-gray-600 mb-6"
+              className="field-text sm:text-base text-sm text-gray-600 mb-3 capitalize"
               dangerouslySetInnerHTML={{ __html: data.text1 }}
               initial="hidden"
               animate={controls}
@@ -99,7 +99,7 @@ const FieldworkExcellence = ({ data }: Props) => {
             />
 
             <motion.p
-              className="field-text text-lg text-gray-600 mb-6"
+              className="field-text sm:text-base text-sm text-gray-600 mb-3"
               initial="hidden"
               animate={controls}
               variants={textVariants}
@@ -108,7 +108,7 @@ const FieldworkExcellence = ({ data }: Props) => {
               {data.listHeading}
             </motion.p>
 
-            <List className="space-y-3 mb-6">
+            <List className="space-y-3 mb-3.5">
               {data.listItems.map((item: string, index) => (
                 <motion.div
                   key={index}
@@ -118,7 +118,7 @@ const FieldworkExcellence = ({ data }: Props) => {
                   variants={listItemVariants}
                   custom={index}
                 >
-                  <ListItem className="flex items-start">
+                  <ListItem className="flex items-start ">
                     <FaClipboardCheck className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600">{item}</span>
                   </ListItem>
@@ -127,7 +127,7 @@ const FieldworkExcellence = ({ data }: Props) => {
             </List>
 
             <motion.p
-              className="field-text text-lg text-gray-600"
+              className="field-text text-base capitalize text-gray-600"
               dangerouslySetInnerHTML={{ __html: data.text2 }}
               initial="hidden"
               animate={controls}
@@ -150,7 +150,7 @@ const FieldworkExcellence = ({ data }: Props) => {
               alt="Fieldwork"
               width={600}
               height={400}
-              className="rounded-xl shadow-lg"
+              className="rounded-xl shadow-lg w-full object-cover"
             />
           </motion.div>
         </div>

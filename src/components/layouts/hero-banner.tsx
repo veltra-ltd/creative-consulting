@@ -50,7 +50,7 @@ const HeroBanner = ({ data }: Props) => {
   return (
     <section
       ref={container}
-      className="relative text-white py-28 md:py-36 lg:py-44 xl:py-52 overflow-hidden bg-gradient-to-r from-primary/80 to-primary/90"
+      className=" relative text-white sm:pt-10 pt-4 sm:pb-15 pb-7 overflow-hidden bg-gradient-to-r from-primary/80 to-primary/90"
     >
       {/* Background image with overlay */}
       <div className="absolute inset-0">
@@ -66,9 +66,9 @@ const HeroBanner = ({ data }: Props) => {
 
       {/* Content */}
       <div className="container px-5 sm:px-6 lg:px-8 mx-auto relative z-10">
-        <div className="max-w-3xl lg:max-w-4xl xl:max-w-5xl">
+        <div className="sm:max-w-3xl ">
           <motion.h1
-            className="heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight scroll-m-20"
+            className="heading text-2xl sm:text-5xl font-bold leading-tight mb-6 tracking-tight scroll-m-20"
             dangerouslySetInnerHTML={{ __html: data.heading }}
             initial="hidden"
             animate="visible"
@@ -76,7 +76,7 @@ const HeroBanner = ({ data }: Props) => {
           />
 
           <motion.p
-            className="paragraph text-xl md:text-2xl text-blue-100/90 leading-relaxed mb-10 max-w-2xl [&:not(:first-child)]:mt-6"
+            className="paragraph sm:text-lg text-base text-blue-100/90 mb-10 max-w-2xl [&:not(:first-child)]:mt-6"
             initial="hidden"
             animate="visible"
             variants={paragraphVariants}
@@ -85,7 +85,7 @@ const HeroBanner = ({ data }: Props) => {
           </motion.p>
 
           {(data?.firstButton || data?.secondButton) && (
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex sm:gap-7 gap-5">
               {data.firstButton && (
                 <motion.div
                   initial="hidden"
@@ -95,7 +95,7 @@ const HeroBanner = ({ data }: Props) => {
                 >
                   <Button
                     href={data.firstButton.link}
-                    className="button px-8 py-4 text-lg cursor-pointer"
+                    className="button sm:px-7 sm:py-3 sm:text-base cursor-pointer"
                   >
                     {data.firstButton.name}
                   </Button>
@@ -110,7 +110,7 @@ const HeroBanner = ({ data }: Props) => {
                 >
                   <Button
                     href={data.secondButton.link}
-                    className="button px-8 py-4 text-lg border-white/2 bg-white/10 cursor-pointer"
+                    className="button sm:px-7 sm:py-3 sm:text-base border-white/2 bg-white/10 cursor-pointer"
                   >
                     {data.secondButton.name}
                   </Button>
@@ -122,7 +122,7 @@ const HeroBanner = ({ data }: Props) => {
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-primary/80 to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-7 bg-gradient-to-t from-primary/50 to-transparent z-10" />
     </section>
   );
 };

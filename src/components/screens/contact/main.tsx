@@ -27,7 +27,8 @@ import {
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import RainbowButton from "@/components/3d/rainbow-button";
-import Title from "@/components/ui/title";
+import SectionHeading from "@/components/ui/section-heading";
+// import Title from "@/components/ui/title";
 // import GooeyButton from "@/components/3d/gooey-button";
 // import ColorfulButton from "@/components/3d/color-full-btn";
 
@@ -232,7 +233,7 @@ export default function ContactPage({
           initial="hidden"
           animate={heroInView ? "visible" : "hidden"}
           variants={staggerContainer}
-          className="relative isolate overflow-hidden py-28 md:py-36 bg-[linear-gradient(to_right,var(--color-gradiant-one),var(--color-gradiant-two),var(--color-gradiant-three))]"
+          className="relative isolate overflow-hidden py-8 sm:py-26 bg-[linear-gradient(to_right,var(--color-gradiant-one),var(--color-gradiant-two),var(--color-gradiant-three))]"
         >
           {/* Background image with elegant gradient overlay */}
           <div className="absolute inset-0 -z-10">
@@ -252,7 +253,7 @@ export default function ContactPage({
             <m.div variants={fadeInUp}>
               <Badge
                 variant="secondary"
-                className="mb-4 bg-white text-primary hover:bg-white/90 transition"
+                className="sm:mb-4 mb-1 bg-white text-primary hover:bg-white/90 transition"
               >
                 Data-Driven Insights
               </Badge>
@@ -260,7 +261,7 @@ export default function ContactPage({
 
             <m.h1
               variants={fadeInUp}
-              className="mb-6 text-4xl font-extrabold tracking-tight text-white lg:text-5xl leading-tight"
+              className="mb-6 sm:text-4xl text-2xl font-extrabold tracking-tight text-white lg:text-5xl leading-tight"
             >
               {contactData.hero.title ||
                 "Power Your Decisions With Market Intelligence"}
@@ -268,7 +269,7 @@ export default function ContactPage({
 
             <m.p
               variants={fadeInUp}
-              className="mx-auto max-w-3xl text-xl leading-relaxed text-white/90"
+              className="mx-auto max-w-3xl sm:text-xl text-[16px] leading-relaxed text-white/90"
             >
               {contactData.hero.subtitle ||
                 "Connect with our research specialists to uncover actionable insights for your business growth"}
@@ -297,7 +298,7 @@ export default function ContactPage({
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition"
+                className="border-white text-[15px] sm:px-6 px-3 sm:py-3 py-2 text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition cursor-pointer"
               >
                 <Mail className="mr-2 h-4 w-4" />
                 Request Proposal
@@ -312,10 +313,15 @@ export default function ContactPage({
           initial="hidden"
           animate={statsInView ? "visible" : "hidden"}
           variants={staggerContainer}
-          className="py-16 md:py-24 bg-white"
+          className="py-6 sm:py-10 bg-white"
         >
           <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-            <Title title="Get in touch with us for expert market research solutions tailored to your business needs. Whether you have a project inquiry or need insights, our team is ready to assist you. Contact us today!" />
+            {/* <Title title="Get in touch with us for expert market research solutions tailored to your business needs. Whether you have a project inquiry or need insights, our team is ready to assist you. Contact us today!" /> */}
+            <m.h1 className="capitalize sm:leading-[2.5rem] leading-7 text-lg sm:text-4xl text-black font-medium text-center sm:w-[80rem] w-full mx-auto sm:mb-4 mb-0">
+              Get in touch with us for expert market research solutions tailored
+              to your business needs. Whether you have a project inquiry or need
+              insights, our team is ready to assist you. Contact us today!
+            </m.h1>
           </div>
         </m.section>
         {/* <m.section
@@ -342,9 +348,9 @@ export default function ContactPage({
         </m.section> */}
 
         {/* Main Content */}
-        <section className="relative py-16 md:py-24 lg:py-32">
+        <section className="relative sm:py-4 py-2">
           <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-14">
               {/* Contact Form */}
               <m.div
                 ref={formSectionRef}
@@ -355,14 +361,14 @@ export default function ContactPage({
               >
                 <m.div
                   variants={fadeInUp}
-                  className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-10 lg:p-12 relative overflow-hidden"
+                  className="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 md:p-10 lg:p-12 relative overflow-hidden"
                 >
                   <div className="absolute -right-10 -top-10 w-64 h-64 bg-blue-100 rounded-full opacity-10"></div>
                   <div className="absolute -left-10 -bottom-10 w-64 h-64 bg-purple-100 rounded-full opacity-10"></div>
                   <div className="relative z-10">
                     <m.h2
                       variants={fadeIn}
-                      className="mb-8 text-gray-900 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
+                      className="sm:mb-5 mb-2 text-gray-900 scroll-m-20 sm:text-2xl text-lg font-semibold tracking-tight transition-colors first:mt-0"
                     >
                       {contactData.form.title ||
                         "Request a Research Consultation"}
@@ -447,7 +453,7 @@ export default function ContactPage({
                   </div>
                 </m.div>
 
-                <m.div variants={fadeInUp}>
+                {/* <m.div variants={fadeInUp}>
                   <Card className="hover:shadow-lg transition-shadow">
                     <CardContent className="p-6">
                       <div className="flex flex-col md:flex-row items-center gap-6">
@@ -475,7 +481,7 @@ export default function ContactPage({
                       </div>
                     </CardContent>
                   </Card>
-                </m.div>
+                </m.div> */}
               </m.div>
 
               {/* Research Services & Info */}
@@ -484,15 +490,16 @@ export default function ContactPage({
                 initial="hidden"
                 animate={servicesInView ? "visible" : "hidden"}
                 variants={staggerContainer}
-                className="space-y-10"
+                className="space-y-6"
               >
                 <div>
-                  <m.h2
+                  {/* <m.h2
                     variants={fadeInUp}
                     className="mb-8 text-gray-900 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
                   >
                     Our Research Services
-                  </m.h2>
+                  </m.h2> */}
+                  <SectionHeading title="Our Research Services" />
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {RESEARCH_SERVICES.map((service, index) => (
@@ -546,21 +553,46 @@ export default function ContactPage({
                 </div>
 
                 <m.div variants={fadeInUp}>
-                  <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-10">
-                    <h2 className="mb-6 text-gray-900 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+                  <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-6 mt-8">
+                    {/* <h2 className="sm:mb-3 mb-2 text-gray-900 scroll-m-20 sm:text-2xl text-lg font-semibold tracking-tight transition-colors first:mt-0">
                       Global Research Centers
-                    </h2>
-                    <div className="space-y-6">
+                    </h2> */}
+                    <CardContent>
+                      <div className="flex  gap-4">
+                        <div className="bg-blue-50 sm:w-12 w-20 h-12 flex items-center justify-center rounded-full">
+                          <Phone className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="sm:text-lg text-base font-semibold scroll-m-20 tracking-tight">
+                            Urgent Research Needs?
+                          </h3>
+                          <p className="text-gray-600 text-base">
+                            Call our 24/7 research hotline for immediate
+                            assistance
+                          </p>
+                          <a
+                            href={`tel:${contactData.contactMethods.phone.replace(
+                              /\s+/g,
+                              ""
+                            )}`}
+                            className="mt-2 inline-block text-lg font-semibold text-primary transition-colors"
+                          >
+                            {contactData.contactMethods.phone}
+                          </a>
+                        </div>
+                      </div>
+                    </CardContent>
+                    <div className="space-y-6 mt-6">
                       {contactData.locations.offices.map((office) => (
                         <div key={office.id} className="flex items-start gap-4">
                           <div className="bg-blue-50 p-3 rounded-full mt-1">
                             <MapPin className="h-6 w-6 text-primary" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-lg font-semibold text-gray-900 scroll-m-20 tracking-tight">
+                            <h3 className="sm:text-lg text-base font-semibold text-gray-900 scroll-m-20 tracking-tight">
                               {office.name}
                             </h3>
-                            <address className="not-italic text-gray-600 mt-1">
+                            <address className="not-italic text-gray-600 mt-1 text-base">
                               {office.address}
                             </address>
                             <div className="mt-3 flex gap-2">
@@ -601,7 +633,7 @@ export default function ContactPage({
           initial="hidden"
           animate={methodologyInView ? "visible" : "hidden"}
           variants={staggerContainer}
-          className="py-16 md:py-24 bg-gray-50"
+          className="py-16 md:py-24 bg-gray-50 hidden"
         >
           <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
             <div className="text-center mb-12">
@@ -658,7 +690,7 @@ export default function ContactPage({
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="h-[600px] w-full relative bg-gray-100"
+          className="h-full w-full relative bg-gray-100 my-7"
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.496699450262!2d90.37131749999999!3d23.800930400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0d236171dd9%3A0xddc1ece1a335e89f!2s1286%20Begum%20Rokeya%20Avenue%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1749710615281!5m2!1sen!2sbd"

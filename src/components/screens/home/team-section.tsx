@@ -12,14 +12,14 @@ interface TeamSectionProps {
 
 const TeamSection: React.FC<TeamSectionProps> = ({ data }) => {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="sm:py-9 py-7 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="Our Research Experts"
           description="Meet the brilliant minds driving innovation and discovery"
         />
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-8 gap-6">
           {data.map((member, index) => (
             <motion.div
               key={member.id}
