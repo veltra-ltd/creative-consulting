@@ -17,13 +17,13 @@ const SolutionsAllPage = async ({
     "screen/solutions/solutions"
   );
   return (
-    <section className="py-20 px-4 container solutions-section">
+    <section className="sm:py-7 py-4 px-4 container solutions-section">
       <SectionHeading
         title={solutionsData.title}
         description={solutionsData.description}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-5">
         {solutionsData.solutions.map((solution, index) => (
           <SolutionCard key={index} {...solution} />
         ))}

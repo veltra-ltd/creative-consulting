@@ -19,7 +19,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primaryLink:
-          "bg-[#1c1c1d] text-white border border-[#1c1c1d] hover:bg-transparent hover:border-primary hover:text-primary rounded-[4px] px-5 py-2.5 w-full sm:w-[197px] h-[54px]",
+          "bg-[#1c1c1d] text-white border border-[#1c1c1d] hover:bg-transparent hover:border-primary hover:text-primary rounded-[4px] px-5 py-2.5 w-fit ",
         secondaryLink:
           "bg-transparent hover:text-white border hover:bg-primary hover:border-primary px-4 py-2.5 lg:px-3.5 lg:py-2 xl:px-6 xl:py-3.5 shadow-sm rounded-full text-primary/90 border-primary/90",
         primary: "bg-primary text-white hover:bg-primary",

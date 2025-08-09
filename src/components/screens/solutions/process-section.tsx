@@ -146,13 +146,13 @@ import { cn } from "@/lib/utils/cn";
 
 export default function ProcessSection({ data }: { data: ProcessSectionData }) {
   return (
-    <section className="py-20 px-4 max-w-7xl mx-auto">
+    <section className="sm:py-9 sm:pb-0 pb-8 px-4 max-w-7xl mx-auto">
       <SectionHeading title={data.title} description={data.description} />
 
-      <div className="relative mt-16">
+      <div className="relative sm:my-9">
         <div className="hidden md:block absolute left-1/2 h-full w-1 bg-gradient-to-b from-gradiant-one via-gradiant-two to-gradaint-three -ml-0.5"></div>
 
-        <div className="space-y-24 md:space-y-32">
+        <div className="sm:space-y-24 space-y-8">
           {data.steps.map((step, index) => (
             <ProcessStep key={step.step} {...step} index={index} />
           ))}
@@ -225,7 +225,7 @@ function ProcessStep({
           ref={ref}
           whileHover={{ scale: 1.02 }}
           className={cn(
-            "bg-white p-6 rounded-xl shadow-lg cursor-pointer relative overflow-hidden",
+            "bg-white sm:p-6 p-4 sm:h-[8rem] rounded-xl shadow-[0_0px_14px_-5px_rgba(0,0,0,0.25)] cursor-pointer relative overflow-hidden",
             index % 2 === 0 ? "ml-auto" : "mr-auto"
           )}
           onMouseEnter={() => setIsHovered(true)}
@@ -251,12 +251,12 @@ function ProcessStep({
               index % 2 === 0 ? "text-left" : "text-right"
             )}
           >
-            <h3 className="text-xl font-bold text-gray-800 mb-2 group">
-              <span className="inline-block group-hover:text-gradiant-one transition-colors duration-300">
+            <h3 className="sm:text-lg text-base font-bold text-gray-800 mb-2 group">
+              <span className="inline-block  transition-colors duration-300">
                 {title}
               </span>
             </h3>
-            <p className="text-gray-600">{description}</p>
+            <p className="text-gray-600 sm:text-base text-sm">{description}</p>
           </div>
 
           {/* Floating details tooltip */}
@@ -287,7 +287,7 @@ function ProcessStep({
             }}
           >
             <div className="space-y-2">
-              <h4 className="text-sm font-bold text-gradiant-one">
+              <h4 className="text-sm font-bold text-black">
                 {dittails.heading}
               </h4>
               <p className="text-xs text-gray-600">{dittails.description}</p>

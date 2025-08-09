@@ -29,7 +29,7 @@ export default function SectionHeading({
         {title}
       </h2>
 
-      <p className="sm:text-xl text-[16px] text-gray-600 sm:max-w-5xl max-w-fit mx-auto">
+      <p className="sm:text-xl text-[16px] text-gray-600 sm:max-w-5xl max-w-fit mx-auto capitalize">
         {description}
       </p>
     </motion.div>
