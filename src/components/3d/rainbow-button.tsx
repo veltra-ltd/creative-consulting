@@ -4,12 +4,14 @@ interface RainbowButtonProps {
   width?: number;
   timing?: number;
   children?: React.ReactNode;
+  className?: string;
 }
 
 const RainbowButton: React.FC<RainbowButtonProps> = ({
   width = 150,
   timing = 2,
-  children = "Join now",
+  children = "Send Message",
+  className = "",
 }) => {
   const buttonStyle: CSSProperties = {
     "--width": `${width}px`,
@@ -66,6 +68,7 @@ const RainbowButton: React.FC<RainbowButtonProps> = ({
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        className={className}
       >
         {children}
       </button>

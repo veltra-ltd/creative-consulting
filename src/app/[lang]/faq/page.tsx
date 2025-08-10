@@ -15,10 +15,7 @@ const MarketResearchFAQPage = async ({
 }) => {
   const { lang } = await params;
 
-  const pageData: MarketResearchFAQData = await getLangData(
-    lang,
-    "screen/faq"
-  );
+  const pageData: MarketResearchFAQData = await getLangData(lang, "screen/faq");
 
   return (
     <motion.div
@@ -28,9 +25,9 @@ const MarketResearchFAQPage = async ({
       className="bg-white"
     >
       <HeroBanner data={pageData.hero} />
-      
-      <FAQSection faqs={pageData.faqs} />
-      
+
+      <FAQSection sections={pageData.sections} />
+
       {pageData.cta && <CTA data={pageData.cta} />}
     </motion.div>
   );

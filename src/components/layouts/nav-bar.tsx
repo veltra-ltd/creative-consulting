@@ -343,23 +343,23 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full bg-white/80 backdrop-blur-2xl border-b border-gray-100 transition-all duration-300",
-        isScrolled ? "shadow-sm py-2" : "py-3",
+        "sticky top-0 z-50 w-full bg-white transition-all duration-300",
+        isScrolled ? "shadow-sm py-2" : "sm:py-3 py-2",
         className
       )}
     >
       <div className="container mx-auto px-4">
         {renderDesktopMenu()}
 
-        <div className="lg:hidden flex items-center justify-between py-2">
-          <div className="flex-shrink-0">
+        <div className="lg:hidden flex items-center justify-between py-0">
+          <div className="flex items-center">
             <Link href="/" className="inline-block">
               <Image
                 src="/logo-white.png"
                 alt="Creative Consulting"
                 width={160}
                 height={60}
-                className="w-auto lg:h-8 xl:h-10 object-contain transition-opacity hover:opacity-90"
+                className="h-fit object-contain transition-opacity hover:opacity-90 w-38"
               />
             </Link>
           </div>
@@ -368,7 +368,9 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
             {/* <Button href="/contact" variant="secondaryLink">
               {data.btnText}
             </Button> */}
-            <SpaceButton href="/contact">{data.btnText}</SpaceButton>
+            <SpaceButton className="!hidden !lg:block" href="/contact">
+              {data.btnText}
+            </SpaceButton>
             <button
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none"

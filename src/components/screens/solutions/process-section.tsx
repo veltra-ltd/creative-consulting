@@ -174,12 +174,14 @@ function ProcessStep({
   title: string;
   description: string;
   icon: string;
-  dittails?: {
-    heading: string;
-    description: string;
-    image: string;
-    content: string[];
-  };
+  dittails?: [
+    {
+      heading: string;
+      description: string;
+      image: string;
+      content: string[];
+    }
+  ];
   index: number;
 }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -263,7 +265,7 @@ function ProcessStep({
         </motion.div>
       </div>
       <AnimatePresence>
-        {isHovered && dittails && (
+        {isHovered && dittails?.length && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{
@@ -287,24 +289,42 @@ function ProcessStep({
             }}
           >
             <div className="space-y-2">
-              <h4 className="text-sm font-bold text-black">
-                {dittails.heading}
-              </h4>
-              <p className="text-xs text-gray-600">{dittails.description}</p>
+              {dittails?.map(
+                (
+                  dittail: {
+                    heading: string;
+                    description: string;
+                    image: string;
+                    content: string[];
+                  },
+                  i
+                ) => (
+                  <div className="space-y-1" key={i}>
+                    <h4 className="text-sm font-bold text-black">
+                      {dittail.heading}
+                    </h4>
+                    <p className="text-xs text-gray-600">
+                      {dittail.description}
+                    </p>
 
-              {dittails.content && (
-                <ul className="space-y-1 mt-2">
-                  {dittails.content
-                    .slice(0, 3)
-                    .map((item: string, i: number) => (
-                      <li key={i} className="flex items-start">
-                        <span className="text-gradiant-two mr-1 text-xs">
-                          •
-                        </span>
-                        <span className="text-xs text-gray-700">{item}</span>
-                      </li>
-                    ))}
-                </ul>
+                    {dittail.content && (
+                      <ul className="space-y-1 mt-2">
+                        {dittail.content
+                          .slice(0, 3)
+                          .map((item: string, i: number) => (
+                            <li key={i} className="flex items-start">
+                              <span className="text-gradiant-two mr-1 text-xs">
+                                •
+                              </span>
+                              <span className="text-xs text-gray-700">
+                                {item}
+                              </span>
+                            </li>
+                          ))}
+                      </ul>
+                    )}
+                  </div>
+                )
               )}
             </div>
           </motion.div>

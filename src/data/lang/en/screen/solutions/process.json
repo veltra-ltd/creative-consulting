@@ -6,33 +6,48 @@
       "step": "1",
       "title": "Its for End Client for full research services process:",
       "description": "At Creative Consulting Services Limited, we follow a structured, efficient, and quality-driven process to deliver actionable insights. This step-by-step approach ensures transparency, accuracy, and value for every client project.",
-      "dittails": {
-        "heading": "Step 1: Understanding Client Objectives",
-        "description": "Laying the Foundation for Relevant Research - We begin every project by understanding your unique needs and business challenges:",
-        "image": "use link from pixels.com",
-        "content": [
-          "Conduct detailed discussions to define research goals",
-          "Identify your target audience, market scope, and information gaps",
-          "Suggest the right research methodology (Quantitative, Qualitative, or Hybrid)",
-          "This foundational step ensures the research is aligned with your decision-making needs."
-        ]
-      }
+      "dittails": [
+        {
+          "heading": "Step 1: Understanding Client Objectives",
+          "description": "Laying the Foundation for Relevant Research - We begin every project by understanding your unique needs and business challenges:",
+          "image": "use link from pixels.com",
+          "content": [
+            "Conduct detailed discussions to define research goals",
+            "Identify your target audience, market scope, and information gaps",
+            "Suggest the right research methodology (Quantitative, Qualitative, or Hybrid)",
+            "This foundational step ensures the research is aligned with your decision-making needs."
+          ]
+        }
+      ]
     },
     {
       "step": "2",
       "title": "When we work with research company:",
       "description": "Our Research Execution Support Process for Partner Agencies",
-      "dittails": {
-        "heading": "Step 1: Requirement Understanding & Alignment",
-        "description": "Clarity First, Execution Next - We begin by fully understanding your project scope and expectations.",
-        "image": "use link from pixels.com",
-        "content": [
-          "Review the brief, sample structure, target groups, and methodology",
-          "Discuss platforms, deliverables, timeline, and any localization needs",
-          "Align on roles: whether you handle scripting & analysis, and we handle field only",
-          " We ensure we’re completely aligned with your agency’s objectives and timelines."
-        ]
-      }
+      "dittails": [
+        {
+          "heading": "Step 1: Requirement Understanding & Alignment",
+          "description": "Clarity First, Execution Next - We begin by fully understanding your project scope and expectations.",
+          "image": "use link from pixels.com",
+          "content": [
+            "Review the brief, sample structure, target groups, and methodology",
+            "Discuss platforms, deliverables, timeline, and any localization needs",
+            "Align on roles: whether you handle scripting & analysis, and we handle field only",
+            " We ensure we’re completely aligned with your agency’s objectives and timelines."
+          ]
+        },
+        {
+          "heading": "Step 1: Requirement Understanding & Alignment",
+          "description": "Clarity First, Execution Next - We begin by fully understanding your project scope and expectations.",
+          "image": "use link from pixels.com",
+          "content": [
+            "Review the brief, sample structure, target groups, and methodology",
+            "Discuss platforms, deliverables, timeline, and any localization needs",
+            "Align on roles: whether you handle scripting & analysis, and we handle field only",
+            " We ensure we’re completely aligned with your agency’s objectives and timelines."
+          ]
+        }
+      ]
     }
   ]
 }
