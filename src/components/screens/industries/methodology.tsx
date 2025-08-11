@@ -197,7 +197,7 @@ interface MethodologySectionProps {
 export default function MethodologySection({ data }: MethodologySectionProps) {
   return (
     <motion.section
-      className="py-20 bg-gray-100"
+      className="sm:py-8 py-5 bg-gray-100"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}
@@ -214,7 +214,7 @@ export default function MethodologySection({ data }: MethodologySectionProps) {
           </p>
         </motion.div> */}
 
-        <motion.div className="grid md:grid-cols-3 gap-8">
+        <motion.div className="grid md:grid-cols-3 sm:gap-8 gap-5">
           {data.methods.map((method, index) => (
             <motion.div
               key={index}
@@ -223,18 +223,29 @@ export default function MethodologySection({ data }: MethodologySectionProps) {
                 y: -5,
                 transition: { duration: 0.3 },
               }}
-              className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+              className="bg-white sm:p-6 p-2 rounded-xl shadow-md hover:shadow-lg transition-shadow"
             >
               <motion.div
-                className="text-blue-600 text-4xl mb-4"
-                whileHover={{ scale: 1.1 }}
+                className="text-blue-600 text-4xl sm:mb-2.5 mb-1.5"
+                // whileHover={{ scale: 1.1 }}
               >
                 {method.icon}
               </motion.div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">
+              <h3 className="sm:text-lg text-base font-bold text-gray-800 sm:mb-1.5 mb-1">
                 {method.title}
               </h3>
-              <p className="text-gray-600">{method.description}</p>
+              <p className="text-black sm:text-base text-sm">
+                {method.description}
+              </p>
+              {method.list && (
+                <ul className="list-disc  mt-3 text-gray-500 flex flex-col gap-2 ml-4">
+                  {method.list.map((item, idx) => (
+                    <li className="sm:text-base text-sm" key={idx}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </motion.div>
           ))}
         </motion.div>

@@ -328,6 +328,7 @@
 import SectionHeading from "@/components/ui/section-heading";
 import { IndustryData } from "@/types/lang";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 interface IndustriesGridProps {
   data: {
@@ -363,7 +364,7 @@ const itemVariants = {
 export default function IndustriesGrid({ data }: IndustriesGridProps) {
   return (
     <motion.section
-      className="py-20 px-4 max-w-7xl mx-auto"
+      className="sm:py-10 py-7 px-4 max-w-7xl mx-auto"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
@@ -377,8 +378,8 @@ export default function IndustriesGrid({ data }: IndustriesGridProps) {
       </motion.div> */}
       <SectionHeading title={data.title} description={data.subtitle} />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {data.industries.map((industry) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-5">
+        {(data.industries ?? []).slice(0, 9).map((industry) => (
           <motion.div
             key={industry.id}
             variants={itemVariants}
@@ -403,21 +404,28 @@ export default function IndustriesGrid({ data }: IndustriesGridProps) {
                 {industry.icon}
               </motion.span>
             </div>
-            <div className="p-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+            <div className="sm:p-4 p-2.5">
+              <h3 className="sm:text-xl text-base font-bold text-gray-800 mb-2">
                 {industry.name}
               </h3>
-              <p className="text-gray-600 mb-4">{industry.description}</p>
-              <motion.button
+              <p className="sm:text-base text-sm text-gray-600 mb-4">
+                {industry.description}
+              </p>
+              {/* <motion.button
                 className="text-primary font-medium"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 Learn more →
-              </motion.button>
+              </motion.button> */}
             </div>
           </motion.div>
         ))}
+      </div>
+      <div className="flex justify-center mx-auto sm:pt-10 pt-7 sm:pb-3.5 pb-9">
+        <Button href="/" variant="primaryLink" className="sm:px-20 px-9">
+          Show More Industries
+        </Button>
       </div>
     </motion.section>
   );

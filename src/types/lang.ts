@@ -622,6 +622,7 @@ export interface MethodologyData {
   icon: string;
   title: string;
   description: string;
+  list?: string[]; // Optional list of items
 }
 
 export interface IndustriesPageData {

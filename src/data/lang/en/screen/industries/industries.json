@@ -37,7 +37,7 @@
     {
       "id": 5,
       "name": "Food & Beverages",
-      "description": "Consumer trends and product innovation",
+      "description": "Market trends and consumer behavior in soft drinks, alcohol, and more.",
       "icon": "🍽️",
       "color": "bg-red-100 text-red-600",
       "image": "https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg"
@@ -45,7 +45,415 @@
     {
       "id": 6,
       "name": "Automotive",
-      "description": "From traditional vehicles to cutting-edge technologies",
+      "description": "Consumer preferences and product testing in vehicles and motorcycles.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Property and Real Estate",
+      "description": "Buyer preferences and market trends in property.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 8,
+      "name": "Electronics",
+      "description": "Research into consumer tech products and usage.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 9,
+      "name": "Telecommunication",
+      "description": "Consumer research in mobile, internet, and telecom services.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 10,
+      "name": "Travel Services",
+      "description": "Our travel services research provides comprehensive insights into consumer behavior, digital trends, and market dynamics in an industry defined by experience and innovation.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 11,
+      "name": "Public Transportation",
+      "description": "Our research in public transportation covers user experiences, infrastructure trends, and policy impacts to help stakeholders optimize transit services in urban environments.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 12,
+      "name": "Financial Services",
+      "description": "Banking, insurance, and investment market insights.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 13,
+      "name": "Healthcare & Contraception",
+      "description": "Our expertise in healthcare and contraception addresses critical challenges and opportunities in these sensitive yet vital markets.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 14,
+      "name": "Home appliances & furnishing",
+      "description": "We offer insights into the evolving world of home appliances and furnishings, focusing on consumer preferences, design innovations, and technological integrations.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 15,
+      "name": "Material Construction",
+      "description": "We provide insights into the material construction sector, focusing on innovations, supply chain dynamics, and market trends in building materials and construction technology.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 16,
+      "name": "E-Commerce",
+      "description": " In the fast-evolving e-commerce landscape, our research provides insights that empower online retailers and marketplaces to adapt to consumer trends and digital innovations.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 17,
+      "name": "Education",
+      "description": "Insights into learning institutions, students, and educational products.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 18,
+      "name": "Entertainment & Media",
+      "description": "Studies on TV, film, music, and live entertainment consumption.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 19,
+      "name": "Environment & Ecology",
+      "description": "Research focused on environmental issues and green products.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 20,
+      "name": "Exercise & Fitness",
+      "description": "Trends in health, wellness, and fitness behaviors.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 21,
+      "name": "Fashion Industry",
+      "description": "Market trends and consumer preferences in fashion.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 22,
+      "name": "Fragrance Industry",
+      "description": "Perfume and scent market consumer research.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 23,
+      "name": "Gay & Lesbian Market",
+      "description": "Studies focused on LGBTQ+ consumer behaviors and preferences.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 24,
+      "name": "IT / Software / Hardware",
+      "description": "Tech industry market research and user experience.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 25,
+      "name": "Legal / Lawyers",
+      "description": "Market and client satisfaction research in legal services.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 26,
+      "name": "Logistics / Mail / Transportation",
+      "description": "Research on supply chain, delivery, and transportation services.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 27,
+      "name": "Media",
+      "description": "Research on TV, radio, print, and online media audiences.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 28,
+      "name": "New Products",
+      "description": "Testing and market introduction studies for innovations.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 29,
+      "name": "Non-Profit / Fund Raising",
+      "description": "Donor behavior and fundraising campaign research.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 30,
+      "name": "Pet Owners / Foods / Supplies",
+      "description": "Market insights in pet care products and services.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 31,
+      "name": "Petrol / Oil / Gas",
+      "description": "Consumer and industrial research in energy fuels.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 32,
+      "name": "Political Polling / Planning",
+      "description": "Voter opinion and election forecasting.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 33,
+      "name": "Public Sector / Government",
+      "description": "Research for public policy and government service improvements.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 34,
+      "name": "Publishing",
+      "description": "Market research for book and magazine publishers.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 35,
+      "name": "Retail / Wholesale",
+      "description": "Consumer insights and sales tracking in retail chains.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 36,
+      "name": "Service Industries",
+      "description": "Research for sectors like banking, insurance, and hospitality.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 37,
+      "name": "Social Development Organisations",
+      "description": "Impact assessment and beneficiary research.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 38,
+      "name": "Technology",
+      "description": "Market insights into new and emerging technologies.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 39,
+      "name": "Telecommunications",
+      "description": "Consumer research in mobile, internet, and telecom services.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 40,
+      "name": "Advertising / Public Relations",
+      "description": "Research supporting advertising, PR campaigns, and communications.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 41,
+      "name": "Agriculture",
+      "description": "Insights into farming practices, agribusiness markets, and rural consumers.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 42,
+      "name": "Airlines",
+      "description": "Customer experience and service quality in air travel.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 43,
+      "name": "Apparel / Clothing",
+      "description": "Trends, preferences, and retail analysis in the fashion industry.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 44,
+      "name": "Association Memberships",
+      "description": "Understanding membership engagement and satisfaction.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 45,
+      "name": "Casinos/Gambling",
+      "description": "Research into gambling behavior and market potential.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 46,
+      "name": "Catering / Hospitality",
+      "description": "Customer satisfaction and service research for food service providers.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 47,
+      "name": "Charity / Non-profit",
+      "description": "Donor insights and campaign effectiveness in the nonprofit sector.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 48,
+      "name": "Chemicals",
+      "description": "Industrial market research related to chemicals and materials.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 49,
+      "name": "Confectionery",
+      "description": "Consumer insights into sweets and snacks markets.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 50,
+      "name": "Consultancy",
+      "description": "Research supporting business strategy and advisory services.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 51,
+      "name": "Consumer Services",
+      "description": "Analysis of services like banking, telecom, and utilities.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 52,
+      "name": "Cosmetics / Hygiene",
+      "description": "Beauty, skincare, and hygiene product consumer research.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 53,
+      "name": "Demographics",
+      "description": "Research focused on various demographic groups like affluent, mothers, youth.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 54,
+      "name": "Detergents",
+      "description": "Market and product insights into cleaning products.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 55,
+      "name": "Direct Marketing",
+      "description": "Effectiveness and targeting in direct sales campaigns.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 56,
+      "name": "Durables / Electrical Goods",
+      "description": "Consumer research on appliances and electronics.",
+      "icon": "🚗",
+      "color": "bg-yellow-100 text-yellow-600",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
+    },
+    {
+      "id": 57,
+      "name": "Energy / Utilities",
+      "description": "Customer satisfaction and market trends in power, water, and energy sectors.",
       "icon": "🚗",
       "color": "bg-yellow-100 text-yellow-600",
       "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
