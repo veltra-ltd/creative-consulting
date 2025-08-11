@@ -280,7 +280,7 @@ function ProcessStep({
               damping: 25,
               stiffness: 300,
             }}
-            className="absolute w-64 bg-white p-4 rounded-lg shadow-xl z-20 pointer-events-none"
+            className="absolute w-full bg-white p-4 rounded-lg shadow-xl z-20 pointer-events-none"
             style={{
               left: 0,
               top: 0,
