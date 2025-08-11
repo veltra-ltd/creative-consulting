@@ -27,7 +27,7 @@ const featureVariants = {
 
 export default function FeaturesSection({ data }: FeaturesSectionProps) {
   return (
-    <section className="sm:pt-6 pt-3 sm:pb-9 pb-3 bg-gradient-to-b from-gray-50 to-white">
+    <section className="sm:pt-6 pt-3 sm:pb-9 pb-6 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center">
           {/* <motion.h2
@@ -56,7 +56,7 @@ export default function FeaturesSection({ data }: FeaturesSectionProps) {
           </motion.p> */}
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 sm:gap-8 gap-5">
           {data.items.map((item, index) => (
             <motion.div
               key={index}

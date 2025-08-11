@@ -102,7 +102,7 @@ export default function ServicesHero({ data }: ServicesHeroProps) {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.7, type: "spring" }}
-          className="flex justify-center gap-4"
+          className="flex sm:flex-row flex-col justify-center sm:gap-4 gap-8 sm:p-0 p-18"
         >
           <button className="bg-white text-indigo-900 font-semibold px-8 py-3 rounded-full hover:bg-primary/30 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
             {data.ctaText}
