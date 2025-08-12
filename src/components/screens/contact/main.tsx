@@ -217,7 +217,7 @@ export default function ContactPage({
       ],
     },
     {
-      name: "interest",
+      name: "market",
       label: "Market",
       type: "select",
       required: true,

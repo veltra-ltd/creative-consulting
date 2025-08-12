@@ -839,7 +839,7 @@ export default function MethodologyHero({ data }: MethodologyHeroProps) {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center px-6 text-center">
+    <section className="relative w-full sm:h-[80vh] h-[75vh] overflow-hidden flex flex-col items-center justify-center px-6 text-center">
       {/* Video Background */}
       <div className="absolute inset-0 -z-20 overflow-hidden">
         <video
@@ -889,7 +889,7 @@ export default function MethodologyHero({ data }: MethodologyHeroProps) {
         transition={{ duration: 1 }}
         className="max-w-5xl mb-8"
       >
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+        <h1 className="sm:text-6xl text-3xl font-bold text-white mb-6">
           {title}
         </h1>
 

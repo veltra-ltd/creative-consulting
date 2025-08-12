@@ -50,7 +50,7 @@ export function SolutionCard({
       viewport={{ once: true }}
       className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl h-full"
     >
-      <div className="sm:h-48 h-48 overflow-hidden">
+      <div className="sm:h-70 h-48 overflow-hidden">
         <img
           src={imageUrl}
           alt={title}

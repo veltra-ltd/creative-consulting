@@ -14,14 +14,15 @@ interface ProcessSectionProps {
       image: string;
       icon: string;
       color: string;
+      list?: string[];
     }[];
   };
 }
 
 export default function ProcessSection({ data }: ProcessSectionProps) {
   return (
-    <section className="py-20 px-4 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
+    <section className="sm:py-10 py-5 px-4 max-w-7xl mx-auto">
+      <div className="text-center sm:mb-10 mb-6">
         <SectionHeading title={data?.title} description={data?.subtitle} />
       </div>
 
@@ -30,7 +31,7 @@ export default function ProcessSection({ data }: ProcessSectionProps) {
         <div className="hidden lg:block absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-gradiant-one via-gradiant-two to-gradaint-three -translate-x-1/2" />
 
         {/* Process steps */}
-        <div className="space-y-16 lg:space-y-32">
+        <div className="sm:space-y-16 space-y-8">
           {data.steps.map((step, index) => (
             <motion.div
               key={step.id}
@@ -38,7 +39,7 @@ export default function ProcessSection({ data }: ProcessSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true, margin: "-100px" }}
-              className={`relative flex flex-col lg:flex-row items-center gap-8 ${
+              className={`relative flex flex-col lg:flex-row items-center sm:gap-8 gap-5 sm:mt-0 mt-12 ${
                 index % 2 === 0 ? "lg:flex-row-reverse" : ""
               }`}
             >
@@ -53,7 +54,7 @@ export default function ProcessSection({ data }: ProcessSectionProps) {
 
               {/* Step content */}
               <div
-                className={`lg:w-1/2 ${
+                className={`sm:lg:w-1/2 w-full ${
                   index % 2 === 0 ? "lg:pr-16" : "lg:pl-16"
                 }`}
               >
@@ -76,13 +77,24 @@ export default function ProcessSection({ data }: ProcessSectionProps) {
               >
                 <motion.div
                   whileHover={{ x: index % 2 === 0 ? -5 : 5 }}
-                  className="bg-white p-8 rounded-xl shadow-lg"
+                  className="bg-white sm:p-4 p-3 rounded-xl shadow-lg"
                 >
-                  <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                  <h3 className="sm:text-xl text-lg font-bold text-gray-800 mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">{step.description}</p>
-                  <button className="text-primary/70 font-medium hover:text-primary transition-colors flex items-center gap-2">
+                  {/* pore lagle use hobe noyto delete */}
+                  {/* <p className="text-gray-600 mb-4 hidden">
+                    {step.description}
+                  </p> */}
+                  {step.list && step.list.length > 0 && (
+                    <ul className="!list-decimal text-black sm:text-base text-sm space-y-1 ml-4">
+                      {step.list.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {/* <button className="text-primary/70 font-medium hover:text-primary transition-colors flex items-center gap-2">
                     Learn more
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +108,7 @@ export default function ProcessSection({ data }: ProcessSectionProps) {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </button>
+                  </button> */}
                 </motion.div>
               </div>
             </motion.div>
