@@ -1,16 +1,18 @@
 "use client";
 
-
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { FAQItem } from "@/types/faq";
 
 interface FAQSectionProps {
-  faqs: FAQItem[];
+  sections: {
+    heading?: string;
+    faqs: FAQItem[];
+  }[];
 }
 
-const FAQSection = ({ faqs }: FAQSectionProps) => {
+const FAQSection = ({ sections }: FAQSectionProps) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -45,52 +47,97 @@ const FAQSection = ({ faqs }: FAQSectionProps) => {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
-      className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50"
+      className="sm:py-7 py-4 px-4 sm:px-6 bg-gray-50"
     >
-      <div className="max-w-4xl mx-auto">
-        <motion.h2
+      <div className="sm:max-w-5xl max-w-full mx-auto">
+        {/* <motion.h2
           variants={itemVariants}
           className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
         >
           Frequently Asked Questions
-        </motion.h2>
-        
-        <motion.div variants={containerVariants} className="space-y-4">
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200"
-            >
-              <button
-                className="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors"
-                onClick={() => toggleFAQ(index)}
-              >
-                <h3 className="text-lg md:text-xl font-semibold text-gray-800">
-                  {faq.question}
-                </h3>
-                {activeIndex === index ? (
-                  <ChevronUp className="h-5 w-5 text-primary" />
-                ) : (
-                  <ChevronDown className="h-5 w-5 text-primary" />
+        </motion.h2> */}
+        <h2 className="text-center sm:text-4xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three sm:mb-2 mb-1.5 animate-glossy-gradient">
+          Frequently Asked Questions
+        </h2>
+
+        <motion.div
+          variants={containerVariants}
+          className="space-y-4 sm:mt-8 mt-3"
+        >
+          {sections.map(
+            (
+              section: {
+                heading?: string;
+                faqs: FAQItem[];
+              },
+              i
+            ) => (
+              <div key={i} className="bg-white rounded-lg shadow-md sm:p-6 p-3">
+                {section.heading && (
+                  <motion.h3
+                    variants={itemVariants}
+                    className="sm:text-xl text-lg  font-bold text-gray-800 sm:mb-4 mb-2"
+                  >
+                    {section?.heading}
+                  </motion.h3>
                 )}
-              </button>
-              
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{
-                  height: activeIndex === index ? "auto" : 0,
-                  opacity: activeIndex === index ? 1 : 0,
-                }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="overflow-hidden"
-              >
-                <div className="px-6 pb-6 pt-2 text-gray-600">
-                  {faq.answer}
-                </div>
-              </motion.div>
-            </motion.div>
-          ))}
+
+                {section.faqs.map(
+                  (
+                    faq: {
+                      question: string;
+                      answer: string;
+                      answerList?: string[];
+                    },
+                    index
+                  ) => (
+                    <motion.div
+                      key={index}
+                      variants={itemVariants}
+                      className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200 sm:mb-4 mb-3 last:mb-0"
+                    >
+                      <button
+                        className="w-full cursor-pointer text-left p-4 flex justify-between items-center hover:bg-gray-50 transition-colors"
+                        onClick={() => toggleFAQ(index)}
+                      >
+                        <h3 className="sm:text-base text-sm font-semibold text-gray-800">
+                          {faq.question}
+                        </h3>
+                        {activeIndex === index ? (
+                          <ChevronUp className="h-5 w-5 text-black" />
+                        ) : (
+                          <ChevronDown className="h-5 w-5 text-black" />
+                        )}
+                      </button>
+
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{
+                          height: activeIndex === index ? "auto" : 0,
+                          opacity: activeIndex === index ? 1 : 0,
+                        }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="sm:text-base text-sm px-4 pb-4 text-gray-600">
+                          {faq.answer}
+                          {faq.answerList && faq.answerList.length > 0 && (
+                            <ul className="list-disc list-inside mt-2 space-y-1">
+                              {faq.answerList.map((item, i) => (
+                                <li key={i} className="text-gray-600">
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      </motion.div>
+                    </motion.div>
+                  )
+                )}
+              </div>
+            )
+          )}
         </motion.div>
       </div>
     </motion.section>

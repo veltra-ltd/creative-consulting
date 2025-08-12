@@ -12,7 +12,7 @@ interface ServicesCTAProps {
 
 export default function ServicesCTA({ data }: ServicesCTAProps) {
   return (
-    <section className="py-20 bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three text-white">
+    <section className="py-20 bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three text-white hidden">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

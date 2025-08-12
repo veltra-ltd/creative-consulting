@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function SolutionsGrid({ data }: { data: SolutionsGridData }) {
   return (
-    <section className="py-20 px-4 container solutions-section">
+    <section className="sm:py-7 px-4 container solutions-section">
       <SectionHeading title={data.title} description={data.description} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -15,9 +15,13 @@ export default function SolutionsGrid({ data }: { data: SolutionsGridData }) {
           <SolutionCard key={index} {...solution} />
         ))}
       </div>
-      <div className="flex justify-center mx-auto py-16">
-        <Button href="/solutions/all" variant="primaryLink">
-          See More
+      <div className="flex justify-center mx-auto sm:pt-10 pt-7 sm:pb-3.5 pb-9">
+        <Button
+          href="/solutions/all"
+          variant="primaryLink"
+          className="sm:px-20 px-9"
+        >
+          Show More Solutions
         </Button>
       </div>
     </section>
@@ -46,18 +50,22 @@ export function SolutionCard({
       viewport={{ once: true }}
       className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl h-full"
     >
-      <div className="h-48 overflow-hidden">
+      <div className="sm:h-70 h-48 overflow-hidden">
         <img
           src={imageUrl}
           alt={title}
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="p-8">
-        <div className="text-primary text-4xl mb-4">{icon}</div>
-        <h3 className="text-2xl font-bold text-gray-800 mb-3">{title}</h3>
-        <p className="text-gray-600 mb-6">{description}</p>
-        <ul className="space-y-2">
+      <div className="py-2 sm:py-3 px-3 sm:px-5">
+        <div className="text-primary text-4xl mb-4 hidden">{icon}</div>
+        <h3 className="sm:text-lg text-base font-bold text-gray-800 sm:mb-1">
+          {title}
+        </h3>
+        <p className="text-gray-600 sm:mb-3 sm:text-base text-sm">
+          {description}
+        </p>
+        <ul className="space-y-1">
           {features.map((feature, index) => (
             <li key={index} className="flex items-start">
               <svg
@@ -73,7 +81,9 @@ export function SolutionCard({
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span className="text-gray-700">{feature}</span>
+              <span className="text-gray-700 sm:text-base text-sm">
+                {feature}
+              </span>
             </li>
           ))}
         </ul>

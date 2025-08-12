@@ -12,7 +12,7 @@ interface MethodologyCTAProps {
 
 export default function MethodologyCTA({ data }: MethodologyCTAProps) {
   return (
-    <section className="relative py-32 overflow-hidden bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three">
+    <section className="relative py-32 overflow-hidden bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three hidden">
       {/* Animated elements */}
       <motion.div
         className="absolute top-0 left-0 w-64 h-64 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20"

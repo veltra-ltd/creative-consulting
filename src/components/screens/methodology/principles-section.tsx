@@ -12,6 +12,7 @@ interface PrinciplesSectionProps {
       title: string;
       description: string;
       icon: string;
+      list?: string[];
     }[];
   };
 }
@@ -35,7 +36,7 @@ export default function PrinciplesSection({ data }: PrinciplesSectionProps) {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
+      className="sm:py-10 py-8 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
     >
       {/* Animated line */}
       <motion.div
@@ -48,11 +49,11 @@ export default function PrinciplesSection({ data }: PrinciplesSectionProps) {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center sm:mb-8 mb-6">
           <SectionHeading title={data?.title} description={data?.subtitle} />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-4">
           {data.principles.map((principle, index) => (
             <motion.div
               key={index}
@@ -61,15 +62,17 @@ export default function PrinciplesSection({ data }: PrinciplesSectionProps) {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white sm:p-8 p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
             >
-              <div className="text-4xl mb-6 bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three bg-clip-text text-transparent">
+              <div className="text-2xl sm:mb-4 mb-3 bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three bg-clip-text text-transparent">
                 {principle.icon}
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              <h3 className="sm:text-xl text-lg font-bold text-gray-800 sm:mb-4 mb-2.5">
                 {principle.title}
               </h3>
-              <p className="text-gray-600">{principle.description}</p>
+              <p className="text-gray-600 sm:text-base text-sm">
+                {principle.description}
+              </p>
             </motion.div>
           ))}
         </div>

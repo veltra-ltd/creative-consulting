@@ -201,16 +201,50 @@ export default function ContactPage({
     },
     {
       name: "interest",
-      label: "Research Interest",
+      label: "Solution area of interest",
       type: "select",
       required: true,
       options: [
-        { value: "consumer", label: "Consumer Insights" },
-        { value: "competitive", label: "Competitive Analysis" },
-        { value: "market", label: "Market Sizing" },
-        { value: "trends", label: "Industry Trends" },
-        { value: "brand", label: "Brand Positioning" },
-        { value: "other", label: "Other Research Need" },
+        { value: "consumer", label: "Market Research" },
+        { value: "competitive", label: "Social Research" },
+        { value: "market", label: "Political Research & Public Opinion Polls" },
+        { value: "trends", label: "Customized Research Solutions " },
+        { value: "brand", label: "Data Analytics & Strategic Consulting " },
+        { value: "other", label: "Survey Scripting & Programming " },
+        { value: "other", label: "Retail & Distributor Audit" },
+        { value: "other", label: "Call Center for Telephonic Survey " },
+        { value: "other", label: "Fieldwork & Data Collection " },
+      ],
+    },
+    {
+      name: "market",
+      label: "Market",
+      type: "select",
+      required: true,
+      options: [
+        { value: "consumer", label: "Bangladesh" },
+        { value: "competitive", label: "India" },
+        { value: "market", label: "Pakistan" },
+        { value: "trends", label: "Nepal" },
+        { value: "brand", label: " Sri Lanka " },
+        { value: "other", label: "Myanmar" },
+        { value: "other", label: "Malaysia" },
+        { value: "other", label: "Indonesia" },
+        { value: "other", label: "Thailand" },
+        { value: "other", label: "Vietnam" },
+        { value: "other", label: "Philippines" },
+        { value: "other", label: "Singapore" },
+        { value: "other", label: "Japan" },
+        { value: "other", label: "South Korea" },
+        { value: "other", label: "China" },
+        { value: "other", label: "Australia" },
+        { value: "other", label: "New Zealand" },
+        { value: "other", label: "Saudi Arabia" },
+        { value: "other", label: "United Arab Emirates (UAE)" },
+        { value: "other", label: "Qatar" },
+        { value: "other", label: "Kuwait" },
+        { value: "other", label: "Oman" },
+        { value: "other", label: "Bahrain" },
       ],
     },
     {
@@ -361,23 +395,23 @@ export default function ContactPage({
               >
                 <m.div
                   variants={fadeInUp}
-                  className="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 md:p-10 lg:p-12 relative overflow-hidden"
+                  className="bg-white rounded-2xl shadow-xl border border-gray-100 py-3 sm:py-6 px-5 sm:px-7 relative overflow-hidden"
                 >
                   <div className="absolute -right-10 -top-10 w-64 h-64 bg-blue-100 rounded-full opacity-10"></div>
                   <div className="absolute -left-10 -bottom-10 w-64 h-64 bg-purple-100 rounded-full opacity-10"></div>
                   <div className="relative z-10">
                     <m.h2
                       variants={fadeIn}
-                      className="sm:mb-5 mb-2 text-gray-900 scroll-m-20 sm:text-2xl text-lg font-semibold tracking-tight transition-colors first:mt-0"
+                      className="sm:mb-5 mb-1 text-center text-gray-900 scroll-m-20 sm:text-2xl text-lg font-semibold tracking-tight transition-colors first:mt-0"
                     >
                       {contactData.form.title ||
                         "Request a Research Consultation"}
                     </m.h2>
 
-                    <m.p variants={fadeIn} className="text-gray-600 mb-6">
+                    {/* <m.p variants={fadeIn} className="text-gray-600 mb-6">
                       Complete this form and our research team will contact you
                       within 24 hours
-                    </m.p>
+                    </m.p> */}
 
                     <form className="space-y-6">
                       {formFields.map((field, index) => (
@@ -437,7 +471,10 @@ export default function ContactPage({
                         </m.div>
                       ))}
 
-                      <m.div variants={fadeInUp} className="pt-2">
+                      <m.div
+                        variants={fadeInUp}
+                        className="sm:pt-5 pt-2 flex justify-center"
+                      >
                         {/* <Button
                           type="submit"
                           size="lg"
@@ -447,7 +484,7 @@ export default function ContactPage({
                           <ChevronRight className="ml-2 h-4 w-4" />
                         </Button> */}
 
-                        <RainbowButton />
+                        <RainbowButton className="sm:!w-[350] sm:!py-3 !py-[8px]" />
                       </m.div>
                     </form>
                   </div>
@@ -575,7 +612,7 @@ export default function ContactPage({
                               /\s+/g,
                               ""
                             )}`}
-                            className="mt-2 inline-block text-lg font-semibold text-primary transition-colors"
+                            className="mt-2 inline-block sm:text-lg text-base font-semibold text-black transition-colors"
                           >
                             {contactData.contactMethods.phone}
                           </a>

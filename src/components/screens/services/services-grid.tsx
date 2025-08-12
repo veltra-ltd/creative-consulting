@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ServiceData } from "@/types/lang";
 import SectionHeading from "@/components/ui/section-heading";
+import { Button } from "@/components/ui/button";
 
 interface ServicesGridProps {
   data: {
@@ -30,8 +31,8 @@ const cardVariants = {
 
 export default function ServicesGrid({ data }: ServicesGridProps) {
   return (
-    <section className="py-20 px-4 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
+    <section className="sm:py-10 py-3 px-4 max-w-7xl mx-auto">
+      <div className="text-center sm:mb-4 mb-0">
         {/* <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,11 +51,15 @@ export default function ServicesGrid({ data }: ServicesGridProps) {
         >
           {data.subtitle}
         </motion.p> */}
-        <SectionHeading title={data?.title} description={data?.subtitle} />
+        <SectionHeading
+          title={data?.title}
+          description={data?.subtitle}
+          className="!mb-5"
+        />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {data.services.map((service, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-5">
+        {(data.services ?? []).slice(0, 9).map((service, index) => (
           <motion.div
             key={service.id}
             initial="offscreen"
@@ -65,13 +70,13 @@ export default function ServicesGrid({ data }: ServicesGridProps) {
             className="group relative overflow-hidden rounded-2xl shadow-xl"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-gradiant-one via-gradiant-two to-gradaint-three opacity-0 group-hover:opacity-90 transition-opacity duration-500 z-10 flex items-center justify-center">
-              <button className="bg-white text-primary font-semibold px-6 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                View Details
-              </button>
+              {/* <button className="bg-white text-primary font-semibold px-6 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                Show More Service
+              </button> */}
             </div>
 
             <div
-              className={`h-64 ${service.color} flex items-center justify-center relative overflow-hidden`}
+              className={`sm:h-64 h-48 ${service.color} flex items-center justify-center relative overflow-hidden`}
               style={{
                 backgroundImage: `url(${service.image})`,
                 backgroundSize: "cover",
@@ -87,11 +92,13 @@ export default function ServicesGrid({ data }: ServicesGridProps) {
               </motion.span>
             </div>
 
-            <div className="bg-white p-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors">
+            <div className="bg-white sm:p-4 p-3.5">
+              <h3 className="sm:text-xl text-base font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors">
                 {service.name}
               </h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
+              <p className="text-gray-600 sm:text-base text-sm">
+                {service.description}
+              </p>
               {/* <motion.button
                 className="text-indigo-600 font-medium flex items-center gap-2"
                 whileHover={{ x: 5 }}
@@ -113,6 +120,11 @@ export default function ServicesGrid({ data }: ServicesGridProps) {
             </div>
           </motion.div>
         ))}
+      </div>
+      <div className="flex justify-center mx-auto sm:pt-10 pt-7 sm:pb-3.5 pb-3">
+        <Button href="/" variant="primaryLink" className="sm:px-20 px-9">
+          Show More Services
+        </Button>
       </div>
     </section>
   );
