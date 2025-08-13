@@ -6,8 +6,8 @@ import {
   FaCar,
   FaMotorcycle,
   FaCheckCircle,
-  FaClipboardList,
-  FaLightbulb,
+  // FaClipboardList,
+  // FaLightbulb,
 } from "react-icons/fa";
 import Image from "next/image";
 import SectionHeading from "@/components/ui/section-heading";
@@ -79,7 +79,7 @@ const ResearchClinicCard: React.FC<{
             icon={<FaCheckCircle className="text-green-500" />}
           />
 
-          <FeatureList
+          {/* <FeatureList
             title={clinic.methodology.title}
             items={clinic.methodology.items}
             icon={<FaClipboardList className="text-blue-500" />}
@@ -89,7 +89,7 @@ const ResearchClinicCard: React.FC<{
             title={clinic.benefits.title}
             items={clinic.benefits.items}
             icon={<FaLightbulb className="text-yellow-500" />}
-          />
+          /> */}
         </div>
       </div>
     </motion.div>
