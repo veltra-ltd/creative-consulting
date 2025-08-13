@@ -34,14 +34,14 @@ const DataCollection: React.FC<{ data: DataCollectionSection }> = ({
   data,
 }) => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="sm:py-8 py-4 bg-gray-50">
       <div className="container px-4 mx-auto max-w-7xl">
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <div className="text-center sm:mb-7 mb-4 ">
           <SectionHeading title={data.heading} description={data.description} />
 
           {/* Methods List */}
-          <div className="mt-8">
+          <div className="sm:mt-0 mt-2">
             <div className="inline-flex flex-wrap justify-center gap-2 max-w-3xl mx-auto">
               {data.methods.map((method, index) => (
                 <motion.span
@@ -60,7 +60,7 @@ const DataCollection: React.FC<{ data: DataCollectionSection }> = ({
         </div>
 
         {/* Cards Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-20">
+        <div className="grid sm:gap-4 gap-2 grid-cols sm:grid-cols-2 sm:mb-4 mb-2">
           {data.cards.map((card, index) => (
             <DataCollectionCard key={card.id} card={card} index={index} />
           ))}
@@ -95,31 +95,34 @@ const DataCollectionCard: React.FC<{
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-        <div className="absolute bottom-4 left-4">
+        <div className="absolute bottom-4 left-4 hidden">
           <div className="w-10 h-10 flex items-center justify-center bg-white rounded-lg text-primary">
             {iconMap[card.icon] || <FaPhone className="w-5 h-5" />}
           </div>
         </div>
       </div>
 
-      <div className="p-6 flex-grow flex flex-col">
-        <h3 className="text-xl font-bold text-gray-800 mb-3">{card.title}</h3>
-        <p className="text-gray-600 mb-4">{card.description}</p>
+      <div className="sm:p-4 p-2.5 flex flex-col">
+        <h3 className="sm:text-lg text-base font-bold text-gray-800 mb-3">
+          {card.title}
+        </h3>
+        <p className="text-gray-600 mb-4 sm:text-base text-sm">
+          {card.description}
+        </p>
 
         <div className="space-y-4 mt-auto">
           {card.content.map((item, i) => (
             <div key={i} className="border-l-2 border-primary pl-3">
-              <h4 className="font-semibold text-gray-800">{item.heading}</h4>
+              <h4 className="sm:text-base text-sm font-bold text-gray-600">
+                {item.heading}
+              </h4>
               {item.description && (
                 <p className="text-gray-600 text-sm mt-1">{item.description}</p>
               )}
               {item.content && (
                 <ul className="mt-2 space-y-2">
                   {item.content.map((subItem, j) => (
-                    <li
-                      key={j}
-                      className="text-sm text-gray-600 flex items-start"
-                    >
+                    <li key={j} className="text-sm text-gray-600 items-start">
                       <span className="inline-block mr-2 mt-1 w-1.5 h-1.5 rounded-full bg-primary" />
                       {subItem.heading}
                       {subItem.content && (
@@ -158,7 +161,7 @@ const ExpertTeamSection: React.FC<{ data: DataCollectionExpertTeam }> = ({
   data,
 }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden hidden">
       <div className="md:flex">
         <div className="md:w-1/3 relative h-64 md:h-auto">
           <Image
