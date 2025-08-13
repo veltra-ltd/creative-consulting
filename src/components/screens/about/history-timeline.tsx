@@ -33,13 +33,13 @@ const HistoryTimeline = ({ data }: { data: HistoryTimelineData }) => {
   };
 
   return (
-    <section ref={ref} className="py-12 bg-white">
+    <section ref={ref} className="sm:py-12 py-6 bg-white">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <motion.h2
           initial="hidden"
           animate={controls}
           variants={itemVariants}
-          className="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three mb-12"
+          className="sm:text-3xl text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three sm:mb-12 mb-6"
         >
           {data.heading}
         </motion.h2>
@@ -55,14 +55,14 @@ const HistoryTimeline = ({ data }: { data: HistoryTimelineData }) => {
           {data.events.map((event, index) => (
             <motion.div
               key={index}
-              className={`mb-8 w-full flex ${
+              className={`sm:mb-0 w-full flex ${
                 index % 2 === 0 ? "justify-start" : "justify-end"
               }`}
               variants={itemVariants}
               custom={index}
             >
               <div
-                className={`w-full md:w-1/2 p-6 ${
+                className={`w-full md:w-1/2 !sm:p-6 sm:py-0 sm:px-0 py-6 px-2 ${
                   index % 2 === 0 ? "md:pr-8" : "md:pl-8"
                 }`}
               >
@@ -71,8 +71,12 @@ const HistoryTimeline = ({ data }: { data: HistoryTimelineData }) => {
                   <div className="text-primary font-bold mb-2">
                     {event.year}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
-                  <p className="text-gray-600">{event.description}</p>
+                  <h3 className="sm:text-xl text-lg font-semibold mb-2">
+                    {event.title}
+                  </h3>
+                  <p className="text-gray-600 sm:text-base text-sm">
+                    {event.description}
+                  </p>
                 </div>
               </div>
             </motion.div>

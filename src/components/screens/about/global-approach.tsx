@@ -26,19 +26,21 @@ const GlobalApproach = ({ data }: { data: GlobalApproachData }) => {
   };
 
   return (
-    <section ref={ref} className="py-12 bg-gray-50">
+    <section ref={ref} className="sm:py-6 py-3.5 bg-gray-50">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="flex flex-col lg:flex-row sm:gap-12 gap-6 items-center">
           <motion.div
             className="lg:w-1/2"
             initial="hidden"
             animate={controls}
             variants={variants}
           >
-            <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three mb-6">
+            <h2 className="sm:text-3xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three sm:mb-6 mb-3.5">
               {data.heading}
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">{data.text}</p>
+            <p className="text-gray-600 sm:text-lg text-base leading-relaxed">
+              {data.text}
+            </p>
           </motion.div>
           <motion.div
             className="lg:w-1/2"
