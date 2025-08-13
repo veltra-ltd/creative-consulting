@@ -47,20 +47,20 @@ const TeamSection: React.FC<TeamSectionProps> = ({ data }) => {
                 >
                   {/* Front of the card */}
                   <motion.div
-                    className="absolute inset-0 backface-hidden bg-white rounded-xl shadow-lg flex flex-col items-center justify-center p-6 text-center border border-gray-100"
+                    className="absolute inset-0 backface-hidden bg-white rounded-xl shadow-lg flex flex-col items-center justify-center p-4 text-center border border-gray-100"
                     variants={{
                       rest: { rotateY: 0 },
                       hover: { rotateY: 180 },
                     }}
                     transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
                   >
-                    <div className="w-28 h-28 mx-auto mb-5 rounded-full overflow-hidden border-4 border-white shadow-lg relative">
+                    <div className="w-28 h-28 mx-auto mb-5 rounded-full overflow-hidden  border-4 border-primary shadow-lg relative">
                       <Image
                         src={member.image}
                         alt={`Portrait of ${member.name}`}
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover"
+                        className="object-cover !w-full !h-full "
                         priority={index < 4} // Only load first 4 images eagerly
                       />
                     </div>
@@ -89,7 +89,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ data }) => {
 
                   {/* Back of the card */}
                   <motion.div
-                    className="absolute inset-0 backface-hidden bg-gradient-to-br from-primary to-primary-dark text-white rounded-xl shadow-lg p-6 flex flex-col items-center justify-center overflow-hidden border border-primary/20"
+                    className="absolute inset-0 backface-hidden bg-gradient-to-br from-primary to-primary-dark text-black rounded-xl shadow-lg p-4 flex flex-col items-center justify-center overflow-hidden border border-primary/20"
                     variants={{
                       rest: { rotateY: 180 },
                       hover: { rotateY: 360 },
@@ -101,8 +101,8 @@ const TeamSection: React.FC<TeamSectionProps> = ({ data }) => {
                         src={member.image}
                         alt=""
                         fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover"
+                        // sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover !w-full !h-full"
                       />
                     </div>
                     <h3 className="text-lg font-bold mb-1 text-center">
@@ -113,7 +113,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ data }) => {
                     </p>
 
                     <motion.p
-                      className="text-sm mb-4 line-clamp-3 text-white/90 text-center"
+                      className="text-sm mb-4 line-clamp-3 text-black text-center"
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2 }}
@@ -122,11 +122,11 @@ const TeamSection: React.FC<TeamSectionProps> = ({ data }) => {
                       {member.bio}
                     </motion.p>
 
-                    <div className="flex flex-wrap justify-center gap-2 mb-4">
+                    <div className="flex flex-wrap justify-center gap-2 mb-4 hidden">
                       {member.expertise.map((skill, i) => (
                         <motion.span
                           key={i}
-                          className="px-3 py-1 text-xs font-medium bg-white/10 text-white rounded-full backdrop-blur-sm"
+                          className="px-3 py-1 text-xs font-medium bg-white/10 text-black rounded-full backdrop-blur-sm"
                           initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.1 * i }}
@@ -138,7 +138,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ data }) => {
                     </div>
 
                     <motion.div
-                      className="mt-auto pt-3 text-sm font-medium flex items-center text-white/80 hover:text-white transition-colors"
+                      className="mt-auto pt-3 text-sm font-medium flex items-center text-black hover:text-primary transition-colors"
                       whileHover={{ x: 3 }}
                     >
                       View full profile
