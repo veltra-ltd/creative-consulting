@@ -22,13 +22,13 @@ const ResearchClinics: React.FC<{ data: ResearchClinicsSection }> = ({
   data,
 }) => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="sm:py-8 py-4 bg-gray-50">
       <div className="container px-4 mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center sm:mb-8 mb-4">
           <SectionHeading title={data.heading} description={data.subheading} />
         </div>
 
-        <div className="grid gap-12 md:grid-cols-2">
+        <div className="grid sm:gap-12 gap-3.5 sm:grid-cols-2 sm:mb-0 mb-4">
           {data.clinics.map((clinic, index) => (
             <ResearchClinicCard key={clinic.id} clinic={clinic} index={index} />
           ))}
@@ -64,13 +64,13 @@ const ResearchClinicCard: React.FC<{
             {iconMap[clinic.icon] || <FaCar className="w-6 h-6" />}
           </div>
         </div>
-        <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white">
+        <h3 className="absolute bottom-4 left-4 sm:text-xl text-lg font-bold text-white">
           {clinic.title}
         </h3>
       </div>
 
-      <div className="p-6 flex-grow">
-        <p className="text-gray-600 mb-6">{clinic.description}</p>
+      <div className="sm:p-6 p-3.5 flex-grow">
+        <p className="text-gray-600 sm:mb-6 mb-3.5">{clinic.description}</p>
 
         <div className="space-y-6">
           <FeatureList
@@ -107,7 +107,7 @@ const FeatureList: React.FC<{
         <div className="flex-shrink-0">{icon}</div>
         <h4 className="text-lg font-semibold text-gray-800">{title}</h4>
       </div>
-      <ul className="space-y-2 pl-8">
+      <ul className="space-y-2 sm:pl-8 pl-6">
         {items.map((item, i) => (
           <motion.li
             key={i}
