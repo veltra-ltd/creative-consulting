@@ -1,4 +1,3 @@
-// Updated page component
 import About from "@/components/screens/home/about";
 import CaseStudies from "@/components/screens/home/case-studies";
 import ClientsSection from "@/components/screens/home/clients-section";
@@ -23,6 +22,9 @@ import {
   SlideData,
   SupportedLang,
 } from "@/types/lang";
+import { DataCollectionSection, ResearchClinicsSection } from "@/types/home";
+import DataCollection from "@/components/screens/home/data-collection";
+import ResearchClinics from "@/components/screens/home/research-clinics";
 
 const home = async ({
   params,
@@ -68,6 +70,15 @@ const home = async ({
   //   "screen/home/industries"
   // );
 
+  const data: DataCollectionSection = await getLangData(
+    lang,
+    "screen/home/data-collection"
+  );
+  const researchClinics: ResearchClinicsSection = await getLangData(
+    lang,
+    "screen/home/research-clinics"
+  );
+
   return (
     <>
       <HeroSlider
@@ -77,8 +88,10 @@ const home = async ({
       />
 
       <About data={heroData} />
+      <DataCollection data={data} />
 
       <Services data={servicesSection} />
+      <ResearchClinics data={researchClinics} />
 
       {/* <IndustriesSection data={industriesData} /> */}
 

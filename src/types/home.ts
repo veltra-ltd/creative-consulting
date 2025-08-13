@@ -56,3 +56,86 @@ export interface CtaSectionData {
     subtitle: string;
     ctaButton: string;
 }
+
+
+export type ResearchMethodologyData = {
+    title: string;
+    description: string;
+    methods: {
+        name: string;
+        description: string;
+        icon: string;
+    }[];
+    sections: {
+        title: string;
+        content: string;
+        image?: string;
+        subsections?: {
+            title: string;
+            content: string;
+        }[];
+    }[];
+    specialServices: {
+        title: string;
+        services: {
+            name: string;
+            description: string;
+        }[];
+    };
+};
+
+
+// types/lang.ts
+export interface DataCollectionContentItem {
+    heading: string;
+    content?: DataCollectionContentItem[];
+    description?: string;
+}
+
+export interface DataCollectionCard {
+    id: string;
+    title: string;
+    description: string;
+    description2?: string;
+    icon: string;
+    image: string;
+    content: DataCollectionContentItem[];
+}
+
+export interface DataCollectionExpertTeam {
+    heading: string;
+    image: string;
+    description: string[];
+}
+
+export interface DataCollectionSection {
+    heading: string;
+    description: string;
+    methods: string[];
+    cards: DataCollectionCard[];
+    expertTeam: DataCollectionExpertTeam;
+}
+
+// types/research-clinics.ts
+export interface ResearchClinicItem {
+    id: string;
+    title: string;
+    description: string;
+    icon: string;
+    features: string[];
+    methodology: {
+        title: string;
+        items: string[];
+    };
+    benefits: {
+        title: string;
+        items: string[];
+    };
+    image: string;
+}
+
+export interface ResearchClinicsSection {
+    heading: string;
+    subheading: string;
+    clinics: ResearchClinicItem[];
+}

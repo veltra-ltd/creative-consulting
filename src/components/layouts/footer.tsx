@@ -242,7 +242,6 @@ import {
   FaLinkedin,
   FaWhatsapp,
 } from "react-icons/fa";
-import Image from "next/image";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
