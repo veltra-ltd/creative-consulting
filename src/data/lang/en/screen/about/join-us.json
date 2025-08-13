@@ -1,0 +1,47 @@
+{
+  "heading": "🤝 Join With Us",
+  "text": "Looking to collaborate or build your research career? We welcome researchers, moderators, translators, and partners across South Asia & the Middle East.",
+  "opportunities": [
+    "Field Moderation & Interviewing",
+    "Translation & Transcription",
+    "Project Coordination",
+    "Regional Research Partnerships"
+  ],
+  "formFields": [
+    {
+      "label": "Name",
+      "type": "text"
+    },
+    {
+      "label": "Email",
+      "type": "email"
+    },
+    {
+      "label": "Phone",
+      "type": "tel"
+    },
+    {
+      "label": "Location/Country",
+      "type": "text"
+    },
+    {
+      "label": "Field of Interest",
+      "type": "checkbox-group",
+      "options": [
+        "Moderation",
+        "Translation",
+        "Field Coordination",
+        "Partnership"
+      ]
+    },
+    {
+      "label": "Upload CV/Portfolio",
+      "type": "file"
+    },
+    {
+      "label": "Message (optional)",
+      "type": "textarea"
+    }
+  ],
+  "submitText": "Submit Your Profile"
+}

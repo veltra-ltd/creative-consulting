@@ -1,5 +1,3 @@
-"use client";
-
 import HeroBanner from "@/components/layouts/hero-banner";
 import {
   FieldworkExcellenceData,
@@ -14,6 +12,22 @@ import Story from "@/components/screens/about/story";
 import WeAddValue from "@/components/screens/about/we-add-value";
 import FieldworkExcellence from "@/components/screens/about/fieldwork-excellence";
 import WhyChooseUs from "@/components/screens/about/why-choose-us";
+import GlobalApproach from "@/components/screens/about/global-approach";
+import WhyChooseUsInternational from "@/components/screens/about/why-choose-us-international";
+import ReliableInsights from "@/components/screens/about/reliable-insights";
+import HistoryTimeline from "@/components/screens/about/history-timeline";
+import Collaboration from "@/components/screens/about/collaboration";
+import JoinUs from "@/components/screens/about/join-us";
+import TrustedPartner from "@/components/screens/about/trusted-partner";
+import {
+  CollaborationData,
+  GlobalApproachData,
+  HistoryTimelineData,
+  JoinUsData,
+  ReliableInsightsData,
+  TrustedPartnerData,
+  WhyChooseUsInternationalData,
+} from "@/types/about";
 
 const AboutPage = async ({
   params,
@@ -36,6 +50,29 @@ const AboutPage = async ({
     lang,
     "screen/about/why-choose-us"
   );
+  const globalApproach: GlobalApproachData = await getLangData(
+    lang,
+    "screen/about/global-approach"
+  );
+  const whyChooseUsInternational: WhyChooseUsInternationalData =
+    await getLangData(lang, "screen/about/why-choose-us-international");
+  const reliableInsights: ReliableInsightsData = await getLangData(
+    lang,
+    "screen/about/reliable-insights"
+  );
+  const historyTimeline: HistoryTimelineData = await getLangData(
+    lang,
+    "screen/about/history-timeline"
+  );
+  const collaboration: CollaborationData = await getLangData(
+    lang,
+    "screen/about/collaboration"
+  );
+  const joinUs: JoinUsData = await getLangData(lang, "screen/about/join-us");
+  const trustedPartner: TrustedPartnerData = await getLangData(
+    lang,
+    "screen/about/trusted-partner"
+  );
 
   return (
     <div className="bg-white">
@@ -43,6 +80,15 @@ const AboutPage = async ({
 
       {/* Our Story */}
       <Story data={story} />
+
+      {/* Global Approach */}
+      <GlobalApproach data={globalApproach} />
+
+      {/* Why Choose Us (International) */}
+      <WhyChooseUsInternational data={whyChooseUsInternational} />
+
+      {/* Reliable Insights */}
+      <ReliableInsights data={reliableInsights} />
 
       {/* How We Add Value */}
       <WeAddValue data={weAddValue} />
@@ -52,6 +98,18 @@ const AboutPage = async ({
 
       {/* Why Choose Us */}
       <WhyChooseUs data={whyChooseUs} />
+
+      {/* History Timeline */}
+      <HistoryTimeline data={historyTimeline} />
+
+      {/* Collaboration */}
+      <Collaboration data={collaboration} />
+
+      {/* Join Us */}
+      <JoinUs data={joinUs} />
+
+      {/* Trusted Partner */}
+      <TrustedPartner data={trustedPartner} />
     </div>
   );
 };

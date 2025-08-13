@@ -1,3 +1,5 @@
+"use client";
+
 import { List } from "@/components/ui/list";
 import { ListItem } from "@/components/ui/list-item";
 import { FieldworkExcellenceData } from "@/types/lang";
