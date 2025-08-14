@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import Services3DIcons from "./services-3d-icons";
+import Link from "next/link";
 
 interface ServicesHeroProps {
   data: {
@@ -25,7 +26,7 @@ const floatingVariants = {
 
 export default function ServicesHero({ data }: ServicesHeroProps) {
   return (
-    <section className="relative sm:h-[80vh] h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 overflow-hidden">
+    <section className="relative sm:h-[80vh] h-[82vh] flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 overflow-hidden">
       {/* Animated background elements */}
       <motion.div
         className="absolute inset-0 bg-[url('https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg')] bg-cover bg-center opacity-20"
@@ -71,9 +72,9 @@ export default function ServicesHero({ data }: ServicesHeroProps) {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
-          <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-6">
+          {/* <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-6">
             <span className="text-white font-medium">Premium Services</span>
-          </div>
+          </div> */}
           <motion.h1
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 bg-clip-text bg-gradient-to-r from-white to-primary/50"
             variants={floatingVariants}
@@ -104,12 +105,14 @@ export default function ServicesHero({ data }: ServicesHeroProps) {
           transition={{ delay: 0.7, type: "spring" }}
           className="flex sm:flex-row flex-col justify-center sm:gap-4 gap-8 sm:p-0 p-18"
         >
-          <button className="bg-white text-indigo-900 font-semibold px-8 py-3 rounded-full hover:bg-primary/30 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-            {data.ctaText}
-          </button>
-          <button className="bg-transparent text-white font-semibold px-8 py-3 rounded-full border-2 border-white/30 hover:border-white/60 transition-all duration-300 transform hover:scale-105">
+          <Link href="/services/all">
+            <button className="bg-white/10 backdrop-blur-xs cursor-pointer text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              {data.ctaText}
+            </button>
+          </Link>
+          {/* <button className="bg-transparent text-white font-semibold px-8 py-3 rounded-full border-2 border-white/30 hover:border-white/60 transition-all duration-300 transform hover:scale-105">
             Learn More
-          </button>
+          </button> */}
         </motion.div>
       </div>
 
