@@ -81,7 +81,7 @@ const DataPoints = () => {
 
 export const MarketResearchHero = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-indigo-900 overflow-hidden">
+    <section className="relative h-[80vh] flex items-center justify-center bg-gradient-to-br from-blue-900 to-indigo-900 overflow-hidden">
       {/* 3D World Map Background */}
       <div className="absolute inset-0 z-0">
         <Canvas camera={{ position: [0, 0, 8], fov: 50 }}>

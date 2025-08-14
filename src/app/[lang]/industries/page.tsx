@@ -441,6 +441,7 @@
 // import IndustriesHero from "@/components/screens/industries/hero-section";
 // import IndustriesGrid from "@/components/screens/industries/industries-grid";
 // import IndustriesCTA from "@/components/screens/industries/cta-section";
+import IndustriesHero from "@/components/screens/industries/hero";
 import IndustriesGrid from "@/components/screens/industries/industries-grid";
 import MethodologySection from "@/components/screens/industries/methodology";
 import getLangData from "@/lib/translator/getLangData";
@@ -463,7 +464,7 @@ const IndustriesPage = async ({
     subtitle: string;
     methods: MethodologyData[];
   }
-  // const heroData = await getLangData(lang, "screen/industries/hero");
+  const heroData = await getLangData(lang, "screen/industries/hero");
 
   const industriesData: IndustriesGridProps = await getLangData(
     lang,
@@ -477,7 +478,7 @@ const IndustriesPage = async ({
 
   return (
     <>
-      {/* <IndustriesHero data={heroData} /> */}
+      <IndustriesHero data={heroData} />
       <IndustriesGrid data={industriesData} />
       <MethodologySection data={methodologyData} />
       {/* <IndustriesCTA data={ctaData} /> */}
