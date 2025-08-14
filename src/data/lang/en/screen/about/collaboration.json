@@ -1,5 +1,5 @@
 {
-  "heading": "🤝 Collaboration",
+  "heading": "Collaboration",
   "text": "Got a project? Let's talk. We're always open to new research partnerships, collaboration opportunities, and exciting challenges. Whether you're launching a study or exploring a new market—our team is ready to support you.",
   "contactMethods": [
     {
@@ -12,7 +12,7 @@
     }
   ],
   "cta": {
-    "text": "Send Us an Email",
+    "text": "Send Us An Email",
     "link": "mailto:info@ccslbd.com"
   }
 }

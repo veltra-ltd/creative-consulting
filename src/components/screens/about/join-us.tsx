@@ -4,6 +4,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { List } from "@/components/ui/list";
 import { JoinUsData } from "@/types/about";
+// import RainbowButton from "@/components/3d/rainbow-button";
 
 const JoinUs = ({ data }: { data: JoinUsData }) => {
   const ref = useRef(null);
@@ -26,19 +27,21 @@ const JoinUs = ({ data }: { data: JoinUsData }) => {
   };
 
   return (
-    <section ref={ref} className="py-12 bg-white">
+    <section ref={ref} className="sm:py-12 py-7 bg-white">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial="hidden"
             animate={controls}
             variants={variants}
-            className="text-center mb-8"
+            className="text-center sm:mb-8 mb-5"
           >
-            <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three mb-4">
+            <h2 className="sm:text-3xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three mb-4">
               {data.heading}
             </h2>
-            <p className="text-gray-600 mb-6">{data.text}</p>
+            <p className="text-gray-600 mb-6 sm:text-base text-sm">
+              {data.text}
+            </p>
           </motion.div>
 
           <motion.div
@@ -46,15 +49,15 @@ const JoinUs = ({ data }: { data: JoinUsData }) => {
             animate={controls}
             variants={variants}
             transition={{ delay: 0.2 }}
-            className="mb-8"
+            className="sm:mb-8 mb-5"
           >
-            <h3 className="text-xl font-semibold mb-4">
+            <h3 className="sm:text-xl text-base text-center font-semibold mb-4">
               Opportunities Include:
             </h3>
-            <List className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <List className="grid grid-cols-1 md:grid-cols-2 sm:gap-4 gap-1 mb-6 sm:text-base text-sm">
               {data.opportunities.map((opp, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                <li key={index} className="flex justify-center">
+                  <span className="text-primary mr-2 sm:block hidden">•</span>
                   <span>{opp}</span>
                 </li>
               ))}
@@ -66,7 +69,7 @@ const JoinUs = ({ data }: { data: JoinUsData }) => {
             animate={controls}
             variants={variants}
             transition={{ delay: 0.4 }}
-            className="space-y-4"
+            className="space-y-4 sm:p-8 p-4 bg-gray-50 rounded-lg shadow-xl"
           >
             {data.formFields.map((field, index) => (
               <div key={index} className="space-y-2">
@@ -108,10 +111,11 @@ const JoinUs = ({ data }: { data: JoinUsData }) => {
             ))}
             <button
               type="submit"
-              className="bg-primary text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+              className="bg-primary text-white sm:px-32 px-12 sm:py-3 py-2.5 flex justify-self-center rounded hover:bg-blue-700 transition"
             >
               {data.submitText}
             </button>
+            {/* <RainbowButton className="sm:!w-[350] sm:!py-3 !py-[8px]" /> */}
           </motion.form>
         </div>
       </div>

@@ -35,7 +35,7 @@ const TrustedPartner = ({ data }: { data: TrustedPartnerData }) => {
   };
 
   return (
-    <section ref={ref} className="py-12 bg-gray-50">
+    <section ref={ref} className="py-12 bg-gray-50 hidden">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div

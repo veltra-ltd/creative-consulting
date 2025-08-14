@@ -61,20 +61,20 @@ const WhyChooseUsInternational = ({
   };
 
   return (
-    <section ref={ref} className="py-12 bg-white">
+    <section ref={ref} className="sm:py-12 py-6 bg-white">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <motion.div
           initial="hidden"
           animate={controls}
           variants={containerVariants}
-          className="text-center mb-12"
+          className="text-center sm:mb-12 mb-5"
         >
-          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three mb-6">
+          <h2 className="sm:text-3xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three mb-6">
             {data.heading}
           </h2>
         </motion.div>
 
-        <List className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <List className="grid grid-cols-1 md:grid-cols-2 sm:gap-8 gap-4">
           {data.features.map((feature, index) => (
             <motion.div
               key={index}
@@ -83,7 +83,7 @@ const WhyChooseUsInternational = ({
               variants={itemVariants}
               custom={index}
             >
-              <ListItem className="bg-gray-50 p-6 rounded-lg">
+              <ListItem className="bg-gray-50 p-6 rounded-lg sm:h-28 h-fit">
                 <div className="flex items-start">
                   <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-50 mr-4">
                     {iconMap[feature.icon] || (
@@ -91,10 +91,12 @@ const WhyChooseUsInternational = ({
                     )}
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-2">
+                    <h3 className="sm:text-lg text-base font-semibold mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600">{feature.text}</p>
+                    <p className="text-gray-600 sm:text-base text-sm">
+                      {feature.text}
+                    </p>
                   </div>
                 </div>
               </ListItem>

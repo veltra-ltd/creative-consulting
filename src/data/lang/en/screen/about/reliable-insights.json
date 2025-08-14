@@ -1,12 +1,11 @@
 {
-  "heading": "🔍 Reliable Insights",
+  "heading": "Reliable Insights",
   "text": "We deliver high-quality recruitment and profiling daily—ensuring every participant is vetted, relevant, and research-ready. Through a comprehensive screening process, we engage precision-targeted respondents to generate authentic, actionable insights that clients can trust.",
   "services": [
     {
       "title": "Simplified Research",
       "items": [
-        "From recruitment to reporting, our end-to-end fieldwork and research solutions make your process seamless.",
-        "We focus on delivering exactly the insights you need—ensuring a research experience that's efficient, accurate, and second to none."
+        "From recruitment to reporting, our end-to-end fieldwork and research solutions make your process seamless. We focus on delivering exactly the insights you need—ensuring a research experience that’s efficient, accurate, and second to none."
       ]
     },
     {
@@ -20,5 +19,5 @@
       ]
     }
   ],
-  "image": "/images/reliable-insights.jpg"
+  "image": "/about/ReliableInsights.jpg"
 }

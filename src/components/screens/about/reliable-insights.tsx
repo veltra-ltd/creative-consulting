@@ -27,10 +27,10 @@ const ReliableInsights = ({ data }: { data: ReliableInsightsData }) => {
   };
 
   return (
-    <section ref={ref} className="py-12 bg-gray-50">
+    <section ref={ref} className="sm:py-6 py-3 bg-gray-50">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          <motion.div
+        <div className="flex flex-col lg:flex-row sm:gap-12 gap-6 items-center">
+          {/* <motion.div
             className="lg:w-1/2"
             initial="hidden"
             animate={controls}
@@ -54,9 +54,9 @@ const ReliableInsights = ({ data }: { data: ReliableInsightsData }) => {
                 </List>
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
           <motion.div
-            className="lg:w-1/2"
+            className="sm:w-1/2 w-full"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={controls}
             variants={{
@@ -74,6 +74,37 @@ const ReliableInsights = ({ data }: { data: ReliableInsightsData }) => {
               height={400}
               className="rounded-xl shadow-lg w-full object-cover"
             />
+          </motion.div>
+          <motion.div
+            className="sm:w-1/2 w-full"
+            initial="hidden"
+            animate={controls}
+            variants={variants}
+          >
+            <h2 className="sm:text-3xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradiant-one via-gradiant-two to-gradaint-three sm:mb-6 mb-2">
+              {data.heading}
+            </h2>
+            <p className="text-gray-600 sm:text-lg text-base sm:mb-4 mb-2.5">
+              {data.text}
+            </p>
+
+            {data.services.map((service, index) => (
+              <div key={index} className="sm:mb-3 mb-2">
+                <h3 className="sm:text-xl text-lg font-semibold sm:mb-3 mb-1.5">
+                  {service.title}
+                </h3>
+                <List className="space-y-2">
+                  {service.items.map((item, i) => (
+                    <li key={i} className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span className="text-gray-600 sm:text-base text-sm">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </List>
+              </div>
+            ))}
           </motion.div>
         </div>
       </div>
