@@ -30,10 +30,12 @@ const FooterPopup: FC<FooterPopupProps> = ({ isOpen, onClose, content }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
       ></div>
+      {/* popup */}
 
       <div className="relative sm:block flex flex-col justify-center bg-white sm:max-w-[40rem] max-w-full sm:h-[32rem] h-screen w-full sm:p-12 p-6 sm:rounded-2xl rounded-0 shadow-lg z-10">
         <button
