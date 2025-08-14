@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { IndustriesHeroData } from "@/types/lang";
 import IndustryIcons3D from "@/components/ui/industry-icons-3d";
+import Link from "next/link";
 
 export default function IndustriesHero({ data }: { data: IndustriesHeroData }) {
   return (
-    <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-gradiant-one via-gradiant-two to-gradaint-three overflow-hidden">
+    <section className="relative sm:h-[65vh] h-[50vh] flex items-center justify-center bg-gradient-to-br from-gradiant-one via-gradiant-two to-gradaint-three overflow-hidden">
       <motion.div
         className="absolute inset-0 z-0"
         initial={{ opacity: 0 }}
@@ -70,9 +71,11 @@ export default function IndustriesHero({ data }: { data: IndustriesHeroData }) {
             damping: 10,
           }}
         >
-          <button className="bg-white text-blue-900 font-semibold px-8 py-3 rounded-full hover:bg-primary/30 transition-all duration-300 transform hover:scale-105 shadow-lg">
-            {data.ctaText}
-          </button>
+          <Link href="/industries/all">
+            <button className="bg-white text-blue-900 font-semibold px-8 py-3 rounded-full cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-lg">
+              {data.ctaText}
+            </button>
+          </Link>
         </motion.div>
       </div>
     </section>
