@@ -228,15 +228,12 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
             exit={{ opacity: 0, x: "-100%" }}
             transition={{ duration: 0.3 }}
             className="lg:hidden fixed h-[80vh] inset-0 bg-white z-[9999999999999]"
-            style={{ top: isScrolled ? "60px" : "80px" }}
+            style={{ top: isScrolled ? "60px" : "100px" }}
           >
             <div className="h-full overflow-y-auto py-6 px-6">
-              <ul className="space-y-4">
+              <ul>
                 {data?.navItems?.map((item) => (
-                  <li
-                    key={item.title}
-                    className="border-b border-gray-100 pb-3"
-                  >
+                  <li key={item.title} className="border-b border-gray-100">
                     <div className="flex flex-col">
                       <div className="flex items-center justify-between py-3 px-2">
                         {!item.child ? (
@@ -324,7 +321,7 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-8 px-2">
+              <div className=" px-2">
                 <Button
                   variant="secondaryLink"
                   href="/contact"

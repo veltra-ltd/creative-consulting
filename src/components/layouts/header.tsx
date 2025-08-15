@@ -5,7 +5,13 @@ import type { HeaderData } from "@/types/lang";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { IoIosArrowDown } from "react-icons/io";
-import { FaFacebook, FaGoogle, FaGlobe } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGoogle,
+  FaGlobe,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa";
 import { MdMail, MdPhone } from "react-icons/md";
 import gsap from "gsap";
 
@@ -17,6 +23,8 @@ import { cn } from "@/lib/utils/cn";
 const iconMap = {
   FaFacebook: <FaFacebook />,
   FaGoogle: <FaGoogle />,
+  FaLinkedin: <FaLinkedin />,
+  FaYoutube: <FaYoutube />,
   FaGlobe: <FaGlobe />,
   MdMail: <MdMail />,
   MdPhone: <MdPhone />,
@@ -129,7 +137,7 @@ const Header: FC<{ data: HeaderData; className?: string }> = ({
       <div className="container mx-auto px-4 sm:px-6">
         <Flex
           direction="col"
-          className="sm:flex-row items-center justify-between gap-4"
+          className=" flex-row items-center sm:justify-between justify-center gap-4"
         >
           {/* Social Links */}
           <nav className="flex items-center space-x-4">
