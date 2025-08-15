@@ -423,7 +423,11 @@ export default function IndustriesGrid({ data }: IndustriesGridProps) {
         ))}
       </div>
       <div className="flex justify-center mx-auto sm:pt-10 pt-7 sm:pb-3.5 pb-9">
-        <Button href="/" variant="primaryLink" className="sm:px-20 px-9">
+        <Button
+          href="/industries/all"
+          variant="primaryLink"
+          className="sm:px-20 px-9"
+        >
           Show More Industries
         </Button>
       </div>

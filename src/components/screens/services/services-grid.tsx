@@ -122,7 +122,11 @@ export default function ServicesGrid({ data }: ServicesGridProps) {
         ))}
       </div>
       <div className="flex justify-center mx-auto sm:pt-10 pt-7 sm:pb-3.5 pb-3">
-        <Button href="/" variant="primaryLink" className="sm:px-20 px-9">
+        <Button
+          href="/services/all"
+          variant="primaryLink"
+          className="sm:px-20 px-9"
+        >
           Show More Services
         </Button>
       </div>

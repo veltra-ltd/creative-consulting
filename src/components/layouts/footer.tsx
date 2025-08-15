@@ -242,9 +242,15 @@ import {
   FaLinkedin,
   FaWhatsapp,
 } from "react-icons/fa";
+import FooterPopup from "../ui/FooterPopup";
+import { useState } from "react";
+import Popupmodal from "../../data/lang/en/popupmodal.json";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [openPopup, setOpenPopup] = useState<
+    null | "privacyPolicy" | "termsConditions" | "cookiePolicy"
+  >(null);
 
   const iconMap = {
     FiPhone: <FiPhone className="text-gray-400" />,
@@ -602,23 +608,34 @@ export const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <Link
-              href="/privacy-policy"
+              href="#"
+              onClick={() => setOpenPopup("privacyPolicy")}
               className="text-gray-400 hover:text-white text-sm! sm:text-[16px] transition-colors underline"
             >
               Privacy Policy
             </Link>
             <Link
-              href="/terms-of-service"
+              href="#"
+              onClick={() => setOpenPopup("termsConditions")}
               className="text-gray-400 hover:text-white text-sm! sm:text-[16px] transition-colors underline"
             >
               Terms & Conditions
             </Link>
             <Link
-              href="/cookie-policy"
+              href="#"
+              onClick={() => setOpenPopup("cookiePolicy")}
               className="text-gray-400 hover:text-white text-sm! sm:text-[16px] transition-colors underline"
             >
               Cookie Policy
             </Link>
+            {/* popupmodal */}
+            {openPopup && (
+              <FooterPopup
+                isOpen={!!openPopup}
+                onClose={() => setOpenPopup(null)}
+                content={Popupmodal[openPopup]}
+              />
+            )}
           </motion.div>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
