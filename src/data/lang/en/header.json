@@ -9,6 +9,16 @@
       "title": "Google",
       "icon": "FaGoogle",
       "link": "https://ccslbd.com/"
+    },
+    {
+      "title": "Linkdin",
+      "icon": "FaLinkedin",
+      "link": "https://ccslbd.com/"
+    },
+    {
+      "title": "Youtube",
+      "icon": "FaYoutube",
+      "link": "https://ccslbd.com/"
     }
   ],
   "right": [
