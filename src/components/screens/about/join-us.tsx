@@ -105,8 +105,8 @@ const JoinUs = ({ data }: { data: JoinUsData }) => {
       console.log("Sending form data:", formDataToSend.get("file"));
 
       const response: AxiosResponse = await axios.post(
-        // `${process.env.NEXT_PUBLIC_API_URL}${process.env.NEXT_PUBLIC_BASE_URL}contact/send/proposal`,
-        `http://localhost:5000/api/v1/join/with-us`,
+        `${process.env.NEXT_PUBLIC_BASE_API_URL}/join/with-us`,
+        // `http://localhost:5000/api/v1/join/with-us`,
         formDataToSend,
         {
           headers: {
