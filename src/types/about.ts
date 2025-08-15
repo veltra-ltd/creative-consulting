@@ -55,6 +55,7 @@ export interface JoinUsData {
         label: string;
         type: string;
         options?: string[];
+        name: string;
     }[];
     submitText: string;
 }
