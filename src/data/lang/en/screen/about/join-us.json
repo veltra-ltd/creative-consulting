@@ -10,19 +10,23 @@
   "formFields": [
     {
       "label": "Name",
-      "type": "text"
+      "type": "text",
+      "name": "name"
     },
     {
       "label": "Email",
-      "type": "email"
+      "type": "email",
+      "name": "email"
     },
     {
       "label": "Phone",
-      "type": "tel"
+      "type": "tel",
+      "name": "phone"
     },
     {
       "label": "Location/Country",
-      "type": "text"
+      "type": "text",
+      "name": "location"
     },
     {
       "label": "Field of Interest",
@@ -32,15 +36,18 @@
         "Translation",
         "Field Coordination",
         "Partnership"
-      ]
+      ],
+      "name": "fieldOfInterest"
     },
     {
       "label": "Upload CV/Portfolio",
-      "type": "file"
+      "type": "file",
+      "name": "file"
     },
     {
       "label": "Message (optional)",
-      "type": "textarea"
+      "type": "textarea",
+      "name": "message"
     }
   ],
   "submitText": "Submit Your Profile"
