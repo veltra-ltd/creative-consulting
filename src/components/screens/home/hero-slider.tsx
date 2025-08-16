@@ -124,7 +124,7 @@ const HeroSlider = ({
   return (
     <div
       ref={sliderRef}
-      className="relative w-full sm:h-[78vh] h-[70vh] sm:max-h-[900px] max-h-[600px] sm:min-h-[550px] min-h-[400px] overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800"
+      className="relative w-full sm:h-[78vh] h-[60vh] sm:max-h-[900px] max-h-[600px] sm:min-h-[550px] min-h-[400px] overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800"
       aria-roledescription="carousel"
       aria-label="Hero slider"
     >
@@ -147,7 +147,7 @@ const HeroSlider = ({
       {/* Content */}
       <div
         ref={contentRef}
-        className="relative z-10 sm:h-[78%] h-full flex flex-col sm:justify-center justify-normal sm:pt-0 pt-5.5 items-center text-center px-4 sm:px-6 lg:px-8"
+        className="relative z-10 sm:h-[78%] h-full flex flex-col justify-center sm:pt-0 pt-5.5 items-center text-center px-4 sm:px-6 lg:px-8"
       >
         <div className="container mx-auto max-w-6xl">
           <h1
@@ -169,7 +169,7 @@ const HeroSlider = ({
           )}
 
           {currentSlide.btnText && currentSlide.link && (
-            <div className="px-14 sm:px-0">
+            <div className="px-14 sm:px-0 hidden">
               <Button
                 href={currentSlide.link}
                 variant="primaryLink"
@@ -185,7 +185,7 @@ const HeroSlider = ({
       {/* Navigation Dots */}
       <div
         ref={dotsRef}
-        className="absolute sm:bottom-12 bottom-6 left-1/2 transform -translate-x-1/2  z-10 flex space-x-3"
+        className="absolute  sm:bottom-12 bottom-6 left-1/2 transform -translate-x-1/2  z-10 flex space-x-3"
         role="group"
         aria-label="Slide navigation dots"
       >
@@ -194,7 +194,7 @@ const HeroSlider = ({
             key={index}
             type="button"
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
               index === activeIndex
                 ? "bg-white w-6 scale-110"
                 : "bg-white/50 hover:bg-white/70"
@@ -208,7 +208,7 @@ const HeroSlider = ({
       {/* Navigation Arrows (optional) */}
       <button
         onClick={goToPrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-300 hidden md:block"
+        className="absolute cursor-pointer left-4 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-300 hidden md:block"
         aria-label="Previous slide"
       >
         <svg
@@ -229,7 +229,7 @@ const HeroSlider = ({
 
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-300 hidden md:block"
+        className="absolute cursor-pointer right-4 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-300 hidden md:block"
         aria-label="Next slide"
       >
         <svg

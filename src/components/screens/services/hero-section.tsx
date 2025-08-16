@@ -76,7 +76,7 @@ export default function ServicesHero({ data }: ServicesHeroProps) {
             <span className="text-white font-medium">Premium Services</span>
           </div> */}
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 bg-clip-text bg-gradient-to-r from-white to-primary/50"
+            className="text-2xl sm:text-5xl font-bold text-white mb-6 bg-clip-text bg-gradient-to-r from-white to-primary/50"
             variants={floatingVariants}
             animate="animate"
           >

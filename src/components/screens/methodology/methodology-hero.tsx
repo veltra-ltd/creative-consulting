@@ -889,7 +889,7 @@ export default function MethodologyHero({ data }: MethodologyHeroProps) {
         transition={{ duration: 1 }}
         className="max-w-5xl mb-8"
       >
-        <h1 className="sm:text-6xl text-3xl font-bold text-white mb-6">
+        <h1 className="sm:text-5xl text-2xl font-bold text-white mb-6">
           {title}
         </h1>
 
