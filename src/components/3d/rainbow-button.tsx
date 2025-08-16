@@ -5,6 +5,8 @@ interface RainbowButtonProps {
   timing?: number;
   children?: React.ReactNode;
   className?: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 const RainbowButton: React.FC<RainbowButtonProps> = ({
@@ -12,6 +14,8 @@ const RainbowButton: React.FC<RainbowButtonProps> = ({
   timing = 2,
   children = "Send Message",
   className = "",
+  type = "button",
+  disabled = false,
 }) => {
   const buttonStyle: CSSProperties = {
     "--width": `${width}px`,
@@ -66,6 +70,8 @@ const RainbowButton: React.FC<RainbowButtonProps> = ({
           ...buttonStyle,
           ...(isHovered ? hoverStyle : {}),
         }}
+        disabled={disabled}
+        type={type}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className={className}

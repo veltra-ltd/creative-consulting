@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { m, LazyMotion, domAnimation, useInView } from "framer-motion";
 import type { ContactPageData } from "@/types/lang";
 import { Button } from "@/components/ui/button";
@@ -28,9 +28,8 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import RainbowButton from "@/components/3d/rainbow-button";
 import SectionHeading from "@/components/ui/section-heading";
-// import Title from "@/components/ui/title";
-// import GooeyButton from "@/components/3d/gooey-button";
-// import ColorfulButton from "@/components/3d/color-full-btn";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 type ContactFormField = {
   name: string;
@@ -69,13 +68,6 @@ const RESEARCH_SERVICES = [
     image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
   },
 ] as const;
-
-// const STATS = [
-//   { value: "85%", color: "blue", text: "of Fortune 500 Clients" },
-//   { value: "40+", color: "purple", text: "Industries Covered" },
-//   { value: "10M+", color: "amber", text: "Data Points Collected" },
-//   { value: "95%", color: "green", text: "Client Retention Rate" },
-// ] as const;
 
 const METHODOLOGY = [
   {
@@ -125,18 +117,6 @@ const fadeIn = {
   },
 };
 
-// const scaleIn = {
-//   hidden: { opacity: 0, scale: 0.95 },
-//   visible: {
-//     opacity: 1,
-//     scale: 1,
-//     transition: {
-//       duration: 0.5,
-//       ease: [0.16, 1, 0.3, 1],
-//     },
-//   },
-// };
-
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
@@ -170,6 +150,9 @@ export default function ContactPage({
     once: true,
     amount: 0.1,
   });
+
+  const [formData, setFormData] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const formFields: ContactFormField[] = [
     {
@@ -258,9 +241,63 @@ export default function ContactPage({
     },
   ];
 
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_BASE_API_URL}/contact/send/proposal`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        toast.success("Your request has been submitted successfully!");
+        setFormData({}); // Reset form
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      toast.error(
+        "There was an error submitting your request. Please try again."
+      );
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <LazyMotion features={domAnimation}>
       <div className="bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+        {/* Toaster for notifications */}
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            style: {
+              borderRadius: "10px",
+              background: "#333",
+              color: "#fff",
+            },
+          }}
+        />
+
         {/* Hero Section */}
         <m.section
           ref={heroRef}
@@ -385,35 +422,13 @@ export default function ContactPage({
         >
           <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
             {/* <Title title="Get in touch with us for expert market research solutions tailored to your business needs. Whether you have a project inquiry or need insights, our team is ready to assist you. Contact us today!" /> */}
-            <m.h1 className="capitalize sm:leading-[2.5rem] leading-7 text-lg sm:text-4xl bg-gradient-to-r from-[#00ACEE] via-[#D91C5C] to-[#FEDB7F] bg-clip-text text-transparent font-medium text-center sm:w-[80rem] w-full mx-auto sm:mb-4 mb-0">
+            <m.h1 className="capitalize sm:leading-[2.5rem] leading-7 text-lg sm:text-4xl text-black font-medium text-center sm:w-[80rem] w-full mx-auto sm:mb-4 mb-0">
               Get in touch with us for expert market research solutions tailored
               to your business needs. Whether you have a project inquiry or need
               insights, our team is ready to assist you. Contact us today!
             </m.h1>
           </div>
         </m.section>
-        {/* <m.section
-          ref={statsSectionRef}
-          initial="hidden"
-          animate={statsInView ? "visible" : "hidden"}
-          variants={staggerContainer}
-          className="py-16 md:py-24 bg-white"
-        >
-          <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {STATS.map((stat, index) => (
-                <m.div key={index} variants={scaleIn} className="text-center">
-                  <div
-                    className={`text-4xl md:text-5xl font-bold text-${stat.color}-600 mb-2`}
-                  >
-                    {stat.value}
-                  </div>
-                  <p className="text-gray-600">{stat.text}</p>
-                </m.div>
-              ))}
-            </div>
-          </div>
-        </m.section> */}
 
         {/* Main Content */}
         <section className="relative sm:py-4 py-2">
@@ -442,12 +457,7 @@ export default function ContactPage({
                         "Request a Research Consultation"}
                     </m.h2>
 
-                    {/* <m.p variants={fadeIn} className="text-gray-600 mb-6">
-                      Complete this form and our research team will contact you
-                      within 24 hours
-                    </m.p> */}
-
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                       {formFields.map((field, index) => (
                         <m.div
                           key={field.name}
@@ -473,9 +483,16 @@ export default function ContactPage({
                               required={field.required}
                               rows={6}
                               className="min-h-[150px] border-gray-300 focus:border-primary focus:ring-primary"
+                              value={formData[field.name] || ""}
+                              onChange={handleInputChange}
                             />
                           ) : field.type === "select" ? (
-                            <Select>
+                            <Select
+                              onValueChange={(value) =>
+                                handleSelectChange(field.name, value)
+                              }
+                              value={formData[field.name] || ""}
+                            >
                               <SelectTrigger className="border-gray-300 focus:border-primary focus:ring-primary">
                                 <SelectValue
                                   placeholder={`Select ${field.label.toLowerCase()}`}
@@ -500,6 +517,8 @@ export default function ContactPage({
                               placeholder={field.placeholder}
                               required={field.required}
                               className="border-gray-300 focus:border-primary focus:ring-primary"
+                              value={formData[field.name] || ""}
+                              onChange={handleInputChange}
                             />
                           )}
                         </m.div>
@@ -509,50 +528,17 @@ export default function ContactPage({
                         variants={fadeInUp}
                         className="sm:pt-5 pt-2 flex justify-center"
                       >
-                        {/* <Button
+                        <RainbowButton
+                          className="sm:!w-[350] sm:!py-3 !py-[8px]"
                           type="submit"
-                          size="lg"
-                          className="w-full bg-gradient-to-r from-primary to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg"
+                          disabled={isSubmitting}
                         >
-                          Submit Research Request
-                          <ChevronRight className="ml-2 h-4 w-4" />
-                        </Button> */}
-
-                        <RainbowButton className="sm:!w-[350] sm:!py-3 !py-[8px]" />
+                          {isSubmitting ? "Submitting..." : "Submit Request"}
+                        </RainbowButton>
                       </m.div>
                     </form>
                   </div>
                 </m.div>
-
-                {/* <m.div variants={fadeInUp}>
-                  <Card className="hover:shadow-lg transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex flex-col md:flex-row items-center gap-6">
-                        <div className="bg-blue-100 p-4 rounded-full">
-                          <Phone className="h-8 w-8 text-primary" />
-                        </div>
-                        <div className="text-center md:text-left">
-                          <h3 className="text-xl font-semibold scroll-m-20 tracking-tight">
-                            Urgent Research Needs?
-                          </h3>
-                          <p className="text-gray-600 mt-2">
-                            Call our 24/7 research hotline for immediate
-                            assistance
-                          </p>
-                          <a
-                            href={`tel:${contactData.contactMethods.phone.replace(
-                              /\s+/g,
-                              ""
-                            )}`}
-                            className="mt-4 inline-block text-lg font-semibold text-primary hover:text-blue-700 transition-colors"
-                          >
-                            {contactData.contactMethods.phone}
-                          </a>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </m.div> */}
               </m.div>
 
               {/* Research Services & Info */}
@@ -564,12 +550,6 @@ export default function ContactPage({
                 className="space-y-6"
               >
                 <div>
-                  {/* <m.h2
-                    variants={fadeInUp}
-                    className="mb-8 text-gray-900 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
-                  >
-                    Our Research Services
-                  </m.h2> */}
                   <SectionHeading title="Our Research Services" />
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -625,9 +605,6 @@ export default function ContactPage({
 
                 <m.div variants={fadeInUp}>
                   <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-6 mt-8">
-                    {/* <h2 className="sm:mb-3 mb-2 text-gray-900 scroll-m-20 sm:text-2xl text-lg font-semibold tracking-tight transition-colors first:mt-0">
-                      Global Research Centers
-                    </h2> */}
                     <CardContent>
                       <div className="flex  gap-4">
                         <div className="bg-blue-50 sm:w-12 w-20 h-12 flex items-center justify-center rounded-full">
