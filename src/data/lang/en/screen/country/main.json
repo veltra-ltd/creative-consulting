@@ -1,0 +1,140 @@
+{
+  "hero": {
+    "heading": "Market Research Company in (countryName) — Creative Consulting Services Limited (CCSL)",
+    "paragraph": "Creative Consulting Services Limited (CCSL) is a leading full-service market & social research and fieldwork partner in (countryName) with operational coverage across APAC & GCC. We specialize in consumer, healthcare, B2B, automotive, financial services, FMCG, retail, and development/NGO research, delivering end-to-end <span class=\"font-bold\">qualitative</span> and <span class=\"font-bold\">quantitative</span> solutions.<br/>Our teams combine local language expertise, nationwide field logistics, and modern research technology (CATI/CAWI/CAPI, online & mobile qual, dashboards, and advanced analytics) to turn questions into clear, decision-ready answers—from concept to implementation.",
+    "focusText": "<span class=\"font-bold\">Standards & Ethics:</span> We follow the ICC/ESOMAR International Code for Market, Opinion & Social Research and Data Analytics. Participant consent, privacy, and multi-layer quality control are embedded in every project."
+  },
+  "whyClientChoose": {
+    "heading": "Why Clients Choose Creative Consulting Services Limited (CCSL): ",
+    "list": [
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling."
+    ]
+  },
+  "whatWeDo": {
+    "heading": "What We Do:",
+    "list": [
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling."
+    ]
+  },
+  "howWeWork": {
+    "heading": "How We Work ",
+    "list": [
+      "<span class=\"font-bold\"> Brief & Objectives:</span>  clarify the problem, KPIs, markets, and timelines.",
+      "<span class=\"font-bold\"> Brief & Objectives:</span>  clarify the problem, KPIs, markets, and timelines.",
+      "<span class=\"font-bold\"> Brief & Objectives:</span>  clarify the problem, KPIs, markets, and timelines.",
+      "<span class=\"font-bold\"> Brief & Objectives:</span>  clarify the problem, KPIs, markets, and timelines.",
+      "<span class=\"font-bold\"> Brief & Objectives:</span>  clarify the problem, KPIs, markets, and timelines.",
+      "<span class=\"font-bold\"> Brief & Objectives:</span>  clarify the problem, KPIs, markets, and timelines."
+    ]
+  },
+  "OurResearch": {
+    "heading": "Our Research Solution or Services: ",
+    "list": [
+      "Market Research",
+      "Social Research",
+      "Survey Scripting & Programming"
+    ]
+  },
+  "QuantitativeResearch": {
+    "heading": "Quantitative Research (CATI • CAWI • CAPI • Online) ",
+    "list": [
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence.",
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence.",
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence.",
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence.",
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence.",
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence."
+    ]
+  },
+  "QualitativeResearch": {
+    "heading": "Qualitative Research (FGDs • IDIs • Ethnography • Online Qual • Semiotics)",
+    "list": [
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence.",
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence.",
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence.",
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence.",
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence.",
+      "<span class=\"font-bold\">Purpose:</span>  size markets, track KPIs, and validate decisions with statistical confidence."
+    ]
+  },
+  "PanelsCommunities": {
+    "heading": "Panels & Communities: ",
+    "subHeading": "Build and engage always-on audiences for faster, iterative learning. ",
+    "list": [
+      "<span class=\"font-bold\">We handle:</span> recruitment & profiling, activity design, moderation, incentive management, re-contact, and community health.",
+      "<span class=\"font-bold\">You get: </span>quicker cycles, lower cost per insight, and robust longitudinal tracking."
+    ]
+  },
+  "MobileResearch": {
+    "heading": "Mobile Research: ",
+    "list": [
+      "<span class=\"font-bold\">Use-cases:</span> recruitment & profiling, activity design, moderation, incentive management, re-contact, and community health.",
+      "<span class=\"font-bold\">Use-cases:</span> recruitment & profiling, activity design, moderation, incentive management, re-contact, and community health."
+    ]
+  },
+  "BiometricsNeuromarketing ": {
+    "heading": "Biometrics & Neuromarketing (Eye-Tracking • Facial Coding • Wearables): ",
+    "subHeading": "Measure attention and emotion to optimize creative, packaging, UI, and shelf layouts. ",
+    "list": [
+      "<span class=\"font-bold\">Methods:</span>  gaze plots, heatmaps, time-to-notice, sequence analysis; emotion valence/arousal traces (where applicable).",
+      "<span class=\"font-bold\">Methods:</span>  gaze plots, heatmaps, time-to-notice, sequence analysis; emotion valence/arousal traces (where applicable)."
+    ]
+  },
+  "AnalyticalServices ": {
+    "heading": "Analytical Services (Big Data • Data Mining • Statistical Modeling):",
+    "list": [
+      "<span class=\"font-bold\">Techniques:</span>data cleaning/integration, EDA, clustering/segmentation, predictive modeling, driver analysis, churn/propensity, price elasticity, demand estimatio MaxDiff, Conjoint, TURF, text analytics & topic modeling.",
+      "<span class=\"font-bold\">Visualization:</span> interactive dashboards, automated KPI trackers, cohort views, and story-first decks."
+    ]
+  },
+  "SocialDigitalAnalytics": {
+    "heading": "Social & Digital Analytics: ",
+    "subHeading": "Social listening, trend & sentiment analysis, topic clustering, influencer/KOL mapping, creative benchmarking, and campaign lift indicators.",
+    "list": [
+      "<span class=\"font-bold\">Use-cases:</span>crisis alerts, brand health monitoring, category trend spotting, competitor tracking."
+    ]
+  },
+  "ResearchPlatformScripting": {
+    "heading": "Research Platform and Scripting: ",
+    "list": [
+      "<span class=\"font-bold\">Platform:</span>Survey To Go, Survey CTO, Qualtrics, SurveyMonkey, Kobo Toolbox and our client platforms (i-field and n-field and others), <br/> Survey scripting/hosting (CATI/CAWI/CAPI), respondent portals, dashboarding, automated ETL/API pipelines, data vaults.",
+      "<span class=\"font-bold\">Security: role-based access, encryption at rest/in transit, audit logs, backups.</span>"
+    ]
+  },
+  "IndustryWeServe": {
+    "heading": "Industry We Serve:",
+    "list": [
+      "Market Research",
+      "Social Research",
+      "Survey Scripting & Programming"
+    ]
+  },
+  "EngagementModelsClients": {
+    "heading": "Our Engagement Models with Clients: ",
+    "list": [
+      "<span class=\"font-bold\">Full-Service:</span>research design → fieldwork → analysis → reporting",
+      "<span class=\"font-bold\">Field & Tab:</span>fieldwork execution + tabs + datasets",
+      "<span class=\"font-bold\">Full-Service:</span>research design → fieldwork → analysis → reporting",
+      "<span class=\"font-bold\">Full-Service:</span>research design → fieldwork → analysis → reporting"
+    ]
+  },
+  "GetTouchBangladesh": {
+    "heading": "Get in Touch for Bangladesh and across APAC & GCC",
+    "list": ["<span class=\"font-bold\">Email:</span>abu.sayeed@ccslbd.com"]
+  },
+  "GetTouchOtherCountries": {
+    "heading": "Get in Touch for other countries",
+    "list": ["<span class=\"font-bold\">Email:</span> info@ccslbd.com"]
+  }
+}
