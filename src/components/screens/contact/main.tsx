@@ -350,19 +350,58 @@ export default function ContactPage({
               variants={fadeInUp}
               className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
             >
-              <Button
+              {/* <GooeyButton> */}
+              {/* <span className="flex items-center">
+                  <Phone className="mr-2 h-4 w-4" />
+                  <span>Schedule Consultation</span>
+                </span> */}
+              {/* Schedule Consultation */}
+              {/* </GooeyButton> */}
+              {/* <ColorfulButton textOne="Schedule Consultation" /> */}
+
+              {/* <Button
+                variant="secondary"
+                size="lg"
+                className="shadow-lg hover:shadow-xl transition-shadow"
+              >
+                Schedule Consultation
+              </Button> */}
+              {/* <Button
                 variant="outline"
                 size="lg"
                 className="border-white text-[15px] sm:px-6 px-3 sm:py-3 py-2 text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition cursor-pointer"
               >
                 <Mail className="mr-2 h-4 w-4" />
                 Request Proposal
-              </Button>
+              </Button> */}
+              <div className="flex gap-3 justify-center mx-auto sm:pt-10 pt-7 sm:pb-3.5 pb-3">
+                <Button
+                  href="https://app.cal.com/auth/login"
+                  variant="primaryLink"
+                  className="sm:px-20 px-9"
+                >
+                  Schedule For Demo
+                </Button>
+                <Button
+                  href="/contact"
+                  variant="primaryLink"
+                  className="sm:px-20 px-9"
+                >
+                  Request for Quote
+                </Button>
+                <Button
+                  href="/about"
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-[15px] sm:px-6 px-3 sm:py-3 py-2 text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition cursor-pointer"
+                >
+                  <Mail className="mr-2 h-4 w-4" />
+                  Request Proposal
+                </Button>
+              </div>
             </m.div>
           </div>
         </m.section>
-
-        {/* Stats Section */}
         <m.section
           ref={statsSectionRef}
           initial="hidden"
@@ -371,6 +410,7 @@ export default function ContactPage({
           className="py-6 sm:py-10 bg-white"
         >
           <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+            {/* <Title title="Get in touch with us for expert market research solutions tailored to your business needs. Whether you have a project inquiry or need insights, our team is ready to assist you. Contact us today!" /> */}
             <m.h1 className="capitalize sm:leading-[2.5rem] leading-7 text-lg sm:text-4xl text-black font-medium text-center sm:w-[80rem] w-full mx-auto sm:mb-4 mb-0">
               Get in touch with us for expert market research solutions tailored
               to your business needs. Whether you have a project inquiry or need

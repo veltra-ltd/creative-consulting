@@ -86,7 +86,7 @@ const DataCollectionCard: React.FC<{
       viewport={{ once: true }}
       className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col"
     >
-      <div className="relative h-48">
+      <div className="relative sm:h-72">
         <Image
           src={card.image}
           alt={card.title}

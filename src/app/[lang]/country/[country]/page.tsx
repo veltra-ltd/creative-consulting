@@ -1,3 +1,4 @@
+
 import Main from "@/components/screens/country/main";
 import getLangData from "@/lib/translator/getLangData";
 import { CCSLContent, CountryService } from "@/types/country";

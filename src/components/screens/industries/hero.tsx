@@ -29,7 +29,7 @@ export default function IndustriesHero({ data }: { data: IndustriesHeroData }) {
             damping: 10,
             duration: 0.8,
           }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+          className="text-2xl sm:text-5xl font-bold text-white mb-6"
         >
           <TypeAnimation
             sequence={[

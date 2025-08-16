@@ -85,7 +85,7 @@ const HeroBanner = ({ data }: Props) => {
           </motion.p>
 
           {(data?.firstButton || data?.secondButton) && (
-            <div className="flex sm:gap-7 gap-5">
+            <div className="flex sm:flex-row flex-col items-center sm:gap-7 gap-5">
               {data.firstButton && (
                 <motion.div
                   initial="hidden"
@@ -110,7 +110,7 @@ const HeroBanner = ({ data }: Props) => {
                 >
                   <Button
                     href={data.secondButton.link}
-                    className="button sm:px-7 sm:py-3 sm:text-base border-white/2 bg-white/10 cursor-pointer"
+                    className="button sm:px-7 px-9.5 sm:py-3 sm:text-base border-white/2 bg-white/10 cursor-pointer"
                   >
                     {data.secondButton.name}
                   </Button>

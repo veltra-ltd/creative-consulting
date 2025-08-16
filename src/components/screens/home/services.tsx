@@ -113,7 +113,7 @@ const Services = ({ data }: Props) => {
   return (
     <section
       ref={containerRef}
-      className="relative sm:py-10 py-7 bg-white"
+      className="global-bussiness relative sm:py-10 py-7 bg-white"
       aria-labelledby="services-heading"
     >
       <div className="absolute inset-0 overflow-hidden">
@@ -157,7 +157,7 @@ const Services = ({ data }: Props) => {
             >
               <motion.a
                 href={service.link}
-                className="block relative z-10 p-5 md:p-6 rounded-xl transition-all duration-150 bg-white border border-gray-100"
+                className="block relative sm:h-48 z-10 p-5 md:p-6 rounded-xl transition-all duration-150  border border-gray-100 global-card"
                 variants={cardHoverVariants}
               >
                 <div className="relative z-10 flex items-start gap-4">
