@@ -329,14 +329,48 @@ export default function ContactPage({
               >
                 Schedule Consultation
               </Button> */}
-              <Button
+              {/* <Button
                 variant="outline"
                 size="lg"
                 className="border-white text-[15px] sm:px-6 px-3 sm:py-3 py-2 text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition cursor-pointer"
               >
                 <Mail className="mr-2 h-4 w-4" />
                 Request Proposal
-              </Button>
+              </Button> */}
+              <div className="flex gap-3 justify-center mx-auto sm:pt-10 pt-7 sm:pb-3.5 pb-3">
+                <Button
+                  href="https://app.cal.com/auth/login"
+                  variant="primaryLink"
+                  className="sm:px-20 px-9"
+                >
+                  Schedule For Demo
+                </Button>
+                <Button
+                  href="/contact"
+                  variant="primaryLink"
+                  className="sm:px-20 px-9"
+                >
+                  Request for Quote
+                </Button>
+                <Button
+                  href="/about"
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-[15px] sm:px-6 px-3 sm:py-3 py-2 text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition cursor-pointer"
+                >
+                  <Mail className="mr-2 h-4 w-4" />
+                  Request Proposal
+                </Button>
+              </div>
+              {/* <Button
+                href="/about"
+                variant="outline"
+                size="lg"
+                className="border-white text-[15px] sm:px-6 px-3 sm:py-3 py-2 text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition cursor-pointer"
+              >
+                <Mail className="mr-2 h-4 w-4" />
+                Request Proposal
+              </Button> */}
             </m.div>
           </div>
         </m.section>
@@ -351,7 +385,7 @@ export default function ContactPage({
         >
           <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
             {/* <Title title="Get in touch with us for expert market research solutions tailored to your business needs. Whether you have a project inquiry or need insights, our team is ready to assist you. Contact us today!" /> */}
-            <m.h1 className="capitalize sm:leading-[2.5rem] leading-7 text-lg sm:text-4xl text-black font-medium text-center sm:w-[80rem] w-full mx-auto sm:mb-4 mb-0">
+            <m.h1 className="capitalize sm:leading-[2.5rem] leading-7 text-lg sm:text-4xl bg-gradient-to-r from-[#00ACEE] via-[#D91C5C] to-[#FEDB7F] bg-clip-text text-transparent font-medium text-center sm:w-[80rem] w-full mx-auto sm:mb-4 mb-0">
               Get in touch with us for expert market research solutions tailored
               to your business needs. Whether you have a project inquiry or need
               insights, our team is ready to assist you. Contact us today!
