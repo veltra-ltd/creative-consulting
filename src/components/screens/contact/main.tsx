@@ -402,8 +402,6 @@ export default function ContactPage({
             </m.div>
           </div>
         </m.section>
-
-        {/* Stats Section */}
         <m.section
           ref={statsSectionRef}
           initial="hidden"
