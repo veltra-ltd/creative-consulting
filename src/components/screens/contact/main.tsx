@@ -399,15 +399,6 @@ export default function ContactPage({
                   Request Proposal
                 </Button>
               </div>
-              {/* <Button
-                href="/about"
-                variant="outline"
-                size="lg"
-                className="border-white text-[15px] sm:px-6 px-3 sm:py-3 py-2 text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition cursor-pointer"
-              >
-                <Mail className="mr-2 h-4 w-4" />
-                Request Proposal
-              </Button> */}
             </m.div>
           </div>
         </m.section>
