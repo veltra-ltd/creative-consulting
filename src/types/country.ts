@@ -1,84 +1,157 @@
-export interface CountryPageData {
-    hero: HeroBannerData;
-    overview: CountryOverviewData;
-    services: CountryServicesData;
-    capabilities: CountryCapabilitiesData;
-    caseStudies: CountryCaseStudiesData;
-    contact: CountryContactData;
-}
+// // types/ccsl-research.ts
+// export interface CCSLResearchService {
+//     title: string;
+//     description: string;
+//     methods?: string[];
+//     applications?: string[];
+//     deliverables?: string[];
+//     icon?: string;
+// }
 
-export interface HeroBannerData {
+// export interface CCSLResearchSection {
+//     title: string;
+//     subtitle?: string;
+//     services: CCSLResearchService[];
+// }
+
+// export interface CCSLCountryData {
+//     name: string;
+//     coverage: string;
+//     languages: string;
+//     qcProcess: string;
+//     fieldOffices: string[];
+//     imageUrl?: string;
+// }
+
+// export interface CCSLResearchPageData {
+//     hero: {
+//         title: string;
+//         subtitle: string;
+//         description: string;
+//         standards: string;
+//         imageUrl?: string;
+//     };
+//     whyChooseUs: {
+//         title: string;
+//         points: {
+//             title: string;
+//             description: string;
+//             icon: string;
+//         }[];
+//     };
+//     whatWeDo: {
+//         title: string;
+//         services: {
+//             title: string;
+//             description?: string;
+//             items?: string[];
+//         }[];
+//     };
+//     howWeWork: {
+//         title: string;
+//         steps: {
+//             step: string;
+//             title: string;
+//             description: string;
+//         }[];
+//     };
+//     researchSolutions: {
+//         title: string;
+//         services: string[];
+//     };
+//     quantitativeResearch: CCSLResearchSection;
+//     qualitativeResearch: CCSLResearchSection;
+//     dataCollection: {
+//         title: string;
+//         coverage: string;
+//         languages: string;
+//         qcCompliance: string;
+//         outputs: string[];
+//     };
+//     panelsCommunities: {
+//         title: string;
+//         weHandle: string[];
+//         youGet: string[];
+//     };
+//     mobileResearch: {
+//         title: string;
+//         useCases: string[];
+//         toolkit: string[];
+//         deliverables: string[];
+//     };
+//     biometrics: {
+//         title: string;
+//         description: string;
+//         methods: string[];
+//         outputs: string[];
+//     };
+//     analyticalServices: {
+//         title: string;
+//         techniques: string[];
+//         visualization: string[];
+//         deliverables: string[];
+//     };
+//     socialDigitalAnalytics: {
+//         title: string;
+//         description: string;
+//         useCases: string[];
+//     };
+//     researchPlatform: {
+//         title: string;
+//         platforms: string[];
+//         security: string[];
+//     };
+//     industries: {
+//         title: string;
+//         list: string[];
+//     };
+//     engagementModels: {
+//         title: string;
+//         models: string[];
+//     };
+//     contact: {
+//         title: string;
+//         emails: {
+//             region: string;
+//             address: string;
+//         }[];
+//     };
+//     countryData: CCSLCountryData;
+// }
+
+export type CountryService = {
     title: string;
-    subtitle: string;
-    description: string;
-    image: string;
-    ctaText: string;
-    ctaLink: string;
-}
-
-export interface CountryOverviewData {
     heading: string;
-    text1: string;
-    text2: string;
-    stats: {
-        value: string;
-        label: string;
-        icon: string;
-    }[];
-    marketInsights: {
-        title: string;
-        description: string;
-        icon: string;
-    }[];
-}
-
-export interface CountryServicesData {
+    list: string[];
+};
+type Section = {
     heading: string;
-    subtitle: string;
-    services: {
-        title: string;
-        description: string;
-        features: string[];
-        icon: string;
-    }[];
-}
+    subHeading?: string;
+    paragraph?: string;
+    focusText?: string;
+    list?: string[];
+};
 
-export interface CountryCapabilitiesData {
-    heading: string;
-    text: string;
-    capabilities: {
-        title: string;
-        description: string;
-        percentage: number;
-        icon: string;
-    }[];
-}
-
-export interface CountryCaseStudiesData {
-    heading: string;
-    subtitle: string;
-    studies: {
-        title: string;
-        client: string;
-        industry: string;
-        description: string;
-        results: string[];
-        image: string;
-    }[];
-}
-
-export interface CountryContactData {
-    heading: string;
-    text: string;
-    office: {
-        address: string;
-        phone: string;
-        email: string;
-        hours: string;
+export type CCSLContent = {
+    hero: {
+        heading: string;
+        paragraph: string;
+        focusText: string;
     };
-    contactMethods: {
-        type: string;
-        value: string;
-        icon: string;
-    }[];
-}
+    whyClientChoose: Section;
+    whatWeDo: Section;
+    howWeWork: Section;
+    OurResearch: Section;
+    QuantitativeResearch: Section;
+    QualitativeResearch: Section;
+    PanelsCommunities: Section;
+    MobileResearch: Section;
+    BiometricsNeuromarketing: Section;
+    AnalyticalServices: Section;
+    SocialDigitalAnalytics: Section;
+    ResearchPlatformScripting: Section;
+    IndustryWeServe: Section;
+    EngagementModelsClients: Section;
+    GetTouchBangladesh: Section;
+    GetTouchOtherCountries: Section;
+};

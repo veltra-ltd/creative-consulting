@@ -24,7 +24,7 @@ export default async function LangLayout({
   // const footerData: FooterData = await getLangData(lang, "footer");
 
   return (
-    <html lang={lang}>
+    <html lang={lang || "en"}>
       <body className="bg-white text-black">
         {/* Fixed Header */}
         <Header data={headerData} />
