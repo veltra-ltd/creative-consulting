@@ -3,14 +3,11 @@ import getLangData from "@/lib/translator/getLangData";
 import { CCSLContent, CountryService } from "@/types/country";
 import { SupportedLang } from "@/types/lang";
 
-interface PageProps {
-  params: {
-    lang: SupportedLang;
-    country: string;
-  };
-}
-
-export default async function CCSLResearchPage({ params }: PageProps) {
+const CCSLResearchPage = async ({
+  params,
+}: {
+  params: Promise<{ lang: SupportedLang; country: string }>;
+}) => {
   const { lang, country } = await params;
   // Fetch data on the server
   const data: CCSLContent = await getLangData(lang, `screen/country/main`);
@@ -24,4 +21,6 @@ export default async function CCSLResearchPage({ params }: PageProps) {
       <Main data={data} countryData={countryData} />
     </div>
   );
-}
+};
+
+export default CCSLResearchPage;
