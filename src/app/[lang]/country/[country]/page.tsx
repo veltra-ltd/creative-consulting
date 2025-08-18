@@ -16,9 +16,20 @@ const CCSLResearchPage = async ({
     `screen/country/name/${country}`
   );
 
+  const replaceCountryName = (datas: object) => {
+    let textDAta = JSON.stringify(datas);
+    textDAta = textDAta.replace(/\(countryName\)/g, countryData.title);
+    console.log(`Replaced country name: ${countryData.title}`);
+
+    return JSON.parse(textDAta);
+  };
+
   return (
     <div className="bg-white">
-      <Main data={data} countryData={countryData} />
+      <Main
+        data={replaceCountryName(data)}
+        countryData={replaceCountryName(countryData)}
+      />
     </div>
   );
 };
