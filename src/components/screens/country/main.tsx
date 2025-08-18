@@ -44,154 +44,165 @@ export default function Main({
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* Country Specific Section */}
-      <motion.section
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-        className="mb-16"
-      >
-        <motion.h1
-          variants={itemVariants}
-          className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
-        >
-          {countryData.title}
-        </motion.h1>
-        <motion.h2
-          variants={itemVariants}
-          className="text-2xl md:text-3xl font-semibold text-blue-600 mb-6"
-        >
-          {countryData.heading}
-        </motion.h2>
-        <motion.ul
-          variants={containerVariants}
-          className="space-y-4 mb-8 list-disc pl-5"
-        >
-          {countryData.list.map((item, index) => (
-            <motion.li
-              key={index}
-              variants={itemVariants}
-              className="text-gray-700"
-              dangerouslySetInnerHTML={{ __html: item }}
+    <>
+      <div className=" bg-gradient-to-r from-blue-50 to-indigo-50">
+        {/* Hero Section */}
+        <div className="max-w-7xl mx-auto sm:py-7 py-0 sm:px-0 px-4">
+          <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeIn}
+            className=" rounded-xl py-8"
+          >
+            <h2 className="sm:text-3xl text-2xl font-bold text-gray-900 sm:mb-6 mb-2.5">
+              {replaceCountryName(data.hero.heading)}
+            </h2>
+            <p
+              className="sm:text-lg text-base text-gray-700 mb-6"
+              dangerouslySetInnerHTML={{
+                __html: replaceCountryName(data.hero.paragraph),
+              }}
             />
-          ))}
-        </motion.ul>
-      </motion.section>
-
-      {/* Hero Section */}
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={fadeIn}
-        className="mb-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 md:p-10"
-      >
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          {replaceCountryName(data.hero.heading)}
-        </h2>
-        <p
-          className="text-lg text-gray-700 mb-6"
-          dangerouslySetInnerHTML={{
-            __html: replaceCountryName(data.hero.paragraph),
-          }}
+            {/* <p
+              className="text-black sm:text-lg text-base relative after:w-3.5 after:h-full after:absolute after:-left-6.5 after:-top-2 after:rounded-xl after:content-'' after:block after:mt-2 after:text-base after:bg-primary"
+              dangerouslySetInnerHTML={{ __html: data.hero.focusText }}
+            /> */}
+            <p
+              className="text-black sm:text-lg text-base relative after:w-3.5 after:h-full after:absolute after:left-0 after:top-0  after:rounded-xl after:content-[''] after:block  after:bg-primary after:transform  after:translate-x-[-23px] after:translate-y-[-1px]"
+              dangerouslySetInnerHTML={{ __html: data.hero.focusText }}
+            />
+          </motion.section>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-12 py-5">
+        {/* Why Choose Us Section */}
+        <SectionWithAnimation
+          title={replaceCountryName(data.whyClientChoose.heading)}
+          items={data.whyClientChoose.list}
+          className="sm:mb-16 mb-5"
         />
-        <p
-          className="text-gray-600 italic"
-          dangerouslySetInnerHTML={{ __html: data.hero.focusText }}
+
+        {/* What We Do Section */}
+        <SectionWithAnimation
+          title={data.whatWeDo.heading}
+          items={data.whatWeDo.list}
+          className="sm:mb-16 mb-5"
         />
-      </motion.section>
 
-      {/* Why Choose Us Section */}
-      <SectionWithAnimation
-        title={replaceCountryName(data.whyClientChoose.heading)}
-        items={data.whyClientChoose.list}
-        className="mb-16"
-      />
+        {/* How We Work Section */}
+        <SectionWithAnimation
+          title={data.howWeWork.heading}
+          items={data.howWeWork.list}
+          className="mb-16"
+        />
 
-      {/* What We Do Section */}
-      <SectionWithAnimation
-        title={data.whatWeDo.heading}
-        items={data.whatWeDo.list}
-        className="mb-16"
-      />
+        {/* Research Solutions Section */}
+        {data.OurResearch.list && (
+          <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={containerVariants}
+            className="sm:mb-16 mb-6"
+          >
+            <motion.h2
+              variants={itemVariants}
+              className="sm:text-2xl text-xl font-bold text-gray-900 sm:mb-6 mb-3"
+            >
+              {data.OurResearch.heading}
+            </motion.h2>
+            <motion.div
+              variants={containerVariants}
+              className="grid grid-cols-1 md:grid-cols-3 sm:gap-6 gap-3"
+            >
+              {data.OurResearch.list.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  whileHover={{ y: -5 }}
+                  className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
+                >
+                  <h3 className="sm:text-lg text-base font-semibold text-black">
+                    {item}
+                  </h3>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.section>
+        )}
 
-      {/* How We Work Section */}
-      <SectionWithAnimation
-        title={data.howWeWork.heading}
-        items={data.howWeWork.list}
-        className="mb-16"
-      />
+        {/* Quantitative Research */}
+        <SectionWithAnimation
+          title={data.QuantitativeResearch.heading}
+          items={data.QuantitativeResearch.list}
+          className="sm:mb-16 mb-6"
+        />
 
-      {/* Research Solutions Section */}
-      {data.OurResearch.list && (
+        {/* Qualitative Research */}
+        <SectionWithAnimation
+          title={data.QualitativeResearch.heading}
+          items={data.QualitativeResearch.list}
+          className="sm:mb-16 mb-6"
+        />
+
+        {/* Panels & Communities */}
+        <SectionWithAnimation
+          title={data.PanelsCommunities.heading}
+          subTitle={data.PanelsCommunities.subHeading}
+          items={data.PanelsCommunities.list}
+          className="sm:mb-16 mb-6"
+        />
+
+        {/* Country Specific Section */}
         <motion.section
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          animate="visible"
           variants={containerVariants}
           className="mb-16"
         >
+          <motion.h1
+            variants={itemVariants}
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 hidden"
+          >
+            {countryData.title}
+          </motion.h1>
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-bold text-gray-900 mb-6"
+            className="sm:text-2xl text-xl font-semibold text-black sm:mb-6 mb-3"
           >
-            {data.OurResearch.heading}
+            {countryData.heading}
           </motion.h2>
-          <motion.div
+          <motion.ul
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="space-y-4 mb-8 list-disc pl-5"
           >
-            {data.OurResearch.list.map((item, index) => (
-              <motion.div
+            {countryData.list.map((item, index) => (
+              <motion.li
                 key={index}
                 variants={itemVariants}
-                whileHover={{ y: -5 }}
-                className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-lg font-semibold text-blue-600">{item}</h3>
-              </motion.div>
+                className="text-gray-700"
+                dangerouslySetInnerHTML={{ __html: item }}
+              />
             ))}
-          </motion.div>
+          </motion.ul>
         </motion.section>
-      )}
 
-      {/* Quantitative Research */}
-      <SectionWithAnimation
-        title={data.QuantitativeResearch.heading}
-        items={data.QuantitativeResearch.list}
-        className="mb-16"
-      />
-
-      {/* Qualitative Research */}
-      <SectionWithAnimation
-        title={data.QualitativeResearch.heading}
-        items={data.QualitativeResearch.list}
-        className="mb-16"
-      />
-
-      {/* Panels & Communities */}
-      <SectionWithAnimation
-        title={data.PanelsCommunities.heading}
-        subTitle={data.PanelsCommunities.subHeading}
-        items={data.PanelsCommunities.list}
-        className="mb-16"
-      />
-
-      {/* Contact Sections */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <SectionWithAnimation
-          title={data.GetTouchBangladesh.heading}
-          items={data.GetTouchBangladesh.list}
-          className="bg-blue-50 p-6 rounded-lg"
-        />
-        <SectionWithAnimation
-          title={data.GetTouchOtherCountries.heading}
-          items={data.GetTouchOtherCountries.list}
-          className="bg-indigo-50 p-6 rounded-lg"
-        />
+        {/* Contact Sections */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <SectionWithAnimation
+            title={data.GetTouchBangladesh.heading}
+            items={data.GetTouchBangladesh.list}
+            className="bg-blue-50 p-6 rounded-lg"
+          />
+          <SectionWithAnimation
+            title={data.GetTouchOtherCountries.heading}
+            items={data.GetTouchOtherCountries.list}
+            className="bg-indigo-50 p-6 rounded-lg"
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 function SectionWithAnimation({
@@ -215,14 +226,14 @@ function SectionWithAnimation({
     >
       <motion.h2
         variants={itemVariants}
-        className="text-2xl font-bold text-gray-900 mb-4"
+        className="sm:text-2xl text-xl font-bold text-gray-900 sm:mb-4 mb-2"
       >
         {title}
       </motion.h2>
       {subTitle && (
         <motion.p
           variants={itemVariants}
-          className="text-gray-600 mb-6"
+          className="text-gray-600 sm:mb-6 mb-3.5"
           dangerouslySetInnerHTML={{ __html: subTitle }}
         />
       )}
@@ -230,7 +241,7 @@ function SectionWithAnimation({
         items.length > 0 && ( // Added check for items existence
           <motion.ul
             variants={containerVariants}
-            className="space-y-3 list-disc pl-5"
+            className="space-y-3 list-disc pl-5 sm:text-lg text-base"
           >
             {items.map((item, index) => (
               <motion.li
