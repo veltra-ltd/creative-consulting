@@ -59,7 +59,14 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
   };
 
   const isActiveLink = (link: string) => {
-    return pathname === link || (link !== "/" && pathname.startsWith(link));
+    // Handle language prefix in pathname
+    const cleanPathname = pathname.replace(/^\/(en|bn|hi)/, "") || "/";
+    const cleanLink = link.replace(/^\/(en|bn|hi)/, "") || "/";
+
+    return (
+      cleanPathname === cleanLink ||
+      (cleanLink !== "/" && cleanPathname.startsWith(cleanLink))
+    );
   };
 
   const toggleMobileMenu = () => {
@@ -153,7 +160,7 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
             {data?.navItems?.map((item) => (
               <li
                 key={item.title}
-                className="group transition-all duration-250"
+                className="group transition-all duration-250 relative"
                 onMouseEnter={() => handleDropdownEnter(item.title)}
                 onMouseLeave={handleDropdownLeave}
               >
@@ -204,12 +211,6 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
         </div>
 
         <div className="flex justify-end flex-1">
-          {/* <Button href="/contact" variant="secondaryLink">
-            {data.btnText}
-          </Button> */}
-          {/* <GradientLinkButton href="/contact">
-            {data.btnText}
-          </GradientLinkButton> */}
           <SpaceButton href="/contact">{data.btnText}</SpaceButton>
         </div>
       </div>
@@ -321,7 +322,7 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
                   </li>
                 ))}
               </ul>
-              <div className=" px-2">
+              <div className="px-2 mt-4">
                 <Button
                   variant="secondaryLink"
                   href="/contact"
@@ -340,7 +341,7 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full bg-white transition-all duration-300",
+        "top-0 w-full z-50 bg-white transition-all duration-300",
         isScrolled ? "shadow-sm py-2" : "sm:py-3 py-2",
         className
       )}
@@ -362,10 +363,7 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
           </div>
 
           <div className="flex items-center gap-3">
-            {/* <Button href="/contact" variant="secondaryLink">
-              {data.btnText}
-            </Button> */}
-            <SpaceButton className="!hidden !lg:block" href="/contact">
+            <SpaceButton className="!hidden lg:!block" href="/contact">
               {data.btnText}
             </SpaceButton>
             <button

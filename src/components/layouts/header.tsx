@@ -13,7 +13,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { MdMail, MdPhone } from "react-icons/md";
-import gsap from "gsap";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { List } from "../ui/list";
 import { ListItem } from "../ui/list-item";
@@ -83,17 +83,6 @@ const Header: FC<{ data: HeaderData; className?: string }> = ({
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  // Dropdown animation
-  useEffect(() => {
-    if (!isMobile && isDropdownOpen && dropdownRef.current) {
-      gsap.fromTo(
-        dropdownRef.current,
-        { opacity: 0, x: -10 },
-        { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }
-      );
-    }
-  }, [isDropdownOpen, isMobile]);
 
   const changeLanguage = (lang: string) => {
     const segments = pathname.split("/").filter(Boolean);
@@ -196,28 +185,37 @@ const Header: FC<{ data: HeaderData; className?: string }> = ({
                 />
               </button>
 
-              <List
-                ref={dropdownRef}
-                className={cn(
-                  "absolute right-0 mt-2 w-40 bg-white rounded-md shadow-xl z-[9999]",
-                  isDropdownOpen ? "block" : "hidden"
-                )}
-                role="menu"
-              >
-                {languages.map((lang) => (
-                  <ListItem
-                    key={lang.code}
-                    className={cn(
-                      "px-4 py-2 hover:bg-gray-100 cursor-pointer transition-colors duration-150",
-                      selectedLang === lang.code && "bg-gray-50 font-medium"
-                    )}
-                    onClick={() => changeLanguage(lang.code)}
-                    role="menuitem"
+              <AnimatePresence>
+                {isDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -10 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
                   >
-                    {lang.label}
-                  </ListItem>
-                ))}
-              </List>
+                    <List
+                      ref={dropdownRef}
+                      className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-xl z-[9999]"
+                      role="menu"
+                    >
+                      {languages.map((lang) => (
+                        <ListItem
+                          key={lang.code}
+                          className={cn(
+                            "px-4 py-2 hover:bg-gray-100 cursor-pointer transition-colors duration-150",
+                            selectedLang === lang.code &&
+                              "bg-gray-50 font-medium"
+                          )}
+                          onClick={() => changeLanguage(lang.code)}
+                          role="menuitem"
+                        >
+                          {lang.label}
+                        </ListItem>
+                      ))}
+                    </List>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </Flex>
         </Flex>

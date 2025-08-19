@@ -27,10 +27,12 @@ export default async function LangLayout({
     <html lang={lang || "en"}>
       <body className="bg-white text-black">
         {/* Fixed Header */}
-        <Header data={headerData} />
+        <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+          <Header data={headerData} />
 
-        {/* Optional sticky NavBar, or just flow element */}
-        <NavBar data={navData} />
+          {/* Optional sticky NavBar, or just flow element */}
+          <NavBar data={navData} />
+        </div>
 
         {/* Page Content */}
         {children}
