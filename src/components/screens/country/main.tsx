@@ -161,47 +161,47 @@ export default function Main({
           className="sm:mb-16 mb-6"
         />
         {/* BiometricsNeuromarketing */}
-        {/* <SectionWithAnimation
+        <SectionWithAnimation
           title={data.BiometricsNeuromarketing.heading}
           subTitle={data.BiometricsNeuromarketing.subHeading}
           items={data.BiometricsNeuromarketing.list}
           className="sm:mb-16 mb-6"
-        /> */}
+        />
         {/* AnalyticalServices */}
-        {/* <SectionWithAnimation
+        <SectionWithAnimation
           title={data.AnalyticalServices.heading}
           subTitle={data.AnalyticalServices.subHeading}
           items={data.AnalyticalServices.list}
           className="sm:mb-16 mb-6"
-        /> */}
+        />
         {/* SocialDigitalAnalytics */}
-        {/* <SectionWithAnimation
+        <SectionWithAnimation
           title={data.SocialDigitalAnalytics.heading}
           subTitle={data.SocialDigitalAnalytics.subHeading}
           items={data.SocialDigitalAnalytics.list}
           className="sm:mb-16 mb-6"
-        /> */}
+        />
         {/* ResearchPlatformScripting */}
-        {/* <SectionWithAnimation
+        <SectionWithAnimation
           title={data.ResearchPlatformScripting.heading}
           subTitle={data.ResearchPlatformScripting.subHeading}
           items={data.ResearchPlatformScripting.list}
           className="sm:mb-16 mb-6"
-        /> */}
+        />
         {/* IndustryWeServe */}
-        {/* <SectionWithAnimation
+        <SectionWithAnimation
           title={data.IndustryWeServe.heading}
           subTitle={data.IndustryWeServe.subHeading}
           items={data.IndustryWeServe.list}
           className="sm:mb-16 mb-6"
-        /> */}
+        />
         {/* EngagementModelsClients */}
-        {/* <SectionWithAnimation
+        <SectionWithAnimation
           title={data.EngagementModelsClients.heading}
           subTitle={data.EngagementModelsClients.subHeading}
           items={data.EngagementModelsClients.list}
           className="sm:mb-16 mb-6"
-        /> */}
+        />
 
         {/* Country Specific Section */}
         <motion.section

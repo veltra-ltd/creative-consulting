@@ -153,7 +153,7 @@
       "<span class=\"font-bold\">Deliverables:</span> rich media galleries, journey timelines, location heatmaps, rapid pulse insights."
     ]
   },
-  "BiometricsNeuromarketing ": {
+  "BiometricsNeuromarketing": {
     "heading": "Biometrics & Neuromarketing (Eye-Tracking • Facial Coding • Wearables): ",
     "subHeading": "Measure attention and emotion to optimize creative, packaging, UI, and shelf layouts.",
     "list": [
@@ -161,7 +161,7 @@
       "<span class=\"font-bold\">Outputs:</span> attention maps, emotion timelines, priority-of-notice, and concrete optimization guidance."
     ]
   },
-  "AnalyticalServices ": {
+  "AnalyticalServices": {
     "heading": "Analytical Services (Big Data • Data Mining • Statistical Modeling):",
     "list": [
       "<span class=\"font-bold\">Techniques:</span> data cleaning/integration, EDA, clustering/segmentation, predictive modeling, driver analysis, churn/propensity, price elasticity, demand estimatio MaxDiff, Conjoint, TURF, text analytics & topic modeling.",
