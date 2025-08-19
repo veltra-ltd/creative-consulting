@@ -257,11 +257,11 @@
     ]
   },
   "GetTouchBangladesh": {
-    "heading": "Get in Touch for (countryName) and across APAC & GCC",
+    "heading": "Get in Touch for only Bangladesh  and across APAC & GCC",
     "list": ["<span class=\"font-bold\">Email:</span> abu.sayeed@ccslbd.com"]
   },
   "GetTouchOtherCountries": {
-    "heading": "Get in Touch for other countries",
+    "heading": "Get in Touch for all country",
     "list": ["<span class=\"font-bold\">Email:</span> info@ccslbd.com"]
   }
 }
