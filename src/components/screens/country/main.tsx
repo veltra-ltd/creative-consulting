@@ -153,6 +153,55 @@ export default function Main({
           items={data.PanelsCommunities.list}
           className="sm:mb-16 mb-6"
         />
+        {/* MobileResearch */}
+        <SectionWithAnimation
+          title={data.MobileResearch.heading}
+          subTitle={data.MobileResearch.subHeading}
+          items={data.MobileResearch.list}
+          className="sm:mb-16 mb-6"
+        />
+        {/* BiometricsNeuromarketing */}
+        {/* <SectionWithAnimation
+          title={data.BiometricsNeuromarketing.heading}
+          subTitle={data.BiometricsNeuromarketing.subHeading}
+          items={data.BiometricsNeuromarketing.list}
+          className="sm:mb-16 mb-6"
+        /> */}
+        {/* AnalyticalServices */}
+        {/* <SectionWithAnimation
+          title={data.AnalyticalServices.heading}
+          subTitle={data.AnalyticalServices.subHeading}
+          items={data.AnalyticalServices.list}
+          className="sm:mb-16 mb-6"
+        /> */}
+        {/* SocialDigitalAnalytics */}
+        {/* <SectionWithAnimation
+          title={data.SocialDigitalAnalytics.heading}
+          subTitle={data.SocialDigitalAnalytics.subHeading}
+          items={data.SocialDigitalAnalytics.list}
+          className="sm:mb-16 mb-6"
+        /> */}
+        {/* ResearchPlatformScripting */}
+        {/* <SectionWithAnimation
+          title={data.ResearchPlatformScripting.heading}
+          subTitle={data.ResearchPlatformScripting.subHeading}
+          items={data.ResearchPlatformScripting.list}
+          className="sm:mb-16 mb-6"
+        /> */}
+        {/* IndustryWeServe */}
+        {/* <SectionWithAnimation
+          title={data.IndustryWeServe.heading}
+          subTitle={data.IndustryWeServe.subHeading}
+          items={data.IndustryWeServe.list}
+          className="sm:mb-16 mb-6"
+        /> */}
+        {/* EngagementModelsClients */}
+        {/* <SectionWithAnimation
+          title={data.EngagementModelsClients.heading}
+          subTitle={data.EngagementModelsClients.subHeading}
+          items={data.EngagementModelsClients.list}
+          className="sm:mb-16 mb-6"
+        /> */}
 
         {/* Country Specific Section */}
         <motion.section
