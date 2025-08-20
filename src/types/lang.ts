@@ -334,51 +334,7 @@ export type HomeCaseStudy = {
 };
 
 // types/contact.ts
-export interface ContactPageData {
-  hero: {
-    title: string;
-    subtitle: string;
-  };
-  form: {
-    title: string;
-    submitText: string;
-    fields: Array<{
-      name: string;
-      label: string;
-      type: "text" | "email" | "tel" | "textarea";
-      placeholder: string;
-      required: boolean;
-    }>;
-  };
-  locations: {
-    title: string;
-    offices: Array<{
-      id: number;
-      name: string;
-      address: string;
-      link?: string;
-    }>;
-  };
-  contactMethods: {
-    title: string;
-    email: string;
-    phone: string;
-    hours: string;
-  };
-  teamContacts?: {
-    title: string;
-    subtitle: string;
-    members: Array<{
-      id: string;
-      name: string;
-      position: string;
-      email: string;
-      avatar: string;
-      bio: string;
-    }>;
-  };
-  mapEmbedUrl: string;
-}
+
 
 // Example usage in your page component:
 // const contactData: ContactPageData = await getLangData(lang, "screen/contact");
@@ -407,7 +363,7 @@ export interface BaseFieldProps {
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
-    BaseFieldProps {
+  BaseFieldProps {
   type?: InputFieldType;
   icon?: ReactNode;
   variant?: "default" | "error" | "disabled";
@@ -416,7 +372,7 @@ export interface InputProps
 
 export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement>,
-    BaseFieldProps {
+  BaseFieldProps {
   showCharCount?: boolean;
   variant?: "default" | "error" | "disabled";
   customSize?: "sm" | "md" | "lg";
@@ -430,7 +386,7 @@ export interface SelectOption {
 
 export interface SelectProps
   extends React.SelectHTMLAttributes<HTMLSelectElement>,
-    BaseFieldProps {
+  BaseFieldProps {
   options: SelectOption[];
   placeholder?: string;
   icon?: ReactNode;

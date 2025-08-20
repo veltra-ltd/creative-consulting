@@ -1,16 +1,11 @@
 "use client";
 
-import React, {
-  useRef,
-  useEffect,
-  forwardRef,
-  type ButtonHTMLAttributes,
-} from "react";
+import React, { useRef, forwardRef, type ButtonHTMLAttributes } from "react";
 import Link from "next/link";
 import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils/cn";
-import { gsap } from "gsap";
 import { cva, type VariantProps } from "class-variance-authority";
+import { motion } from "framer-motion";
 
 // Custom button design system
 const buttonVariants = cva(
@@ -23,6 +18,8 @@ const buttonVariants = cva(
         secondaryLink:
           "bg-transparent hover:text-white border hover:bg-primary hover:border-primary px-4 py-2.5 lg:px-3.5 lg:py-2 xl:px-6 xl:py-3.5 shadow-sm rounded-full text-primary/90 border-primary/90",
         primary: "bg-primary text-white hover:bg-primary",
+        about:
+          "bg-primary text-white hover:bg-primary rounded-[4px] px-5 py-2.5 w-fit", // fixed so it acts like link style
         secondary:
           "border border-[#1c1c1d] text-[#1c1c1d] hover:bg-[#1c1c1d] hover:text-white",
         outline:
@@ -69,54 +66,31 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
-    const buttonRef = useRef<HTMLButtonElement | null>(null);
-
-    useEffect(() => {
-      if (buttonRef.current) {
-        gsap.fromTo(
-          buttonRef.current,
-          { opacity: 0, y: 10 },
-          { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }
-        );
-      }
-    }, []);
-
-    const handleMouseEnter = () => {
-      if (buttonRef.current) {
-        gsap.to(buttonRef.current, { scale: 1.05, duration: 0.2 });
-      }
-    };
-
-    const handleMouseLeave = () => {
-      if (buttonRef.current) {
-        gsap.to(buttonRef.current, { scale: 1, duration: 0.2 });
-      }
-    };
-
     // Decide which element to render
     const isLinkVariant =
-      variant === "primaryLink" || variant === "secondaryLink";
+      variant === "primaryLink" ||
+      variant === "secondaryLink" ||
+      variant === "about";
 
     const Comp: React.ElementType =
       isLinkVariant && href ? Link : asChild ? Slot : "button";
 
+    const MotionComp = motion(Comp);
+
     return (
-      <Comp
-        ref={(node: HTMLButtonElement | null) => {
-          if (!asChild && ref && typeof ref !== "function") {
-            (ref as React.MutableRefObject<HTMLButtonElement | null>).current =
-              node;
-          }
-          buttonRef.current = node;
-        }}
+      <MotionComp
+        ref={ref}
         {...(isLinkVariant && href ? { href } : {})}
         className={cn(buttonVariants({ variant, size, fullWidth }), className)}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
         {...props}
       >
         {children}
-      </Comp>
+      </MotionComp>
     );
   }
 );
