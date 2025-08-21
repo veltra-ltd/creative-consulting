@@ -59,29 +59,29 @@ const RESEARCH_SERVICES = [
   },
 ] as const;
 
-const METHODOLOGY = [
-  {
-    number: "01",
-    color: "blue",
-    title: "Data Collection",
-    description:
-      "Multi-source data gathering including surveys, interviews, and big data analytics",
-  },
-  {
-    number: "02",
-    color: "purple",
-    title: "Analysis",
-    description:
-      "Advanced statistical modeling and machine learning techniques for deeper insights",
-  },
-  {
-    number: "03",
-    color: "amber",
-    title: "Strategic Insights",
-    description:
-      "Actionable recommendations tailored to your business objectives",
-  },
-] as const;
+// const METHODOLOGY = [
+//   {
+//     number: "01",
+//     color: "blue",
+//     title: "Data Collection",
+//     description:
+//       "Multi-source data gathering including surveys, interviews, and big data analytics",
+//   },
+//   {
+//     number: "02",
+//     color: "purple",
+//     title: "Analysis",
+//     description:
+//       "Advanced statistical modeling and machine learning techniques for deeper insights",
+//   },
+//   {
+//     number: "03",
+//     color: "amber",
+//     title: "Strategic Insights",
+//     description:
+//       "Actionable recommendations tailored to your business objectives",
+//   },
+// ] as const;
 
 // Animation variants
 const fadeInUp = {
@@ -127,7 +127,7 @@ export default function ContactPage({
   const formSectionRef = useRef<HTMLDivElement>(null);
   const servicesSectionRef = useRef<HTMLDivElement>(null);
   const statsSectionRef = useRef<HTMLDivElement>(null);
-  const methodologyRef = useRef<HTMLDivElement>(null);
+  // const methodologyRef = useRef<HTMLDivElement>(null);
 
   const heroInView = useInView(heroRef, { once: true, amount: 0.1 });
   const formInView = useInView(formSectionRef, { once: true, amount: 0.1 });
@@ -136,10 +136,10 @@ export default function ContactPage({
     amount: 0.1,
   });
   const statsInView = useInView(statsSectionRef, { once: true, amount: 0.1 });
-  const methodologyInView = useInView(methodologyRef, {
-    once: true,
-    amount: 0.1,
-  });
+  // const methodologyInView = useInView(methodologyRef, {
+  //   once: true,
+  //   amount: 0.1,
+  // });
 
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -371,6 +371,7 @@ export default function ContactPage({
                     if (btnIndex === 1) {
                       return (
                         <Button
+                          key={btnIndex}
                           href={btn.link}
                           variant="outline"
                           size="lg"
@@ -383,6 +384,7 @@ export default function ContactPage({
                     }
                     return (
                       <Button
+                        key={btnIndex}
                         href={btn.link}
                         //  href={"https://app.cal.com/auth/login"}
                         variant="primaryLink"
