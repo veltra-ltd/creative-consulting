@@ -70,7 +70,7 @@ const Collaboration = ({ data }: { data: CollaborationData }) => {
             >
               <Link
                 href={data.cta.link}
-                className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+                className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary transition"
               >
                 {data.cta.text}
               </Link>

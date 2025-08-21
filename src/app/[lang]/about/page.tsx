@@ -75,7 +75,7 @@ const AboutPage = async ({
   );
 
   return (
-    <div className="bg-white">
+    <div className="about-page bg-white">
       <HeroBanner data={hero} />
 
       {/* Our Story */}
