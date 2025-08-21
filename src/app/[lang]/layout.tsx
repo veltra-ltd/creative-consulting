@@ -27,6 +27,7 @@ export default async function LangLayout({
     <html lang={lang || "en"}>
       <body className="bg-white text-black">
         {/* Fixed Header */}
+
         <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
           <Header data={headerData} />
 
@@ -35,7 +36,7 @@ export default async function LangLayout({
         </div>
 
         {/* Page Content */}
-        {children}
+        <div className="py-[110px]">{children}</div>
 
         {/* Footer */}
         <Footer />

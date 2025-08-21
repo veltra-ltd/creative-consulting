@@ -2,7 +2,6 @@
 
 import { useRef, useState } from "react";
 import { m, LazyMotion, domAnimation, useInView } from "framer-motion";
-import type { ContactPageData } from "@/types/lang";
 import { Button } from "@/components/ui/button";
 import {
   MapPin,
@@ -30,16 +29,7 @@ import RainbowButton from "@/components/3d/rainbow-button";
 import SectionHeading from "@/components/ui/section-heading";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-
-type ContactFormField = {
-  name: string;
-  label: string;
-  type: "select" | "textarea" | "text" | "tel" | "email";
-  placeholder?: string;
-  required?: boolean;
-  options?: { value: string; label: string; link?: string }[];
-  maxLength?: number;
-};
+import { ContactPageData, HeroButton } from "@/types/contact";
 
 // Constants
 const RESEARCH_SERVICES = [
@@ -154,92 +144,92 @@ export default function ContactPage({
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const formFields: ContactFormField[] = [
-    {
-      name: "name",
-      label: "Full Name",
-      type: "text",
-      placeholder: "John Doe",
-      required: true,
-    },
-    {
-      name: "company",
-      label: "Company Name",
-      type: "text",
-      placeholder: "Your Organization",
-      required: true,
-    },
-    {
-      name: "email",
-      label: "Email Address",
-      type: "email",
-      placeholder: "your@email.com",
-      required: true,
-    },
-    {
-      name: "phone",
-      label: "Phone Number",
-      type: "tel",
-      placeholder: "+1 (555) 123-4567",
-    },
-    {
-      name: "interest",
-      label: "Solution area of interest",
-      type: "select",
-      required: true,
-      options: [
-        { value: "consumer", label: "Market Research" },
-        { value: "competitive", label: "Social Research" },
-        { value: "market", label: "Political Research & Public Opinion Polls" },
-        { value: "trends", label: "Customized Research Solutions " },
-        { value: "brand", label: "Data Analytics & Strategic Consulting " },
-        { value: "other", label: "Survey Scripting & Programming " },
-        { value: "other", label: "Retail & Distributor Audit" },
-        { value: "other", label: "Call Center for Telephonic Survey " },
-        { value: "other", label: "Fieldwork & Data Collection " },
-      ],
-    },
-    {
-      name: "market",
-      label: "Market",
-      type: "select",
-      required: true,
-      options: [
-        { value: "consumer", label: "Bangladesh" },
-        { value: "competitive", label: "India" },
-        { value: "market", label: "Pakistan" },
-        { value: "trends", label: "Nepal" },
-        { value: "brand", label: " Sri Lanka " },
-        { value: "other", label: "Myanmar" },
-        { value: "other", label: "Malaysia" },
-        { value: "other", label: "Indonesia" },
-        { value: "other", label: "Thailand" },
-        { value: "other", label: "Vietnam" },
-        { value: "other", label: "Philippines" },
-        { value: "other", label: "Singapore" },
-        { value: "other", label: "Japan" },
-        { value: "other", label: "South Korea" },
-        { value: "other", label: "China" },
-        { value: "other", label: "Australia" },
-        { value: "other", label: "New Zealand" },
-        { value: "other", label: "Saudi Arabia" },
-        { value: "other", label: "United Arab Emirates (UAE)" },
-        { value: "other", label: "Qatar" },
-        { value: "other", label: "Kuwait" },
-        { value: "other", label: "Oman" },
-        { value: "other", label: "Bahrain" },
-      ],
-    },
-    {
-      name: "message",
-      label: "Research Objectives",
-      type: "textarea",
-      placeholder:
-        "Describe your research needs, target audience, and objectives...",
-      required: true,
-      maxLength: 1500,
-    },
-  ];
+  // const formFields: ContactFormField[] = [
+  //   {
+  //     name: "name",
+  //     label: "Full Name",
+  //     type: "text",
+  //     placeholder: "John Doe",
+  //     required: true,
+  //   },
+  //   {
+  //     name: "company",
+  //     label: "Company Name",
+  //     type: "text",
+  //     placeholder: "Your Organization",
+  //     required: true,
+  //   },
+  //   {
+  //     name: "email",
+  //     label: "Email Address",
+  //     type: "email",
+  //     placeholder: "your@email.com",
+  //     required: true,
+  //   },
+  //   {
+  //     name: "phone",
+  //     label: "Phone Number",
+  //     type: "tel",
+  //     placeholder: "+1 (555) 123-4567",
+  //   },
+  //   {
+  //     name: "interest",
+  //     label: "Solution area of interest",
+  //     type: "select",
+  //     required: true,
+  //     options: [
+  //       { value: "consumer", label: "Market Research" },
+  //       { value: "competitive", label: "Social Research" },
+  //       { value: "market", label: "Political Research & Public Opinion Polls" },
+  //       { value: "trends", label: "Customized Research Solutions " },
+  //       { value: "brand", label: "Data Analytics & Strategic Consulting " },
+  //       { value: "other", label: "Survey Scripting & Programming " },
+  //       { value: "other", label: "Retail & Distributor Audit" },
+  //       { value: "other", label: "Call Center for Telephonic Survey " },
+  //       { value: "other", label: "Fieldwork & Data Collection " },
+  //     ],
+  //   },
+  //   {
+  //     name: "market",
+  //     label: "Market",
+  //     type: "select",
+  //     required: true,
+  //     options: [
+  //       { value: "consumer", label: "Bangladesh" },
+  //       { value: "competitive", label: "India" },
+  //       { value: "market", label: "Pakistan" },
+  //       { value: "trends", label: "Nepal" },
+  //       { value: "brand", label: " Sri Lanka " },
+  //       { value: "other", label: "Myanmar" },
+  //       { value: "other", label: "Malaysia" },
+  //       { value: "other", label: "Indonesia" },
+  //       { value: "other", label: "Thailand" },
+  //       { value: "other", label: "Vietnam" },
+  //       { value: "other", label: "Philippines" },
+  //       { value: "other", label: "Singapore" },
+  //       { value: "other", label: "Japan" },
+  //       { value: "other", label: "South Korea" },
+  //       { value: "other", label: "China" },
+  //       { value: "other", label: "Australia" },
+  //       { value: "other", label: "New Zealand" },
+  //       { value: "other", label: "Saudi Arabia" },
+  //       { value: "other", label: "United Arab Emirates (UAE)" },
+  //       { value: "other", label: "Qatar" },
+  //       { value: "other", label: "Kuwait" },
+  //       { value: "other", label: "Oman" },
+  //       { value: "other", label: "Bahrain" },
+  //     ],
+  //   },
+  //   {
+  //     name: "message",
+  //     label: "Research Objectives",
+  //     type: "textarea",
+  //     placeholder:
+  //       "Describe your research needs, target audience, and objectives...",
+  //     required: true,
+  //     maxLength: 1500,
+  //   },
+  // ];
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -374,30 +364,42 @@ export default function ContactPage({
                 <Mail className="mr-2 h-4 w-4" />
                 Request Proposal
               </Button> */}
+
               <div className="flex gap-3 justify-center mx-auto sm:pt-10 pt-7 sm:pb-3.5 pb-3">
-                <Button
-                  href="https://app.cal.com/auth/login"
-                  variant="primaryLink"
-                  className="sm:px-20 px-9"
-                >
-                  Schedule For Demo
-                </Button>
-                <Button
+                {contactData.hero.buttons.map(
+                  (btn: HeroButton, btnIndex: number) => {
+                    if (btnIndex === 1) {
+                      return (
+                        <Button
+                          href={btn.link}
+                          variant="outline"
+                          size="lg"
+                          className="border-white text-[15px] sm:px-6 px-3 sm:py-3 py-2 text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition cursor-pointer"
+                        >
+                          <Mail className="mr-2 h-4 w-4" />
+                          {btn.name || " Request Proposal"}
+                        </Button>
+                      );
+                    }
+                    return (
+                      <Button
+                        href={btn.link}
+                        //  href={"https://app.cal.com/auth/login"}
+                        variant="primaryLink"
+                        className="sm:px-20 px-9"
+                      >
+                        {btn.name || "Schedule For Demo"}
+                      </Button>
+                    );
+                  }
+                )}
+                {/* <Button
                   href="/contact"
                   variant="primaryLink"
                   className="sm:px-20 px-9"
                 >
                   Request for Quote
-                </Button>
-                <Button
-                  href="/about"
-                  variant="outline"
-                  size="lg"
-                  className="border-white text-[15px] sm:px-6 px-3 sm:py-3 py-2 text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition cursor-pointer"
-                >
-                  <Mail className="mr-2 h-4 w-4" />
-                  Request Proposal
-                </Button>
+                </Button> */}
               </div>
             </m.div>
           </div>
@@ -412,9 +414,10 @@ export default function ContactPage({
           <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
             {/* <Title title="Get in touch with us for expert market research solutions tailored to your business needs. Whether you have a project inquiry or need insights, our team is ready to assist you. Contact us today!" /> */}
             <m.h1 className="capitalize sm:leading-[2.5rem] leading-7 text-lg sm:text-4xl text-black font-medium text-center sm:w-[80rem] w-full mx-auto sm:mb-4 mb-0">
-              Get in touch with us for expert market research solutions tailored
-              to your business needs. Whether you have a project inquiry or need
-              insights, our team is ready to assist you. Contact us today!
+              {
+                contactData.importantText
+                // "Get in touch with us for expert market research solutions tailored to your business needs. Whether you have a project inquiry or need insights, our team is ready to assist you. Contact us today!"
+              }
             </m.h1>
           </div>
         </m.section>
@@ -447,7 +450,7 @@ export default function ContactPage({
                     </m.h2>
 
                     <form className="space-y-6" onSubmit={handleSubmit}>
-                      {formFields.map((field, index) => (
+                      {contactData.formFields.map((field, index) => (
                         <m.div
                           key={field.name}
                           variants={fadeInUp}
@@ -601,11 +604,12 @@ export default function ContactPage({
                         </div>
                         <div>
                           <h3 className="sm:text-lg text-base font-semibold scroll-m-20 tracking-tight">
-                            Urgent Research Needs?
+                            {contactData.contactMethods.heading ||
+                              "Urgent Research Needs?"}
                           </h3>
                           <p className="text-gray-600 text-base">
-                            Call our 24/7 research hotline for immediate
-                            assistance
+                            {contactData.contactMethods.pragraph ||
+                              "Call our 24/7 research hotline for immediate assistance"}
                           </p>
                           <a
                             href={`tel:${contactData.contactMethods.phone.replace(
@@ -665,7 +669,7 @@ export default function ContactPage({
         </section>
 
         {/* Methodology Section */}
-        <m.section
+        {/* <m.section
           ref={methodologyRef}
           initial="hidden"
           animate={methodologyInView ? "visible" : "hidden"}
@@ -719,7 +723,7 @@ export default function ContactPage({
               ))}
             </div>
           </div>
-        </m.section>
+        </m.section> */}
 
         {/* Map Section */}
         <m.section

@@ -96,6 +96,7 @@ const HeroBanner = ({ data }: Props) => {
                   <Button
                     href={data.firstButton.link}
                     className="button sm:px-7 sm:py-3 sm:text-base cursor-pointer"
+                    variant="about"
                   >
                     {data.firstButton.name}
                   </Button>
@@ -111,6 +112,7 @@ const HeroBanner = ({ data }: Props) => {
                   <Button
                     href={data.secondButton.link}
                     className="button sm:px-7 px-9.5 sm:py-3 sm:text-base border-white/2 bg-white/10 cursor-pointer"
+                    variant="secondaryLink"
                   >
                     {data.secondButton.name}
                   </Button>
