@@ -839,7 +839,7 @@ export default function MethodologyHero({ data }: MethodologyHeroProps) {
   }, []);
 
   return (
-    <section className="relative w-full sm:h-[80vh] h-[75vh] overflow-hidden flex flex-col items-center justify-center px-6 text-center">
+    <section className="relative w-full sm:h-[72vh] h-[65vh] gap-2.5 overflow-hidden flex flex-col items-center justify-center px-6 text-center">
       {/* Video Background */}
       <div className="absolute inset-0 -z-20 overflow-hidden">
         <video
