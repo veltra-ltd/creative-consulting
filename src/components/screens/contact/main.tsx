@@ -493,9 +493,9 @@ export default function ContactPage({
                                 />
                               </SelectTrigger>
                               <SelectContent>
-                                {field.options?.map((option) => (
+                                {field.options?.map((option, index) => (
                                   <SelectItem
-                                    key={option.value}
+                                    key={`${option.value}-${index}`}
                                     value={option.value}
                                   >
                                     {option.label}

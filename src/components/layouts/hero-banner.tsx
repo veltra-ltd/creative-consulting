@@ -50,7 +50,7 @@ const HeroBanner = ({ data }: Props) => {
   return (
     <section
       ref={container}
-      className=" relative text-white sm:pt-10 pt-4 sm:pb-15 pb-7 overflow-hidden bg-gradient-to-r from-primary/80 to-primary/90"
+      className=" relative text-white sm:pt-15 pt-16 sm:pb-15 pb-11 overflow-hidden bg-gradient-to-r from-primary/80 to-primary/90"
     >
       {/* Background image with overlay */}
       <div className="absolute inset-0">

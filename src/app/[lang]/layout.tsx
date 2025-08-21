@@ -36,7 +36,7 @@ export default async function LangLayout({
         </div>
 
         {/* Page Content */}
-        <div className="py-[110px]">{children}</div>
+        <div className="sm:pt-[100px] pt-[70px]">{children}</div>
 
         {/* Footer */}
         <Footer />

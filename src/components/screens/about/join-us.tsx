@@ -280,7 +280,7 @@ const JoinUs = ({ data }: { data: JoinUsData }) => {
             ))}
             <button
               type="submit"
-              className="bg-primary text-white sm:px-32 px-12 sm:py-3 py-2.5 flex justify-self-center rounded hover:bg-blue-700 transition"
+              className="bg-primary cursor-pointer text-white sm:px-32 px-12 sm:py-3 py-2.5 flex justify-self-center rounded hover:bg-primary transition"
             >
               {data.submitText}
             </button>
