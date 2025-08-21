@@ -66,7 +66,7 @@ const HeroBanner = ({ data }: Props) => {
 
       {/* Content */}
       <div className="container px-5 sm:px-6 lg:px-8 mx-auto relative z-10">
-        <div className="sm:max-w-3xl ">
+        <div className="sm:max-w-3xl sm:text-start text-center">
           <motion.h1
             className="heading text-2xl sm:text-5xl font-bold leading-tight mb-6 tracking-tight scroll-m-20"
             dangerouslySetInnerHTML={{ __html: data.heading }}

@@ -124,7 +124,7 @@ const HeroSlider = ({
   return (
     <div
       ref={sliderRef}
-      className="relative w-full sm:h-[78vh] h-[60vh] sm:max-h-[900px] max-h-[600px] sm:min-h-[550px] min-h-[400px] overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800"
+      className="relative w-full sm:mt-20 mt-15 sm:h-[78vh] h-[60vh] sm:max-h-[900px] max-h-[600px] sm:min-h-[550px] min-h-[400px] overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800"
       aria-roledescription="carousel"
       aria-label="Hero slider"
     >
