@@ -21,7 +21,7 @@ const CTA = ({ data }: FAQCTAProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8 }}
-      className="sm:py-8 py-4 px-4 sm:px-6 sm:mb-7 mb-4 bg-gradient-to-r from-primary to-primary-dark"
+      className="sm:py-8 py-4 px-4 sm:px-6 bg-gradient-to-r from-primary to-primary-dark"
     >
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
