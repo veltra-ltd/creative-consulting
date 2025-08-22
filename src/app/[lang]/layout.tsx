@@ -1,4 +1,3 @@
-// import Footer from "@/components/layouts/footer";
 import { Footer } from "@/components/layouts/footer";
 import Header from "@/components/layouts/header";
 import NavBar from "@/components/layouts/nav-bar";
@@ -27,20 +26,16 @@ export default async function LangLayout({
     <html lang={lang || "en"}>
       <body className="bg-white text-black">
         {/* Fixed Header */}
-
-        <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+        <div className="fixed top-0 left-0 w-full z-50">
           <Header data={headerData} />
-
-          {/* Optional sticky NavBar, or just flow element */}
           <NavBar data={navData} />
         </div>
 
         {/* Page Content */}
-        <div className="py-[110px]">{children}</div>
+        <div className="pt-[110px]">{children}</div>
 
         {/* Footer */}
         <Footer />
-        {/* <Footer data={footerData} /> */}
       </body>
     </html>
   );

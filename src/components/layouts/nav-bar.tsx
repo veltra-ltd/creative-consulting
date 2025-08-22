@@ -1,17 +1,16 @@
 "use client";
 
+import { cn } from "@/lib/utils/cn";
+import { NavData } from "@/types/lang";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect, type FC } from "react";
-import { IoIosArrowDown, IoIosMenu, IoIosClose } from "react-icons/io";
-import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils/cn";
-import Image from "next/image";
-import { NavData } from "@/types/lang";
-import { Button } from "../ui/button";
+import { FC, useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
-
+import { IoIosArrowDown, IoIosClose, IoIosMenu } from "react-icons/io";
 import SpaceButton from "../3d/space-button";
+import { Button } from "../ui/button";
 
 interface NavItem {
   title: string;
@@ -142,7 +141,7 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
   const renderDesktopMenu = () => {
     return (
       <div className="hidden lg:flex items-center justify-between w-full">
-        <div className="flex items-center! flex-1">
+        <div className="flex items-center flex-1">
           <div className="flex-shrink-0 mr-10">
             <Link href="/" className="inline-block">
               <Image
@@ -216,7 +215,6 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
       </div>
     );
   };
-
   const renderMobileMenu = () => {
     if (!isMobile) return null;
 
@@ -228,10 +226,31 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "-100%" }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden fixed h-[80vh] inset-0 bg-white z-[9999999999999]"
-            style={{ top: isScrolled ? "60px" : "100px" }}
+            className="lg:hidden fixed top-0 left-0 h-screen w-full bg-white z-[9999999999999]"
           >
-            <div className="h-full overflow-y-auto py-6 px-6">
+            {/* Close Button Header */}
+            <div className="flex justify-between items-center p-4 border-b border-gray-100 bg-white">
+              <Link href="/" className="inline-block" onClick={closeMobileMenu}>
+                <Image
+                  src="/logo-white.png"
+                  alt="Creative Consulting"
+                  width={120}
+                  height={40}
+                  className="h-8 w-auto object-contain"
+                  // style={{ filter: "brightness(0) invert(0)" }}
+                />
+              </Link>
+              <button
+                type="button"
+                className="p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none"
+                aria-label="Close menu"
+                onClick={closeMobileMenu}
+              >
+                <IoIosClose className="h-8 w-8" />
+              </button>
+            </div>
+
+            <div className="h-full overflow-y-auto py-4 px-6">
               <ul>
                 {data?.navItems?.map((item) => (
                   <li key={item.title} className="border-b border-gray-100">
@@ -322,14 +341,8 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
                   </li>
                 ))}
               </ul>
-              <div className="px-2 mt-4">
-                <Button
-                  variant="secondaryLink"
-                  href="/contact"
-                  onClick={closeMobileMenu}
-                >
-                  {data.btnText}
-                </Button>
+              <div className="px-2 mt-6">
+                <SpaceButton href="/contact">{data.btnText}</SpaceButton>
               </div>
             </div>
           </motion.div>
@@ -339,7 +352,7 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
   };
 
   return (
-    <header
+    <nav
       className={cn(
         "top-0 w-full z-50 bg-white transition-all duration-300",
         isScrolled ? "shadow-sm py-2" : "sm:py-3 py-2",
@@ -357,7 +370,8 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
                 alt="Creative Consulting"
                 width={160}
                 height={60}
-                className="h-fit object-contain transition-opacity hover:opacity-90 w-38"
+                className="h-10 w-auto object-contain transition-opacity hover:opacity-90"
+                // style={{ filter: "brightness(80) invert(0)" }}
               />
             </Link>
           </div>
@@ -383,7 +397,7 @@ const NavBar: FC<NavBarProps> = ({ data, className = "" }) => {
       </div>
 
       {renderMobileMenu()}
-    </header>
+    </nav>
   );
 };
 

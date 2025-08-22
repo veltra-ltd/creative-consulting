@@ -8,6 +8,7 @@ interface SpaceButtonProps {
   target?: string;
   className?: string;
   style?: React.CSSProperties;
+  onClick?: Function;
 }
 
 const SpaceButton: React.FC<SpaceButtonProps> = ({
@@ -15,9 +16,15 @@ const SpaceButton: React.FC<SpaceButtonProps> = ({
   className,
   style,
   children = "SPACE",
+  onClick,
 }) => {
   return (
-    <StyledButton href={href} className={cn("btn", className)} style={style}>
+    <StyledButton
+      onClick={onClick}
+      href={href}
+      className={cn("btn", className)}
+      style={style}
+    >
       <strong>{children}</strong>
       <div id="container-stars">
         <div id="stars"></div>

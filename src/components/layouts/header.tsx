@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef, type FC } from "react";
-import type { HeaderData } from "@/types/lang";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosMenu, IoIosClose } from "react-icons/io";
 import {
   FaFacebook,
   FaGoogle,
@@ -14,12 +13,18 @@ import {
 } from "react-icons/fa";
 import { MdMail, MdPhone } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
+import { FiArrowUpRight } from "react-icons/fi";
+import Image from "next/image";
 
 import { List } from "../ui/list";
 import { ListItem } from "../ui/list-item";
 import { Flex } from "../ui/flex";
 import { cn } from "@/lib/utils/cn";
+import { Button } from "../ui/button";
+import SpaceButton from "../3d/space-button";
+import type { HeaderData, NavData, FooterData } from "@/types/lang";
 
+// Header Component
 const iconMap = {
   FaFacebook: <FaFacebook />,
   FaGoogle: <FaGoogle />,
@@ -126,7 +131,7 @@ const Header: FC<{ data: HeaderData; className?: string }> = ({
       <div className="container mx-auto px-4 sm:px-6">
         <Flex
           direction="col"
-          className=" flex-row items-center sm:justify-between justify-center gap-4"
+          className="flex-row items-center sm:justify-between justify-center gap-4"
         >
           {/* Social Links */}
           <nav className="flex items-center space-x-4">
