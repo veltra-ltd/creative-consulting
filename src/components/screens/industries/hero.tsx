@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function IndustriesHero({ data }: { data: IndustriesHeroData }) {
   return (
-    <section className="relative sm:h-[65vh] h-[50vh] flex items-center justify-center bg-gradient-to-br from-gradiant-one via-gradiant-two to-gradaint-three overflow-hidden">
+    <section className="relative sm:h-[58vh] h-[55vh] sm:pt-0 pt-10 flex items-center justify-center bg-gradient-to-br from-gradiant-one via-gradiant-two to-gradaint-three overflow-hidden">
       <motion.div
         className="absolute inset-0 z-0"
         initial={{ opacity: 0 }}
@@ -56,7 +56,7 @@ export default function IndustriesHero({ data }: { data: IndustriesHeroData }) {
             stiffness: 50,
             duration: 0.8,
           }}
-          className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-8"
+          className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto sm:mb-30 mb-4"
         >
           {data.subtitle}
         </motion.p>
