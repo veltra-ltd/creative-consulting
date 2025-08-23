@@ -1,9 +1,11 @@
+// ServicesHero.tsx
 "use client";
 
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import Services3DIcons from "./services-3d-icons";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 interface ServicesHeroProps {
   data: {
@@ -25,44 +27,54 @@ const floatingVariants = {
 };
 
 export default function ServicesHero({ data }: ServicesHeroProps) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <section className="relative sm:h-[80vh] h-[82vh] flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 overflow-hidden">
-      {/* Animated background elements */}
-      <motion.div
-        className="absolute inset-0 bg-[url('https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg')] bg-cover bg-center opacity-20"
-        initial={{ scale: 1.2 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 5 }}
+      {/* Background with inline style to avoid hydration mismatch */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20"
+        style={{
+          backgroundImage:
+            "url(https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg)",
+        }}
       />
 
       {/* Floating particles */}
-      {[...Array(20)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full bg-white/10 backdrop-blur-sm"
-          style={{
-            width: Math.random() * 10 + 5,
-            height: Math.random() * 10 + 5,
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-          animate={{
-            y: [0, (Math.random() - 0.5) * 100],
-            x: [0, (Math.random() - 0.5) * 50],
-            opacity: [0.5, 1, 0.5],
-          }}
-          transition={{
-            duration: Math.random() * 10 + 10,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        />
-      ))}
+      {isClient &&
+        [...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-white/10 backdrop-blur-sm"
+            style={{
+              width: Math.random() * 10 + 5,
+              height: Math.random() * 10 + 5,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, (Math.random() - 0.5) * 100],
+              x: [0, (Math.random() - 0.5) * 50],
+              opacity: [0.5, 1, 0.5],
+            }}
+            transition={{
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          />
+        ))}
 
       {/* 3D Icons */}
-      <div className="absolute inset-0 z-0">
-        <Services3DIcons />
-      </div>
+      {isClient && (
+        <div className="absolute inset-0 z-0">
+          <Services3DIcons />
+        </div>
+      )}
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
@@ -72,21 +84,22 @@ export default function ServicesHero({ data }: ServicesHeroProps) {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
-          {/* <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-6">
-            <span className="text-white font-medium">Premium Services</span>
-          </div> */}
           <motion.h1
             className="text-2xl sm:text-5xl font-bold text-white mb-6 bg-clip-text bg-gradient-to-r from-white to-primary/50"
             variants={floatingVariants}
             animate="animate"
           >
-            <TypeAnimation
-              sequence={data.titleSequences.flatMap((text) => [text, 1500])}
-              wrapper="span"
-              speed={40}
-              style={{ display: "inline-block" }}
-              repeat={Infinity}
-            />
+            {isClient ? (
+              <TypeAnimation
+                sequence={data.titleSequences.flatMap((text) => [text, 1500])}
+                wrapper="span"
+                speed={40}
+                style={{ display: "inline-block" }}
+                repeat={Infinity}
+              />
+            ) : (
+              data.titleSequences[0] // Show first title during SSR
+            )}
           </motion.h1>
         </motion.div>
 
@@ -110,40 +123,39 @@ export default function ServicesHero({ data }: ServicesHeroProps) {
               {data.ctaText}
             </button>
           </Link>
-          {/* <button className="bg-transparent text-white font-semibold px-8 py-3 rounded-full border-2 border-white/30 hover:border-white/60 transition-all duration-300 transform hover:scale-105">
-            Learn More
-          </button> */}
         </motion.div>
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-10 left-0 right-0 flex justify-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-      >
+      {isClient && (
         <motion.div
-          animate={{ y: [0, 15, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="flex flex-col items-center"
+          className="absolute bottom-10 left-0 right-0 flex justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
         >
-          <span className="text-white/80 text-sm mb-2">Scroll Down</span>
-          <svg
-            className="h-6 w-6 text-white"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+          <motion.div
+            animate={{ y: [0, 15, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="flex flex-col items-center"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
+            <span className="text-white/80 text-sm mb-2">Scroll Down</span>
+            <svg
+              className="h-6 w-6 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </motion.div>
         </motion.div>
-      </motion.div>
+      )}
     </section>
   );
 }

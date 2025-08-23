@@ -102,7 +102,7 @@ const JoinUs = ({ data }: { data: JoinUsData }) => {
     }
 
     try {
-      console.log("Sending form data:", formDataToSend.get("file"));
+      console.log("Sending form data:", process.env.NEXT_PUBLIC_BASE_API_URL);
 
       const response: AxiosResponse = await axios.post(
         `${process.env.NEXT_PUBLIC_BASE_API_URL}/join/with-us`,

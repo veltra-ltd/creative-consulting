@@ -1,3 +1,4 @@
+// Services3DIcons.tsx
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -8,16 +9,23 @@ import {
   Float,
 } from "@react-three/drei";
 import * as THREE from "three";
-import { useRef, Suspense } from "react";
+import { useRef, Suspense, useState, useEffect } from "react";
 
 const ServiceIcons = () => {
   const groupRef = useRef<THREE.Group>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Use placeholder images to avoid CORS issues
   const images = [
-    "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg", // Market Research
-    "https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg", // Data Analytics
-    "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg", // Strategy
-    "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg", // Digital
-    "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg", // Customer
+    "/api/placeholder/600/400", // Local placeholder
+    "/api/placeholder/600/400",
+    "/api/placeholder/600/400",
+    "/api/placeholder/600/400",
+    "/api/placeholder/600/400",
   ];
 
   const textures = useTexture(images);
@@ -35,6 +43,8 @@ const ServiceIcons = () => {
     }
   });
 
+  if (!isClient) return null;
+
   return (
     <group ref={groupRef}>
       {icons.map((icon, index) => (
@@ -49,17 +59,7 @@ const ServiceIcons = () => {
             rotation={icon.rotation as [number, number, number]}
           >
             <boxGeometry args={[icon.size, icon.size, icon.size]} />
-            {textures[index] && (
-              <>
-                {[...Array(6)].map((_, i) => (
-                  <meshStandardMaterial
-                    key={i}
-                    attach={`material-${i}`}
-                    map={textures[index]}
-                  />
-                ))}
-              </>
-            )}
+            <meshStandardMaterial color={`hsl(${index * 72}, 70%, 60%)`} />
           </mesh>
         </Float>
       ))}
@@ -68,13 +68,21 @@ const ServiceIcons = () => {
 };
 
 export default function Services3DIcons() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+
   return (
     <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1} />
       <Suspense fallback={null}>
         <ServiceIcons />
-        <Environment preset="city" />
+        <Environment preset="apartment" />
       </Suspense>
       <OrbitControls
         enableZoom={false}
