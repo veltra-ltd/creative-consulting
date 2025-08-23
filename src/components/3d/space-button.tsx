@@ -8,7 +8,9 @@ interface SpaceButtonProps {
   target?: string;
   className?: string;
   style?: React.CSSProperties;
-  onClick?: Function;
+  onClick?: (
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) => void;
 }
 
 const SpaceButton: React.FC<SpaceButtonProps> = ({

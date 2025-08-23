@@ -3,30 +3,27 @@
 import { useState, useEffect, useRef, type FC } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { IoIosArrowDown, IoIosMenu, IoIosClose } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 import {
-  FaFacebook,
+  // FaFacebook,
   FaGoogle,
   FaGlobe,
   FaLinkedin,
   FaYoutube,
+  FaFacebookF,
 } from "react-icons/fa";
 import { MdMail, MdPhone } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiArrowUpRight } from "react-icons/fi";
-import Image from "next/image";
 
 import { List } from "../ui/list";
 import { ListItem } from "../ui/list-item";
 import { Flex } from "../ui/flex";
 import { cn } from "@/lib/utils/cn";
-import { Button } from "../ui/button";
-import SpaceButton from "../3d/space-button";
-import type { HeaderData, NavData, FooterData } from "@/types/lang";
+import type { HeaderData } from "@/types/lang";
 
 // Header Component
 const iconMap = {
-  FaFacebook: <FaFacebook />,
+  FaFacebook: <FaFacebookF />,
   FaGoogle: <FaGoogle />,
   FaLinkedin: <FaLinkedin />,
   FaYoutube: <FaYoutube />,

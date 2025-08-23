@@ -10,7 +10,6 @@ import { FC, useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IoIosArrowDown, IoIosClose, IoIosMenu } from "react-icons/io";
 import SpaceButton from "../3d/space-button";
-import { Button } from "../ui/button";
 
 interface NavItem {
   title: string;

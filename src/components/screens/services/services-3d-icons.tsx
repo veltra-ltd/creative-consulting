@@ -4,7 +4,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
   OrbitControls,
-  useTexture,
+  // useTexture,
   Environment,
   Float,
 } from "@react-three/drei";
@@ -20,15 +20,15 @@ const ServiceIcons = () => {
   }, []);
 
   // Use placeholder images to avoid CORS issues
-  const images = [
-    "/api/placeholder/600/400", // Local placeholder
-    "/api/placeholder/600/400",
-    "/api/placeholder/600/400",
-    "/api/placeholder/600/400",
-    "/api/placeholder/600/400",
-  ];
+  // const images = [
+  //   "/api/placeholder/600/400", // Local placeholder
+  //   "/api/placeholder/600/400",
+  //   "/api/placeholder/600/400",
+  //   "/api/placeholder/600/400",
+  //   "/api/placeholder/600/400",
+  // ];
 
-  const textures = useTexture(images);
+  // const textures = useTexture(images);
   const icons = [
     { position: [0, 0, 0], size: 1, rotation: [0, 0, 0] },
     { position: [3, 1, -2], size: 0.8, rotation: [0.2, 0.4, 0] },
