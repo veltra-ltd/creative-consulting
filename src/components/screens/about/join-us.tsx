@@ -110,6 +110,7 @@ const JoinUs = ({ data }: { data: JoinUsData }) => {
         formDataToSend,
         {
           headers: {
+            Accept: "application/json, text/plain, */*",
             "Content-Type": "multipart/form-data",
           },
         }
