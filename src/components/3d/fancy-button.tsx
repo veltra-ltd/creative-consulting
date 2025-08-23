@@ -122,7 +122,7 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({
         </svg>
 
         <div className="outline"></div>
-        <div className="content text-[16px] sm:textl-[20px]">
+        <div className="content text-[16px]">
           <span className="char state-1">
             {textOne.split("").map((letter, index) => (
               <span

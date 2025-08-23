@@ -53,13 +53,13 @@ export default function Main({
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeIn}
-            className=" rounded-xl py-8"
+            className=" rounded-xl sm:py-8 py-10"
           >
-            <h2 className="sm:text-3xl text-2xl font-bold text-gray-900 sm:mb-6 mb-2.5">
+            <h2 className="sm:text-3xl text-2xl font-bold text-gray-900 sm:mb-2 mb-1 sm:mt-0 mt-5">
               {replaceCountryName(data.hero.heading)}
             </h2>
             <p
-              className="sm:text-lg text-base text-gray-700 mb-6"
+              className="sm:text-lg text-base text-gray-700 sm:mb-9 mb-4"
               dangerouslySetInnerHTML={{
                 __html: replaceCountryName(data.hero.paragraph),
               }}
@@ -75,7 +75,7 @@ export default function Main({
           </motion.section>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-12 py-5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-0 sm:py-12 py-5">
         {/* Why Choose Us Section */}
         <SectionWithAnimation
           title={replaceCountryName(data.whyClientChoose.heading)}
@@ -94,7 +94,7 @@ export default function Main({
         <SectionWithAnimation
           title={data.howWeWork.heading}
           items={data.howWeWork.list}
-          className="mb-16"
+          className="sm:mb-16 mb-5"
         />
 
         {/* Research Solutions Section */}
@@ -208,7 +208,7 @@ export default function Main({
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="mb-16"
+          className="sm:mb-16 mb-6"
         >
           <motion.h1
             variants={itemVariants}
@@ -238,7 +238,7 @@ export default function Main({
         </motion.section>
 
         {/* Contact Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-8 gap-5">
           <SectionWithAnimation
             title={data.GetTouchBangladesh.heading}
             items={data.GetTouchBangladesh.list}
