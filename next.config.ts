@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-    domains: ['images.pexels.com', "unpkg.com", "images.weserv.nl", "https://images.pexels.com", "https://images.weserv.nl"],
+    domains: ['images.pexels.com', "unpkg.com", "images.weserv.nl", "https://images.pexels.com", "https://images.weserv.nl", "https://creative-con-backend.onrender.com"],
   },
   webpack(config) {
     config.module.rules.push({
