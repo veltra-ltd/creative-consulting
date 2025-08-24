@@ -20,7 +20,7 @@ function getLocale(request: NextRequest): string | undefined {
         languages = new Negotiator({ headers: negotiatorHeaders }).languages(
             locales
         );
-    } catch (e) {
+    } catch {
         languages = [i18n.defaultLocale];
     }
 

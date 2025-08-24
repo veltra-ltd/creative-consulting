@@ -5,7 +5,7 @@ import { useRef, useEffect, useState } from "react";
 import { List } from "@/components/ui/list";
 import { JoinUsData } from "@/types/about";
 import toast from "react-hot-toast";
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 // import RainbowButton from "@/components/3d/rainbow-button";
 
 interface FormData {

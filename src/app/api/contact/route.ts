@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Sanitize inputs
-    const sanitizeInput = (input: any): string => {
+    const sanitizeInput = (input: unknown): string => {
       if (typeof input !== 'string') return '';
       return input.trim().replace(/<script.*?>.*?<\/script>/gi, '');
     };
@@ -166,11 +166,10 @@ export async function POST(request: NextRequest) {
     const { data: emailData, error: emailError } = await resend.emails.send({
       from: "onboarding@resend.dev",
       // to: process.env.TO_EMAIL_ADDRESS!,
-      // subject: `New Contact Form: ${name}`,
+      subject: `New Contact Form: ${name}`,
       // html: emailHtml,
       // text: emailText,
       to: process.env.TO_EMAIL_ADDRESS!,
-      subject: `New Job Application: ${name}`,
       html: emailHtml,
       text: emailText,
       // attachments: attachments.length > 0 ? attachments : undefined,

@@ -10,7 +10,8 @@ import ProcessSection from "@/components/screens/solutions/process-section";
 // import DataVisualization from "@/components/screens/solutions/data-visualization";
 import SolutionsGrid from "@/components/screens/solutions/solutions-grid";
 // import { HeroSection } from "@/components/layouts/hero";
-import { MarketResearchHero } from "@/components/layouts/worldHero";
+import { HeroData } from "@/types/worldHero";
+import WorldMapHero from "@/components/layouts/worldHero";
 
 const SolutionsPage = async ({
   params,
@@ -20,7 +21,7 @@ const SolutionsPage = async ({
   const { lang } = await params;
 
   // Fetch all data needed for the solutions page
-  // const heroData:SolutionHero  = await getLangData(lang, "screen/solutions/hero");
+  const heroData: HeroData = await getLangData(lang, "worldHero");
   const solutionsData: SolutionsGridData = await getLangData(
     lang,
     "screen/solutions/solutions"
@@ -34,7 +35,7 @@ const SolutionsPage = async ({
   return (
     <>
       {/* <HeroSection /> */}
-      <MarketResearchHero />
+      <WorldMapHero heroData={heroData} />
       <SolutionsGrid data={solutionsData} />
       {/* <DataVisualization /> */}
       <ProcessSection data={processData} />
