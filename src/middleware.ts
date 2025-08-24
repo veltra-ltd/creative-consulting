@@ -15,50 +15,66 @@ function getLocale(request: NextRequest): string | undefined {
     const locales: string[] = i18n.locales;
 
     // Use negotiator and intl-localematcher to get best locale
-    const languages = new Negotiator({ headers: negotiatorHeaders }).languages(locales);
+    let languages: string[];
+    try {
+        languages = new Negotiator({ headers: negotiatorHeaders }).languages(
+            locales
+        );
+    } catch (e) {
+        languages = [i18n.defaultLocale];
+    }
 
     const locale = matchLocale(languages, locales, i18n.defaultLocale);
-
     return locale;
 }
 
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
 
-    // Ignore paths like /api, /_next, public files, etc.
-    if (
-        pathname.startsWith("/api") ||
-        pathname.startsWith("/_next") ||
-        pathname.startsWith("/favicon.ico") ||
-        /\.(mp4|webm|jpg|jpeg|png|svg|gif|ico|ogg|mp3|wav|json|txt|woff2|ttf)$/.test(pathname)
-    ) {
-        return;
+    // Check if there should be a redirect
+    const shouldHandleLocale =
+        // Ignore Next.js internals and API routes
+        !pathname.startsWith("/_next") &&
+        !pathname.startsWith("/api") &&
+        // Ignore files in public folder with extensions
+        !pathname.match(/\.(.*)$/) &&
+        // Ignore favicon
+        pathname !== "/favicon.ico";
+
+    if (!shouldHandleLocale) {
+        return NextResponse.next();
     }
 
     // Check if the pathname already includes a locale
-    const pathnameIsMissingLocale = i18n.locales.every(
-        (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+    const pathnameHasLocale = i18n.locales.some(
+        (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
     );
 
-    if (pathnameIsMissingLocale) {
-        const locale = getLocale(request);
+    if (pathnameHasLocale) {
+        return NextResponse.next();
+    }
 
-        // ✅ Redirect root path "/" to "/{locale}/home"
-        if (pathname === "/") {
-            return NextResponse.redirect(
-                new URL(`/${locale}/home`, request.url)
-            );
-        }
+    // Redirect if no locale
+    const locale = getLocale(request);
 
+    // Handle root path redirect to localized home
+    if (pathname === "/") {
         return NextResponse.redirect(
-            new URL(
-                `/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`,
-                request.url
-            )
+            new URL(`/${locale}/home`, request.url)
         );
     }
+
+    return NextResponse.redirect(
+        new URL(
+            `/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`,
+            request.url
+        )
+    );
 }
 
 export const config = {
-    matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+    // Matcher ignoring _next, api, and all static files
+    matcher: [
+        "/((?!_next|api|[\\w-]+\\.\\w+).*)",
+    ],
 };

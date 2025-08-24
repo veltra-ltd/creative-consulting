@@ -6,12 +6,35 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'http://localhost:3000',
+        hostname: 'localhost',
+        port: '3000',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'unpkg.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.weserv.nl',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'creative-con-backend.onrender.com',
+        port: '',
+        pathname: '/**',
+      }
     ],
-    domains: ['images.pexels.com', "unpkg.com", "images.weserv.nl", "https://images.pexels.com", "https://images.weserv.nl", "https://creative-con-backend.onrender.com"],
   },
   webpack(config) {
     config.module.rules.push({
@@ -24,8 +47,19 @@ const nextConfig: NextConfig = {
     };
     return config;
   },
+  // Enable CORS for API routes
+  async headers() {
+    return [
+      {
+        source: '/api/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
+          { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
-
-

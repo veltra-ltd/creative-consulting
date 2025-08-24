@@ -87,7 +87,6 @@ const JoinUs = ({ data }: { data: JoinUsData }) => {
     e.preventDefault();
     // Handle form submission logic here
     console.log("Form submitted with data:", formData);
-
     const formDataToSend = new FormData();
     for (const key in formData) {
       if (formData[key as keyof FormData] instanceof File) {
@@ -104,18 +103,11 @@ const JoinUs = ({ data }: { data: JoinUsData }) => {
     try {
       console.log("Sending form data:", process.env.NEXT_PUBLIC_BASE_API_URL);
 
-      const response: AxiosResponse = await axios.post(
-        `${process.env.NEXT_PUBLIC_BASE_API_URL}/join/with-us`,
-        // `http://localhost:5000/api/v1/join/with-us`,
-        formDataToSend,
-        {
-          headers: {
-            Accept: "application/json, text/plain, */*",
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-
+      const response = await axios.post("/api/join/with-us", formDataToSend, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       // Log the response for debugging
       // toast.promise(
       //   response,

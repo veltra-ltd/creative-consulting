@@ -247,15 +247,11 @@ export default function ContactPage({
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_BASE_API_URL}/contact/send/proposal`,
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post(`/api/contact`, formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       if (response.status === 200) {
         toast.success("Your request has been submitted successfully!");
