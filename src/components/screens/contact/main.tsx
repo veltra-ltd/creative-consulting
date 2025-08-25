@@ -384,7 +384,7 @@ export default function ContactPage({
                         href={btn.link}
                         //  href={"https://app.cal.com/auth/login"}
                         variant="primaryLink"
-                        className="sm:px-10 px-7"
+                        className="sm:px-10 px-7 cursor-pointer hover: !bg-black"
                       >
                         {btn.name || "Schedule For Demo"}
                       </Button>
