@@ -66,9 +66,9 @@ const WorldMapHero = ({ heroData }: WorldMapHeroProps) => {
   const resumeAnimations = () => setIsPlaying(true);
 
   return (
-    <section className="relative h-[70vh] md:h-[80vh] flex flex-col overflow-hidden bg-gradient-to-br from-blue-900 to-indigo-950 text-white">
+    <section className="relative h-[70vh] flex flex-col overflow-hidden bg-gradient-to-br from-blue-900 to-indigo-950 text-white">
       {/* Background World Map */}
-      <div className="absolute inset-0 z-0 opacity-20">
+      <div className="absolute inset-0 z-0 opacity-60">
         <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
           <EarthGlobe isMobile={isMobile} />
         </Canvas>
@@ -90,7 +90,7 @@ const WorldMapHero = ({ heroData }: WorldMapHeroProps) => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold px-2"
+                className="text-2xl sm:text-5xl font-bold px-2"
               >
                 {titleSequences[currentTitleIndex]}
               </motion.h1>
@@ -99,7 +99,7 @@ const WorldMapHero = ({ heroData }: WorldMapHeroProps) => {
 
           {/* Animated Description */}
           <div
-            className="h-12 md:h-16 mb-6 md:mb-10 flex items-center justify-center"
+            className="h-12 md:h-16 mb-16 sm:mb-10 flex items-center justify-center"
             onMouseEnter={pauseAnimations}
             onMouseLeave={resumeAnimations}
           >
@@ -118,7 +118,7 @@ const WorldMapHero = ({ heroData }: WorldMapHeroProps) => {
           </div>
 
           {/* Indicators */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12 px-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mb-0 md:mb-12 px-2">
             {heroData.indicators.map((indicator, index) => (
               <motion.div
                 key={index}
@@ -138,7 +138,7 @@ const WorldMapHero = ({ heroData }: WorldMapHeroProps) => {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
+          {/* <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -153,7 +153,7 @@ const WorldMapHero = ({ heroData }: WorldMapHeroProps) => {
             >
               {heroData.buttonTexts.secondary}
             </motion.button>
-          </div>
+          </div> */}
         </div>
       </div>
 

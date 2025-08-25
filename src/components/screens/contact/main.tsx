@@ -290,7 +290,7 @@ export default function ContactPage({
           initial="hidden"
           animate={heroInView ? "visible" : "hidden"}
           variants={staggerContainer}
-          className="relative isolate overflow-hidden py-8 sm:py-26 bg-[linear-gradient(to_right,var(--color-gradiant-one),var(--color-gradiant-two),var(--color-gradiant-three))]"
+          className="relative isolate overflow-hidden sm:mt-0 mt-8 py-8 sm:py-26 bg-[linear-gradient(to_right,var(--color-gradiant-one),var(--color-gradiant-two),var(--color-gradiant-three))]"
         >
           {/* Background image with elegant gradient overlay */}
           <div className="absolute inset-0 -z-10">
@@ -361,7 +361,7 @@ export default function ContactPage({
                 Request Proposal
               </Button> */}
 
-              <div className="flex gap-3 justify-center mx-auto sm:pt-10 pt-7 sm:pb-3.5 pb-3">
+              <div className="flex gap-3 justify-center items-center sm:flex-row flex-col mx-auto sm:pt-10 pt-7 sm:pb-3.5 pb-3">
                 {contactData.hero.buttons.map(
                   (btn: HeroButton, btnIndex: number) => {
                     if (btnIndex === 1) {
@@ -371,7 +371,7 @@ export default function ContactPage({
                           href={btn.link}
                           variant="outline"
                           size="lg"
-                          className="border-white text-[15px] sm:px-6 px-3 sm:py-3 py-2 text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition cursor-pointer"
+                          className="border-white text-[15px] sm:px-7 px-6 sm:py-3 py-2 text-white hover:bg-white/10 hover:border-white/80 shadow-lg transition cursor-pointer"
                         >
                           <Mail className="mr-2 h-4 w-4" />
                           {btn.name || " Request Proposal"}
@@ -384,7 +384,7 @@ export default function ContactPage({
                         href={btn.link}
                         //  href={"https://app.cal.com/auth/login"}
                         variant="primaryLink"
-                        className="sm:px-20 px-9"
+                        className="sm:px-10 px-7 cursor-pointer hover: !bg-black"
                       >
                         {btn.name || "Schedule For Demo"}
                       </Button>
@@ -519,7 +519,7 @@ export default function ContactPage({
                         className="sm:pt-5 pt-2 flex justify-center"
                       >
                         <RainbowButton
-                          className="sm:!w-[350] sm:!py-3 !py-[8px]"
+                          className="sm:!w-[350] !w-[280] sm:!py-3 !py-[8px]"
                           type="submit"
                           disabled={isSubmitting}
                         >
@@ -729,7 +729,7 @@ export default function ContactPage({
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="h-full w-full relative bg-gray-100 my-7"
+          className="h-full w-full relative bg-gray-100 mt-7"
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.496699450262!2d90.37131749999999!3d23.800930400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0d236171dd9%3A0xddc1ece1a335e89f!2s1286%20Begum%20Rokeya%20Avenue%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1749710615281!5m2!1sen!2sbd"
