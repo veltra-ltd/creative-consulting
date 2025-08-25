@@ -9,7 +9,7 @@
     },
     "secondButton": {
       "name": "Our Services",
-      "link": "/services"
+      "link": "/services/all"
     }
   },
   "sections": [
