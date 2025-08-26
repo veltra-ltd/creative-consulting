@@ -1,25 +1,25 @@
 {
   "hero": {
     "heading": "Market Research Company in (countryName) — Creative Consulting Services Limited (CCSL)",
-    "paragraph": "Creative Consulting Services Limited (CCSL) is a leading full-service market & social research and fieldwork partner in (countryName) with operational coverage across APAC & GCC. We specialize in consumer, healthcare, B2B, automotive, financial services, FMCG, retail, and development/NGO research, delivering end-to-end <span class=\"font-bold cursor-pointer underline\">qualitative</span> and <span class=\"font-bold cursor-pointer underline\">quantitative</span> solutions.<br/>Our teams combine local language expertise, nationwide field logistics, and modern research technology (CATI/CAWI/CAPI, online & mobile qual, dashboards, and advanced analytics) to turn questions into clear, decision-ready answers—from concept to implementation.",
+    "paragraph": "Creative Consulting Services Limited (CCSL) is a leading full-service market & social research and fieldwork partner in <span class=\"font-bold\">(countryName)</span> with operational coverage across APAC & GCC. We specialize in consumer, healthcare, B2B, automotive, financial services, FMCG, retail, and development/NGO research, delivering end-to-end <span class=\"font-bold cursor-pointer underline\"><a href='/services/all'>qualitative</a></span> and <span class=\"font-bold cursor-pointer underline\"><a href='/services/all'>quantitative</a></span> solutions.<br/>Our teams combine local language expertise, nationwide field logistics, and modern research technology (CATI/CAWI/CAPI, online & mobile qual, dashboards, and advanced analytics) to turn questions into clear, decision-ready answers—from concept to implementation.",
     "focusText": "<span class=\"font-bold\">Standards & Ethics:</span> We follow the ICC/ESOMAR International Code for Market, Opinion & Social Research and Data Analytics. Participant consent, privacy, and multi-layer quality control are embedded in every project."
   },
   "whyClientChoose": {
     "heading": "Why Clients Choose Creative Consulting Services Limited (CCSL): ",
     "list": [
       "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
-      "<span class=\"font-bold\">Multi-mode, fit-for-purpose design:</span> Survey, FGDs, IDIs, ethnography, CATI, CAWI, CAPI, online communities, mobile diaries.",
-      "<span class=\"font-bold\">Quality you can verify:</span> live monitoring, call/listen-backs and consented recordings, GPS/time-stamps, 100% critical back-checks.",
-      "<span class=\"font-bold\">Actionable outputs: </span>concise narratives, clear visuals, and prioritized recommendations—not just data dumps."
+      "<span class=\"font-bold\"> Multi-mode, fit-for-purpose design:</span> Survey, FGDs, IDIs, ethnography, CATI, CAWI, CAPI, online communities, mobile diaries.",
+      "<span class=\"font-bold\"> Quality you can verify:</span> live monitoring, call/listen-backs and consented recordings, GPS/time-stamps, 100% critical back-checks.",
+      "<span class=\"font-bold\"> Actionable outputs: </span>concise narratives, clear visuals, and prioritized recommendations—not just data dumps."
     ]
   },
   "whatWeDo": {
     "heading": "What We Do:",
     "list": [
       "<span class=\"font-bold\"> Quantitative Research</span> (CATI, CAWI, CAPI, Online).",
-      "<span class=\"font-bold\">Qualitative Research</span>(FGDs, IDIs, Ethnography, Online Qual, Semiotics).",
+      "<span class=\"font-bold\"> Qualitative Research</span>(FGDs, IDIs, Ethnography, Online Qual, Semiotics).",
       "<span class=\"font-bold\"> Data Collection & Fieldwork in (countryName)</span> (nationwide recruitment, survey,  moderation, logistics & QC).",
-      "<span class=\"font-bold\">Mobile Research</span>(diaries, photo/video ethnography, geo-tasks).",
+      "<span class=\"font-bold\"> Mobile Research</span>(diaries, photo/video ethnography, geo-tasks).",
       "<span class=\"font-bold\"> Panels & Communities </span>(always-on audiences, re-contact studies).",
       "<span class=\"font-bold\"> Biometrics & Neuromarketing </span> (Eye-Tracking, Facial Coding, Wearables).",
       "<span class=\"font-bold\"> Analytical Services</span>  (Big Data, Data Mining, Statistical Modeling).",
@@ -30,13 +30,13 @@
   "howWeWork": {
     "heading": "How We Work (Concept → Completion)",
     "list": [
-      "<span class=\"font-bold\">Brief & Objectives </span>clarify the problem, KPIs, markets, and timelines.",
+      "<span class=\"font-bold\"> Brief & Objectives </span>clarify the problem, KPIs, markets, and timelines.",
       "<span class=\"font-bold\"> Design & Sampling</span> method mix, incidence & quotas, discussion guide/questionnaire, compliance plan.",
       "<span class=\"font-bold\"> Recruitment & Scheduling </span>screeners, verification, reminders, venue/tech setup.",
-      "<span class=\"font-bold\">Fieldwork Execution</span> moderators/interviewers, stimulus handling, live client access.",
-      "<span class=\"font-bold\">Quality Control</span>consented monitoring/recordings, back-checks, fraud/duplicate checks, GPS/time-stamps.",
-      "<span class=\"font-bold\">Analysis & Insight </span>stats modeling, thematic coding, frameworks (What/Why/Now-What).",
-      "<span class=\"font-bold\">Delivery & Enablement</span>datasets, dashboards, reports, and an action plan."
+      "<span class=\"font-bold\"> Fieldwork Execution</span> moderators/interviewers, stimulus handling, live client access.",
+      "<span class=\"font-bold\"> Quality Control</span>consented monitoring/recordings, back-checks, fraud/duplicate checks, GPS/time-stamps.",
+      "<span class=\"font-bold\"> Analysis & Insight </span>stats modeling, thematic coding, frameworks (What/Why/Now-What).",
+      "<span class=\"font-bold\"> Delivery & Enablement</span>datasets, dashboards, reports, and an action plan."
     ]
   },
   "OurResearch": {
@@ -131,9 +131,9 @@
   "QualitativeResearch": {
     "heading": "Qualitative Research (FGDs • IDIs • Ethnography • Online Qual • Semiotics)",
     "list": [
-      "<span class=\"font-bold\">Purpose:</span>uncover motivations, barriers, language, and cultural meanings to shape propositions and communication.",
-      "<span class=\"font-bold\">Applications: </span>idea exploration, product/pack refinement, messaging, patient/HCP journeys, shopper missions, UX/usability, cultural decoding.",
-      "<span class=\"font-bold\">Execution:</span>targeted recruitment, senior moderation, projective/creative tasks, in-facility/in-home/shop-along, online or offline FGDs/IDIs, mobile diaries.",
+      "<span class=\"font-bold\">Purpose:</span> uncover motivations, barriers, language, and cultural meanings to shape propositions and communication.",
+      "<span class=\"font-bold\">Applications:</span> idea exploration, product/pack refinement, messaging, patient/HCP journeys, shopper missions, UX/usability, cultural decoding.",
+      "<span class=\"font-bold\">Execution:</span> targeted recruitment, senior moderation, projective/creative tasks, in-facility/in-home/shop-along, online or offline FGDs/IDIs, mobile diaries.",
       "<span class=\"font-bold\">Deliverables:</span> transcripts & translations, verbatim packs, highlight reels, thematic maps, personas/journeys, and action frameworks."
     ]
   },
@@ -142,7 +142,7 @@
     "subHeading": "Build and engage always-on audiences for faster, iterative learning.",
     "list": [
       "<span class=\"font-bold\">We handle:</span> in-the-moment diaries, path-to-purchase, mystery shopping, OOH checks, product trials.",
-      "<span class=\"font-bold\">Toolkit: </span>app/web tasks, photo/video uploads, barcode/QR scans, geo-fenced assignments, opt-in passive metering."
+      "<span class=\"font-bold\">Toolkit: </span> app/web tasks, photo/video uploads, barcode/QR scans, geo-fenced assignments, opt-in passive metering."
     ]
   },
   "MobileResearch": {
@@ -179,7 +179,7 @@
   "ResearchPlatformScripting": {
     "heading": "Research Platform and Scripting: ",
     "list": [
-      "<span class=\"font-bold\">Platform:</span>Survey To Go, Survey CTO, Qualtrics, SurveyMonkey, Kobo Toolbox and our client platforms (i-field and n-field and others), <br/> Survey scripting/hosting (CATI/CAWI/CAPI), respondent portals, dashboarding, automated ETL/API pipelines, data vaults.",
+      "<span class=\"font-bold\">Platform:</span> Survey To Go, Survey CTO, Qualtrics, SurveyMonkey, Kobo Toolbox and our client platforms (i-field and n-field and others), <br/> Survey scripting/hosting (CATI/CAWI/CAPI), respondent portals, dashboarding, automated ETL/API pipelines, data vaults.",
       "<span class=\"font-bold\">Security:</span> role-based access, encryption at rest/in transit, audit logs, backups."
     ]
   },
