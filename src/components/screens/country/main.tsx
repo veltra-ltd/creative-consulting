@@ -55,9 +55,15 @@ export default function Main({
             variants={fadeIn}
             className=" rounded-xl sm:py-8 py-10 "
           >
-            <h2 className="sm:text-3xl text-2xl font-bold text-gray-900 sm:mb-2 mb-1 sm:mt-0 mt-5">
+            {/* <h2 className="sm:text-3xl text-2xl font-bold text-gray-900 sm:mb-2 mb-1 sm:mt-0 mt-5">
               {replaceCountryName(data.hero.heading)}
-            </h2>
+            </h2> */}
+            <h2
+              className="sm:text-3xl text-2xl font-bold text-gray-900 sm:mb-2 mb-1 sm:mt-0 mt-5 "
+              dangerouslySetInnerHTML={{
+                __html: replaceCountryName(data.hero.heading),
+              }}
+            />
             <p
               className="sm:text-lg text-base text-gray-700 sm:mb-9 mb-4"
               dangerouslySetInnerHTML={{
