@@ -1,13 +1,13 @@
 {
   "hero": {
     "heading": "Market Research Company in <span class=\"text-primary\"> (countryName) </span> — Creative Consulting Services Limited (CCSL)",
-    "paragraph": "Creative Consulting Services Limited (CCSL) is a leading full-service market & social research and fieldwork partner in <span class=\"font-bold\">(countryName)</span> with operational coverage across APAC & GCC. We specialize in consumer, healthcare, B2B, automotive, financial services, FMCG, retail, and development/NGO research, delivering end-to-end <span class=\"font-bold cursor-pointer underline\"><a href='/services/all'>qualitative</a></span> and <span class=\"font-bold cursor-pointer underline\"><a href='/services/all'>quantitative</a></span> solutions.<br/>Our teams combine local language expertise, nationwide field logistics, and modern research technology (CATI/CAWI/CAPI, online & mobile qual, dashboards, and advanced analytics) to turn questions into clear, decision-ready answers—from concept to implementation.",
+    "paragraph": "Creative Consulting Services Limited (CCSL) is a leading full-service market & social research and fieldwork partner in <span class=\"font-bold text-primary\">(countryName)</span> with operational coverage across APAC & GCC. We specialize in consumer, healthcare, B2B, automotive, financial services, FMCG, retail, and development/NGO research, delivering end-to-end <span class=\"font-bold cursor-pointer underline\"><a href='/services/all'>qualitative</a></span> and <span class=\"font-bold cursor-pointer underline\"><a href='/services/all'>quantitative</a></span> solutions.<br/>Our teams combine local language expertise, nationwide field logistics, and modern research technology (CATI/CAWI/CAPI, online & mobile qual, dashboards, and advanced analytics) to turn questions into clear, decision-ready answers—from concept to implementation.",
     "focusText": "<span class=\"font-bold\">Standards & Ethics:</span> We follow the ICC/ESOMAR International Code for Market, Opinion & Social Research and Data Analytics. Participant consent, privacy, and multi-layer quality control are embedded in every project."
   },
   "whyClientChoose": {
     "heading": "Why Clients Choose Creative Consulting Services Limited (CCSL): ",
     "list": [
-      "<span class=\"font-bold\"> Strong field operations in (countryName):</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
+      "<span class=\"font-bold\"> Strong field operations in <span class=\"text-primary\"> (countryName) </span>:</span> vetted recruiters, trained interviewers/moderators, centralized scheduling, secure data handling.",
       "<span class=\"font-bold\"> Multi-mode, fit-for-purpose design:</span> Survey, FGDs, IDIs, ethnography, CATI, CAWI, CAPI, online communities, mobile diaries.",
       "<span class=\"font-bold\"> Quality you can verify:</span> live monitoring, call/listen-backs and consented recordings, GPS/time-stamps, 100% critical back-checks.",
       "<span class=\"font-bold\"> Actionable outputs: </span> concise narratives, clear visuals, and prioritized recommendations—not just data dumps."
@@ -18,7 +18,7 @@
     "list": [
       "<span class=\"font-bold\"> Quantitative Research</span> (CATI, CAWI, CAPI, Online).",
       "<span class=\"font-bold\"> Qualitative Research</span>(FGDs, IDIs, Ethnography, Online Qual, Semiotics).",
-      "<span class=\"font-bold\"> Data Collection & Fieldwork in (countryName)</span> (nationwide recruitment, survey,  moderation, logistics & QC).",
+      "<span class=\"font-bold\"> Data Collection & Fieldwork in <span class=\"text-primary\"> (countryName) </span> </span> (nationwide recruitment, survey,  moderation, logistics & QC).",
       "<span class=\"font-bold\"> Mobile Research</span>(diaries, photo/video ethnography, geo-tasks).",
       "<span class=\"font-bold\"> Panels & Communities </span>(always-on audiences, re-contact studies).",
       "<span class=\"font-bold\"> Biometrics & Neuromarketing </span> (Eye-Tracking, Facial Coding, Wearables).",

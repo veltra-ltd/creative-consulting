@@ -267,12 +267,17 @@ export default function Main({
           >
             {countryData.title}
           </motion.h1>
-          <motion.h2
+          {/* <motion.h2
             variants={itemVariants}
             className="sm:text-2xl text-xl font-semibold text-black sm:mb-6 mb-3"
           >
             {countryData.heading}
-          </motion.h2>
+          </motion.h2> */}
+          <motion.h2
+            variants={itemVariants}
+            className="sm:text-2xl text-xl font-semibold text-black sm:mb-6 mb-3"
+            dangerouslySetInnerHTML={{ __html: countryData.heading }}
+          />
           <motion.ul
             variants={containerVariants}
             className="space-y-4 mb-8 list-disc pl-5"
@@ -333,7 +338,7 @@ function SectionWithAnimation({
       {subTitle && (
         <motion.p
           variants={itemVariants}
-          className="text-gray-600 sm:mb-6 mb-3.5"
+          className="text-gray-600 sm:mb-6 mb-3.5 sm:text-lg text-base"
           dangerouslySetInnerHTML={{ __html: subTitle }}
         />
       )}
