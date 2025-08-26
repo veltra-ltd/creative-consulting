@@ -189,12 +189,57 @@ export default function Main({
           className="sm:mb-16 mb-6"
         />
         {/* IndustryWeServe */}
-        <SectionWithAnimation
+        {/* <SectionWithAnimation
           title={data.IndustryWeServe.heading}
           subTitle={data.IndustryWeServe.subHeading}
           items={data.IndustryWeServe.list}
           className="sm:mb-16 mb-6"
-        />
+        /> */}
+        {/* Industry We Serve Section */}
+        {data.IndustryWeServe.list && (
+          <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={containerVariants}
+            className="sm:mb-16 mb-6"
+          >
+            <motion.h2
+              variants={itemVariants}
+              className="sm:text-2xl text-xl font-bold text-gray-900 sm:mb-6 mb-3"
+            >
+              {data.IndustryWeServe.heading}
+            </motion.h2>
+
+            {data.IndustryWeServe.subHeading && (
+              <motion.p
+                variants={itemVariants}
+                className="text-base text-[#41464c] sm:mb-8 mb-5"
+              >
+                {data.IndustryWeServe.subHeading}
+              </motion.p>
+            )}
+
+            <motion.div
+              variants={containerVariants}
+              className="grid grid-cols-1 md:grid-cols-3 sm:gap-6 gap-3"
+            >
+              {data.IndustryWeServe.list.map((item: string, index: number) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  whileHover={{ y: -5 }}
+                  className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
+                >
+                  <h3 className="sm:text-lg text-base font-semibold text-[#41464c]">
+                    {item}
+                  </h3>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.section>
+        )}
+
         {/* EngagementModelsClients */}
         <SectionWithAnimation
           title={data.EngagementModelsClients.heading}
