@@ -1,7 +1,7 @@
 {
   "one": {
     "top": {
-      "heading": "Global Office",
+      "heading": "Head Quarter:",
       "info": [
         {
           "title": "+8801948373084",
@@ -179,15 +179,15 @@
         "link": "#"
       },
       {
-        "title": "Careers",
-        "link": "#"
-      },
-      {
         "title": "Locations",
         "link": "#"
       },
       {
         "title": "Contact Us",
+        "link": "#"
+      },
+      {
+        "title": "Our Team",
         "link": "#"
       }
     ],
