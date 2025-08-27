@@ -17,10 +17,11 @@ const SolutionsAllPage = async ({
     "screen/solutions/solutions"
   );
   return (
-    <section className="sm:py-7 py-4 px-4 container solutions-section">
+    <section className="sm:py-7 py-12 px-4 container solutions-section">
       <SectionHeading
         title={solutionsData.title}
         description={solutionsData.description}
+        className="sm:mt-8 mt-2"
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-5">
