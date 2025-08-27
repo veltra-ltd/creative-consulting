@@ -35,7 +35,7 @@ const DataCollection: React.FC<{ data: DataCollectionSection }> = ({
 }) => {
   return (
     <section className="sm:py-8 py-4 bg-gray-50">
-      <div className="container px-4 mx-auto max-w-7xl">
+      <div className="container px-4 mx-auto">
         {/* Header Section */}
         <div className="text-center sm:mb-7 mb-4 ">
           <SectionHeading title={data.heading} description={data.description} />
@@ -60,7 +60,7 @@ const DataCollection: React.FC<{ data: DataCollectionSection }> = ({
         </div>
 
         {/* Cards Grid */}
-        <div className="grid sm:gap-4 gap-2 grid-cols sm:grid-cols-2 sm:mb-4 mb-2">
+        <div className="grid sm:gap-12 gap-2 grid-cols sm:grid-cols-2 sm:mb-4 mb-2">
           {data.cards.map((card, index) => (
             <DataCollectionCard key={card.id} card={card} index={index} />
           ))}
