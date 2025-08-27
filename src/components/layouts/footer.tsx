@@ -278,7 +278,7 @@ export const Footer = () => {
               transition={{ duration: 0.5 }}
               className="sm:text-xl text-[16px] mb-4 font-semibold tracking-tight text-white"
             >
-              Global Office
+              Head Quarter
             </motion.h3>
 
             <ul className="sm:space-y-4 space-y-3">
@@ -433,11 +433,18 @@ export const Footer = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                 >
-                  <Link
+                  {/* <Link
                     href={`/${item
                       .toLowerCase()
                       .replace(/ & /g, "-")
                       .replace(/ /g, "-")}`}
+                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1 group"
+                  >
+                    {item}
+                    <FiArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link> */}
+                  <Link
+                    href="/solutions/all"
                     className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1 group"
                   >
                     {item}
@@ -486,11 +493,18 @@ export const Footer = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.03 }}
                 >
-                  <Link
+                  {/* <Link
                     href={`/${item
                       .toLowerCase()
                       .replace(/ & /g, "-")
                       .replace(/ /g, "-")}`}
+                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1 group"
+                  >
+                    {item}
+                    <FiArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link> */}
+                  <Link
+                    href="/industries/all"
                     className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1 group"
                   >
                     {item}
@@ -514,7 +528,7 @@ export const Footer = () => {
             </motion.h3>
 
             <ul className="space-y-3 sm:mb-6 mb-2">
-              {["About Us", "Careers", "Locations", "Contact Us"].map(
+              {["About Us", "Locations", "Contact Us", "Our Team"].map(
                 (item, index) => (
                   <motion.li
                     key={index}
@@ -523,8 +537,15 @@ export const Footer = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <Link
+                    {/* <Link
                       href={`/${item.toLowerCase().replace(/ /g, "-")}`}
+                      className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1 group"
+                    >
+                      {item}
+                      <FiArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link> */}
+                    <Link
+                      href="#"
                       className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1 group"
                     >
                       {item}

@@ -53,13 +53,19 @@ export default function Main({
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeIn}
-            className=" rounded-xl py-8"
+            className=" rounded-xl sm:py-8 py-10 "
           >
-            <h2 className="sm:text-3xl text-2xl font-bold text-gray-900 sm:mb-6 mb-2.5">
+            {/* <h2 className="sm:text-3xl text-2xl font-bold text-gray-900 sm:mb-2 mb-1 sm:mt-0 mt-5">
               {replaceCountryName(data.hero.heading)}
-            </h2>
+            </h2> */}
+            <h2
+              className="sm:text-3xl text-2xl font-bold text-gray-900 sm:mb-2 mb-1 sm:mt-0 mt-5 "
+              dangerouslySetInnerHTML={{
+                __html: replaceCountryName(data.hero.heading),
+              }}
+            />
             <p
-              className="sm:text-lg text-base text-gray-700 mb-6"
+              className="sm:text-lg text-base text-gray-700 sm:mb-9 mb-4"
               dangerouslySetInnerHTML={{
                 __html: replaceCountryName(data.hero.paragraph),
               }}
@@ -69,13 +75,13 @@ export default function Main({
               dangerouslySetInnerHTML={{ __html: data.hero.focusText }}
             /> */}
             <p
-              className="text-black sm:text-lg text-base relative after:w-3.5 after:h-full after:absolute after:left-0 after:top-0  after:rounded-xl after:content-[''] after:block  after:bg-primary after:transform  after:translate-x-[-23px] after:translate-y-[-1px]"
+              className="bg-[#f8c7d0] pl-6 py-2 rounded-sm text-black sm:text-lg text-base relative after:w-3.5 after:h-full after:absolute after:left-0 after:top-0  after:rounded-sm after:content-[''] after:block  after:bg-[#d91c5c] after:transform  after:translate-x-[1px] after:translate-y-[-1px]"
               dangerouslySetInnerHTML={{ __html: data.hero.focusText }}
             />
           </motion.section>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-12 py-5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-0 sm:py-12 py-5">
         {/* Why Choose Us Section */}
         <SectionWithAnimation
           title={replaceCountryName(data.whyClientChoose.heading)}
@@ -94,7 +100,7 @@ export default function Main({
         <SectionWithAnimation
           title={data.howWeWork.heading}
           items={data.howWeWork.list}
-          className="mb-16"
+          className="sm:mb-16 mb-5"
         />
 
         {/* Research Solutions Section */}
@@ -189,12 +195,57 @@ export default function Main({
           className="sm:mb-16 mb-6"
         />
         {/* IndustryWeServe */}
-        <SectionWithAnimation
+        {/* <SectionWithAnimation
           title={data.IndustryWeServe.heading}
           subTitle={data.IndustryWeServe.subHeading}
           items={data.IndustryWeServe.list}
           className="sm:mb-16 mb-6"
-        />
+        /> */}
+        {/* Industry We Serve Section */}
+        {data.IndustryWeServe.list && (
+          <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={containerVariants}
+            className="sm:mb-16 mb-6"
+          >
+            <motion.h2
+              variants={itemVariants}
+              className="sm:text-2xl text-xl font-bold text-gray-900 sm:mb-6 mb-3"
+            >
+              {data.IndustryWeServe.heading}
+            </motion.h2>
+
+            {data.IndustryWeServe.subHeading && (
+              <motion.p
+                variants={itemVariants}
+                className="text-base text-[#41464c] sm:mb-8 mb-5"
+              >
+                {data.IndustryWeServe.subHeading}
+              </motion.p>
+            )}
+
+            <motion.div
+              variants={containerVariants}
+              className="grid grid-cols-1 md:grid-cols-3 sm:gap-6 gap-3"
+            >
+              {data.IndustryWeServe.list.map((item: string, index: number) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  whileHover={{ y: -5 }}
+                  className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
+                >
+                  <h3 className="sm:text-lg text-base font-semibold text-[#41464c]">
+                    {item}
+                  </h3>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.section>
+        )}
+
         {/* EngagementModelsClients */}
         <SectionWithAnimation
           title={data.EngagementModelsClients.heading}
@@ -216,12 +267,17 @@ export default function Main({
           >
             {countryData.title}
           </motion.h1>
-          <motion.h2
+          {/* <motion.h2
             variants={itemVariants}
             className="sm:text-2xl text-xl font-semibold text-black sm:mb-6 mb-3"
           >
             {countryData.heading}
-          </motion.h2>
+          </motion.h2> */}
+          <motion.h2
+            variants={itemVariants}
+            className="sm:text-2xl text-xl font-semibold text-black sm:mb-6 mb-3"
+            dangerouslySetInnerHTML={{ __html: countryData.heading }}
+          />
           <motion.ul
             variants={containerVariants}
             className="space-y-4 mb-8 list-disc pl-5"
@@ -238,7 +294,7 @@ export default function Main({
         </motion.section>
 
         {/* Contact Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-8 gap-5">
           <SectionWithAnimation
             title={data.GetTouchBangladesh.heading}
             items={data.GetTouchBangladesh.list}
@@ -282,7 +338,7 @@ function SectionWithAnimation({
       {subTitle && (
         <motion.p
           variants={itemVariants}
-          className="text-gray-600 sm:mb-6 mb-3.5"
+          className="text-gray-600 sm:mb-6 mb-3.5 sm:text-lg text-base"
           dangerouslySetInnerHTML={{ __html: subTitle }}
         />
       )}
@@ -290,7 +346,7 @@ function SectionWithAnimation({
         items.length > 0 && ( // Added check for items existence
           <motion.ul
             variants={containerVariants}
-            className="space-y-3 list-disc pl-5 sm:text-lg text-base"
+            className="space-y-3 list-disc pl-6 sm:text-lg text-base"
           >
             {items.map((item, index) => (
               <motion.li
