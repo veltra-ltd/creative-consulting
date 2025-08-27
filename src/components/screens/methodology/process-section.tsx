@@ -65,6 +65,8 @@ export default function ProcessSection({ data }: ProcessSectionProps) {
                   <Image
                     src={step.image}
                     alt={step.title}
+                    width={600}
+                    height={400}
                     className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </motion.div>
