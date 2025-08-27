@@ -1,6 +1,7 @@
 "use client";
 import { FC, useEffect } from "react";
 import { X } from "lucide-react";
+import Link from "next/link";
 
 interface FooterPopupProps {
   isOpen: boolean;
@@ -63,12 +64,12 @@ const FooterPopup: FC<FooterPopupProps> = ({ isOpen, onClose, content }) => {
             {content.contact}
             <br />
             📧{" "}
-            <a
+            <Link
               href={`mailto:${content.email}`}
               className="text-blue-600 underline font-bold"
             >
               {content.email}
-            </a>
+            </Link>
           </p>
         )}
       </div>

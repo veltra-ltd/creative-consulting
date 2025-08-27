@@ -122,7 +122,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ data }) => {
                       {member.bio}
                     </motion.p>
 
-                    <div className="flex flex-wrap justify-center gap-2 mb-4 hidden">
+                    <div className="flex-wrap justify-center gap-2 mb-4 hidden">
                       {member.expertise.map((skill, i) => (
                         <motion.span
                           key={i}

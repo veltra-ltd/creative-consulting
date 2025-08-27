@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Search } from "lucide-react";
+import { Link, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 interface BlogSidebarProps {
@@ -43,7 +43,7 @@ const BlogSidebar = ({ categories, popularTags }: BlogSidebarProps) => {
         <ul className="space-y-3">
           {categories.map((category, index) => (
             <li key={index}>
-              <a 
+              <Link
                 href="#"
                 className="flex justify-between items-center py-2 hover:text-primary transition-colors"
               >
@@ -51,7 +51,7 @@ const BlogSidebar = ({ categories, popularTags }: BlogSidebarProps) => {
                 <span className="bg-gray-200 px-2 py-1 rounded-full text-xs">
                   {category.count}
                 </span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -68,13 +68,13 @@ const BlogSidebar = ({ categories, popularTags }: BlogSidebarProps) => {
         <h3 className="text-xl font-bold mb-4">Popular Tags</h3>
         <div className="flex flex-wrap gap-2">
           {popularTags.map((tag, index) => (
-            <a
+            <Link
               key={index}
               href="#"
               className="px-3 py-1 bg-white rounded-full text-sm hover:bg-primary hover:text-white transition-colors"
             >
               {tag}
-            </a>
+            </Link>
           ))}
         </div>
       </motion.div>

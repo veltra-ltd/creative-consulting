@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { SolutionsGridData } from "@/types/lang";
 import SectionHeading from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function SolutionsGrid({ data }: { data: SolutionsGridData }) {
   return (
@@ -51,7 +52,7 @@ export function SolutionCard({
       className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl h-full"
     >
       <div className="sm:h-70 h-48 overflow-hidden">
-        <img
+        <Image
           src={imageUrl}
           alt={title}
           className="w-full h-full object-cover"

@@ -290,13 +290,13 @@ export const Footer = () => {
                 className="flex items-start gap-3 group"
               >
                 <span className="mt-0.5">{iconMap.FiPhone}</span>
-                <a
+                <Link
                   href="tel:+8801948373084"
                   className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1"
                 >
                   +8801948373084
                   <FiArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
+                </Link>
               </motion.li>
 
               <motion.li
@@ -307,13 +307,13 @@ export const Footer = () => {
                 className="flex items-start gap-3 group"
               >
                 <span className="mt-0.5">{iconMap.FiMail}</span>
-                <a
+                <Link
                   href="mailto:abu.sayeed@ccslbd.com"
                   className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1"
                 >
                   abu.sayeed@ccslbd.com
                   <FiArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
+                </Link>
               </motion.li>
 
               <motion.li
