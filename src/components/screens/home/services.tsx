@@ -155,9 +155,36 @@ const Services = ({ data }: Props) => {
               whileHover="hover"
               whileTap="tap"
             >
-              <motion.a
+              {/* <motion.a
                 href={service.link}
                 className="block relative sm:h-48 z-10 p-5 md:p-6 rounded-xl transition-all duration-150  border border-gray-100 global-card"
+                variants={cardHoverVariants}
+              >
+                <div className="relative z-10 flex items-start gap-4">
+                  <motion.span
+                    className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-[#d91c5c] transition-all duration-200 group-hover:shadow-sm"
+                    variants={iconHoverVariants}
+                  >
+                    {iconsMap[service.icon]}
+                  </motion.span>
+                  <div className="flex flex-col">
+                    <motion.h4
+                      className="sm:text-lg text-[16px] font-semibold text-[#1c1c1d] mb-2 transition-colors duration-200"
+                      variants={titleHoverVariants}
+                    >
+                      {service.title}
+                    </motion.h4>
+                    <motion.div variants={descHoverVariants}>
+                      <p className="text-gray-600 leading-relaxed sm:text-[16px] text-sm md:text-base ">
+                        {service.text}
+                      </p>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.a> */}
+              <motion.a
+                href="#"
+                className="block cursor-default relative sm:h-48 z-10 p-5 md:p-6 rounded-xl transition-all duration-150  border border-gray-100 global-card"
                 variants={cardHoverVariants}
               >
                 <div className="relative z-10 flex items-start gap-4">
