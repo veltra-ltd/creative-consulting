@@ -15,6 +15,8 @@ interface FAQCTAProps {
 }
 
 const CTA = ({ data }: FAQCTAProps) => {
+  // console.log(CTA);
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -50,10 +52,7 @@ const CTA = ({ data }: FAQCTAProps) => {
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          <Button
-            href={data.button.link}
-            className="sm:px-8 sm:py-3 px-4 py-2 sm:text-lg text-base bg-white text-primary hover:bg-gray-100 cursor-pointer"
-          >
+          <Button href={data.button.link} variant="faq">
             {data.button.name}
           </Button>
         </motion.div>

@@ -5,7 +5,7 @@
     "buttons": [
       {
         "name": "Schedule For Demo",
-        "link": "https://app.cal.com/auth/login"
+        "link": "https://cal.com/ccsl-a-market-research-compnay/collaborative-opportunities-in-market-research-for-the-bangladesh-market?month=2025-09"
       },
       {
         "name": "Request Proposal",
@@ -104,18 +104,36 @@
       "type": "select",
       "required": true,
       "options": [
-        { "value": "consumer", "label": "Market Research" },
-        { "value": "competitive", "label": "Social Research" },
+        { "value": "Market Research", "label": "Market Research" },
+        { "value": "Social Research", "label": "Social Research" },
         {
-          "value": "market",
+          "value": "Political Research & Public Opinion Polls",
           "label": "Political Research & Public Opinion Polls"
         },
-        { "value": "trends", "label": "Customized Research Solutions " },
-        { "value": "brand", "label": "Data Analytics & Strategic Consulting " },
-        { "value": "other", "label": "Survey Scripting & Programming " },
-        { "value": "other", "label": "Retail & Distributor Audit" },
-        { "value": "other", "label": "Call Center for Telephonic Survey " },
-        { "value": "other", "label": "Fieldwork & Data Collection " }
+        {
+          "value": "Customized Research Solutions",
+          "label": "Customized Research Solutions"
+        },
+        {
+          "value": "Data Analytics & Strategic Consulting",
+          "label": "Data Analytics & Strategic Consulting"
+        },
+        {
+          "value": "Survey Scripting & Programming",
+          "label": "Survey Scripting & Programming"
+        },
+        {
+          "value": "Retail & Distributor Audit",
+          "label": "Retail & Distributor Audit"
+        },
+        {
+          "value": "Call Center for Telephonic Survey",
+          "label": "Call Center for Telephonic Survey"
+        },
+        {
+          "value": "Fieldwork & Data Collection",
+          "label": "Fieldwork & Data Collection"
+        }
       ]
     },
     {
@@ -124,29 +142,32 @@
       "type": "select",
       "required": true,
       "options": [
-        { "value": "consumer", "label": "Bangladesh" },
+        { "value": "Bangladesh", "label": "Bangladesh" },
         { "value": "competitive", "label": "India" },
-        { "value": "market", "label": "Pakistan" },
-        { "value": "trends", "label": "Nepal" },
-        { "value": "brand", "label": " Sri Lanka " },
-        { "value": "other", "label": "Myanmar" },
-        { "value": "other", "label": "Malaysia" },
-        { "value": "other", "label": "Indonesia" },
-        { "value": "other", "label": "Thailand" },
+        { "value": "India", "label": "Pakistan" },
+        { "value": "Nepal", "label": "Nepal" },
+        { "value": "Sri Lanka", "label": "Sri Lanka" },
+        { "value": "Myanmar", "label": "Myanmar" },
+        { "value": "Malaysia", "label": "Malaysia" },
+        { "value": "Indonesia", "label": "Indonesia" },
+        { "value": "Thailand", "label": "Thailand" },
         { "value": "other", "label": "Vietnam" },
-        { "value": "other", "label": "Philippines" },
-        { "value": "other", "label": "Singapore" },
-        { "value": "other", "label": "Japan" },
-        { "value": "other", "label": "South Korea" },
-        { "value": "other", "label": "China" },
-        { "value": "other", "label": "Australia" },
-        { "value": "other", "label": "New Zealand" },
-        { "value": "other", "label": "Saudi Arabia" },
-        { "value": "other", "label": "United Arab Emirates (UAE)" },
-        { "value": "other", "label": "Qatar" },
-        { "value": "other", "label": "Kuwait" },
-        { "value": "other", "label": "Oman" },
-        { "value": "other", "label": "Bahrain" }
+        { "value": "Vietnam", "label": "Philippines" },
+        { "value": "Singapore", "label": "Singapore" },
+        { "value": "Japan", "label": "Japan" },
+        { "value": "South Korea", "label": "South Korea" },
+        { "value": "China", "label": "China" },
+        { "value": "Australia", "label": "Australia" },
+        { "value": "New Zealand", "label": "New Zealand" },
+        { "value": "Saudi Arabia", "label": "Saudi Arabia" },
+        {
+          "value": "United Arab Emirates (UAE)",
+          "label": "United Arab Emirates (UAE)"
+        },
+        { "value": "Qatar", "label": "Qatar" },
+        { "value": "Kuwait", "label": "Kuwait" },
+        { "value": "Oman", "label": "Oman" },
+        { "value": "Bahrain", "label": "Bahrain" }
       ]
     },
     {

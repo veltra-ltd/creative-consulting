@@ -256,3 +256,8 @@ html.dark ::-webkit-scrollbar-thumb {
     height: 63px !important;
   }
 }
+
+.container-fluid {
+  @apply w-full px-60 mx-auto;
+  max-width: 100%;
+}

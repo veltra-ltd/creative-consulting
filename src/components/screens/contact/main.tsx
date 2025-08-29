@@ -254,9 +254,11 @@ export default function ContactPage({
         },
       });
 
+      console.log(response);
+
       if (response.status === 200) {
         toast.success("Your request has been submitted successfully!");
-        setFormData({}); // Reset form
+        setFormData({});
       } else {
         throw new Error("Failed to submit form");
       }

@@ -18,8 +18,9 @@ const buttonVariants = cva(
         secondaryLink:
           "bg-transparent hover:text-white border hover:bg-primary hover:border-primary px-4 py-2.5 lg:px-3.5 lg:py-2 xl:px-6 xl:py-3.5 shadow-sm rounded-full text-primary/90 border-primary/90",
         primary: "bg-primary text-white hover:bg-primary",
+        faq: "sm:px-8 sm:py-3 px-4 py-2 sm:text-lg text-base bg-white text-primary hover:bg-gray-100 cursor-pointer",
         about:
-          "bg-primary text-white hover:bg-primary rounded-[4px] px-5 py-2.5 w-fit", // fixed so it acts like link style
+          "bg-primary text-white hover:bg-primary rounded-[4px] px-5 py-2.5 w-fit",
         secondary:
           "border border-[#1c1c1d] text-[#1c1c1d] hover:bg-[#1c1c1d] hover:text-white",
         outline:
@@ -70,6 +71,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const isLinkVariant =
       variant === "primaryLink" ||
       variant === "secondaryLink" ||
+      variant === "faq" ||
       variant === "about";
 
     const Comp: React.ElementType =

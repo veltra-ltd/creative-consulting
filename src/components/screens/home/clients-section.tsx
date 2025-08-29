@@ -94,7 +94,7 @@ const ClientsSection = ({ data }: { data: ClientsSectionProps }) => {
             animate={{ x: ["0%", "-33.33%", "-66.66%", "0%"] }}
             transition={{
               repeat: Infinity,
-              duration: 45,
+              duration: 450,
               ease: "linear",
             }}
             className="flex items-center justify-around gap-16 w-max"
