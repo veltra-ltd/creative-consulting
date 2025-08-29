@@ -77,16 +77,16 @@ const About = ({ data }: Props) => {
       aria-labelledby="hero-heading"
     >
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="flex flex-col lg:flex-row flex-wrap md:flex-nowrap items-center lg:justify-between sm:gap-8 gap-0 w-full">
+        <div className="flex flex-col lg:flex-row flex-wrap md:flex-nowrap items-center lg:justify-between sm:gap-2 gap-0 w-full">
           {/* Content Section */}
           <div
             ref={contentRef}
-            className="relative z-10 w-full md:max-w-[660px] order-1 md:order-none font-['Maven_Pro']"
+            className="relative z-10 w-full order-1 md:order-none"
           >
             <h2
               id="hero-heading"
               // className="text-[#1c1c1d] font-bold leading-[1.1] md:leading-[75px] tracking-tight text-4xl sm:text-3xl md:text-5xl xxl:text-[72px] mb-5 lg:mb-[20px] origin-[50%_50%]"
-              className="scroll-m-20 sm:text-3xl text-2xl sm:mb-5 mb-3 font-semibold tracking-tight transition-colors first:mt-0"
+              className="scroll-m-20 sm:text-4xl text-2xl sm:w-[44rem] w-full sm:mb-5 mb-3 font-semibold tracking-tight transition-colors first:mt-0"
               style={{ letterSpacing: "-1px" }}
             >
               {data.heading}
@@ -94,7 +94,7 @@ const About = ({ data }: Props) => {
 
             <p
               dangerouslySetInnerHTML={{ __html: data.text }}
-              className="text-[#0f0f0f] font-normal leading-relaxed md:leading-[30px] text-lg sm:text-lg mb-8 sm:mb-10 lg:mb-[70px] w-full lg:w-[647px]"
+              className="text-[#0f0f0f] font-normal leading-relaxed md:leading-[30px] text-base sm:text-xl mb-8 sm:mb-10 lg:mb-[70px] w-full lg:w-[647px]"
             />
 
             <div className="sm:block! hidden!">
@@ -109,7 +109,7 @@ const About = ({ data }: Props) => {
           {/* Image Section */}
           <div
             ref={imageRef}
-            className="w-full md:w-[calc(50%-32px)] lg:w-[45%] relative order-2 md:order-none sm:mt-6 mt-0 md:mt-0"
+            className="w-full md:w-[calc(50%-32px)] lg:w-[90%] relative order-2 md:order-none sm:mt-6 mt-0 md:mt-0"
           >
             <div className="relative w-full aspect-[4/3] lg:aspect-[5/4] xl:aspect-[3/2] z-10">
               <Image

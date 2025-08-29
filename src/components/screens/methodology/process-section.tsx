@@ -2,7 +2,7 @@
 
 import SectionHeading from "@/components/ui/section-heading";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 interface ProcessSectionProps {
   data: {
     title: string;
@@ -62,9 +62,11 @@ export default function ProcessSection({ data }: ProcessSectionProps) {
                   whileHover={{ scale: 1.02 }}
                   className="overflow-hidden rounded-xl shadow-xl"
                 >
-                  <img
+                  <Image
                     src={step.image}
                     alt={step.title}
+                    width={600}
+                    height={400}
                     className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </motion.div>

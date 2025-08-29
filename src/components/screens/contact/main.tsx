@@ -12,6 +12,7 @@ import {
   Globe,
   Users,
   Database,
+  Link,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -609,7 +610,7 @@ export default function ContactPage({
                             {contactData.contactMethods.pragraph ||
                               "Call our 24/7 research hotline for immediate assistance"}
                           </p>
-                          <a
+                          <Link
                             href={`tel:${contactData.contactMethods.phone.replace(
                               /\s+/g,
                               ""
@@ -617,7 +618,7 @@ export default function ContactPage({
                             className="mt-2 inline-block sm:text-lg text-base font-semibold text-black transition-colors"
                           >
                             {contactData.contactMethods.phone}
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </CardContent>

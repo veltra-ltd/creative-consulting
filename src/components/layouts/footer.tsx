@@ -266,9 +266,9 @@ export const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-gray-100 border-t border-gray-800">
-      <div className="container mx-auto px-4 pt-8 sm:pb-6 lg:pt-16 lg:pb-6">
+      <div className="container mx-auto px-4 pt-8 pb-4 sm:pt-10 sm:pb-6">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:gap-12 gap-6 lg:gap-8 sm:mb-16 mb-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:gap-12 gap-6 lg:gap-8 sm:mb-10 mb-3">
           {/* Contact Column */}
           <div className="space-y-8">
             <motion.h3
@@ -290,13 +290,13 @@ export const Footer = () => {
                 className="flex items-start gap-3 group"
               >
                 <span className="mt-0.5">{iconMap.FiPhone}</span>
-                <a
+                <Link
                   href="tel:+8801948373084"
                   className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1"
                 >
                   +8801948373084
                   <FiArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
+                </Link>
               </motion.li>
 
               <motion.li
@@ -307,13 +307,13 @@ export const Footer = () => {
                 className="flex items-start gap-3 group"
               >
                 <span className="mt-0.5">{iconMap.FiMail}</span>
-                <a
+                <Link
                   href="mailto:abu.sayeed@ccslbd.com"
                   className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1"
                 >
                   abu.sayeed@ccslbd.com
                   <FiArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
+                </Link>
               </motion.li>
 
               <motion.li
@@ -445,7 +445,7 @@ export const Footer = () => {
                   </Link> */}
                   <Link
                     href="/solutions/all"
-                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1 group"
+                    className="text-gray-300 hover:text-primary transition-colors text-sm sm:text-base inline-flex items-center gap-1 group"
                   >
                     {item}
                     <FiArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -505,7 +505,7 @@ export const Footer = () => {
                   </Link> */}
                   <Link
                     href="/industries/all"
-                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1 group"
+                    className="text-gray-300 hover:text-primary transition-colors text-sm sm:text-base inline-flex items-center gap-1 group"
                   >
                     {item}
                     <FiArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -546,7 +546,7 @@ export const Footer = () => {
                     </Link> */}
                     <Link
                       href="#"
-                      className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base flex items-center gap-1 group"
+                      className="text-gray-300 hover:text-primary transition-colors text-sm sm:text-base inline-flex items-center gap-1 group"
                     >
                       {item}
                       <FiArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />

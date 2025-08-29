@@ -120,6 +120,412 @@
       "logo": "/home/images/Pran.png",
       "width": 130,
       "height": 60
+    },
+    {
+      "id": 18,
+      "name": "Australia",
+      "logo": "/home/images/Picture1.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 19,
+      "name": "BBC",
+      "logo": "/home/images/Picture2.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 20,
+      "name": "Field",
+      "logo": "/home/images/Picture3.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 21,
+      "name": "Gsk",
+      "logo": "/home/images/Picture4.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 22,
+      "name": "Katalyst",
+      "logo": "/home/images/Picture5.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 23,
+      "name": "Reckkit",
+      "logo": "/home/images/Picture6.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 24,
+      "name": "Maritime",
+      "logo": "/home/images/Picture7.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 25,
+      "name": "Quipper",
+      "logo": "/home/images/Picture8.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 26,
+      "name": "Square",
+      "logo": "/home/images/Picture9.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 27,
+      "name": "UKaid",
+      "logo": "/home/images/Picture10.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 28,
+      "name": "USaid",
+      "logo": "/home/images/Picture11.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 29,
+      "name": "cocacola",
+      "logo": "/home/images/Picture12.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 30,
+      "name": "Tobacco",
+      "logo": "/home/images/Picture13.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 31,
+      "name": "Varinia",
+      "logo": "/home/images/Picture14.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 32,
+      "name": "Maction",
+      "logo": "/home/images/Picture15.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 33,
+      "name": "ResearchServices",
+      "logo": "/home/images/Picture16.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 34,
+      "name": "EuropeanClimate",
+      "logo": "/home/images/Picture17.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 35,
+      "name": "SocialImpact",
+      "logo": "/home/images/Picture18.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 36,
+      "name": "Jica",
+      "logo": "/home/images/Picture19.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 37,
+      "name": "SAgroup",
+      "logo": "/home/images/Picture20.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 38,
+      "name": "Ucash",
+      "logo": "/home/images/Picture21.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 39,
+      "name": "SADC",
+      "logo": "/home/images/Picture22.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 40,
+      "name": "RFL",
+      "logo": "/home/images/Picture23.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 41,
+      "name": "IPSOS",
+      "logo": "/home/images/Picture24.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 42,
+      "name": "Kantar",
+      "logo": "/home/images/Picture25.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 43,
+      "name": "Nielsen",
+      "logo": "/home/images/Picture26.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 44,
+      "name": "RedSheer",
+      "logo": "/home/images/Picture28.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 45,
+      "name": "Dabur",
+      "logo": "/home/images/Picture29.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 46,
+      "name": "Bkash",
+      "logo": "/home/images/Picture30.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 47,
+      "name": "Tangar",
+      "logo": "/home/images/Picture31.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 48,
+      "name": "BussinessExpress",
+      "logo": "/home/images/Picture32.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 49,
+      "name": "Panoramix",
+      "logo": "/home/images/Picture33.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 50,
+      "name": "NewVision",
+      "logo": "/home/images/Picture34.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 51,
+      "name": "Parlance",
+      "logo": "/home/images/Picture35.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 52,
+      "name": "SRT",
+      "logo": "/home/images/Picture36.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 53,
+      "name": "PartextStar",
+      "logo": "/home/images/Picture37.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 54,
+      "name": "Sbrand",
+      "logo": "/home/images/Picture38.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 55,
+      "name": "BIID",
+      "logo": "/home/images/Picture39.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 56,
+      "name": "MIRG",
+      "logo": "/home/images/Picture40.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 57,
+      "name": "Nokia",
+      "logo": "/home/images/Picture41.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 58,
+      "name": "HUL",
+      "logo": "/home/images/Picture42.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 59,
+      "name": "Nestle",
+      "logo": "/home/images/Picture43.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 60,
+      "name": "Trident",
+      "logo": "/home/images/Picture44.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 61,
+      "name": "Radius",
+      "logo": "/home/images/Picture45.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 62,
+      "name": "RSPL",
+      "logo": "/home/images/Picture47.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 63,
+      "name": "ResearchTree",
+      "logo": "/home/images/Picture48.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 64,
+      "name": "Sumsang",
+      "logo": "/home/images/Picture49.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 65,
+      "name": "IDS",
+      "logo": "/home/images/Picture50.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 66,
+      "name": "BrandWorldWide",
+      "logo": "/home/images/Picture51.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 67,
+      "name": "Redquanta",
+      "logo": "/home/images/Picture52.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 68,
+      "name": "PWC",
+      "logo": "/home/images/Picture53.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 69,
+      "name": "TATA",
+      "logo": "/home/images/Picture54.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 70,
+      "name": "OPPO",
+      "logo": "/home/images/Picture55.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 71,
+      "name": "Abedin",
+      "logo": "/home/images/Picture56.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 72,
+      "name": "BAJAJ",
+      "logo": "/home/images/Picture57.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 73,
+      "name": "Samphony",
+      "logo": "/home/images/Picture58.jpg",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 74,
+      "name": "AkijGroup",
+      "logo": "/home/images/Picture59.png",
+      "width": 130,
+      "height": 60
+    },
+    {
+      "id": 75,
+      "name": "IRI",
+      "logo": "/home/images/Picture60.png",
+      "width": 130,
+      "height": 60
     }
   ],
   "cta": {

@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import { SolutionsGridData } from "@/types/lang";
 import SectionHeading from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function SolutionsGrid({ data }: { data: SolutionsGridData }) {
   return (
-    <section className="sm:py-7 px-4 container solutions-section">
+    <section className="sm:py-7 py-4 px-4 container solutions-section">
       <SectionHeading title={data.title} description={data.description} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -51,9 +52,11 @@ export function SolutionCard({
       className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl h-full"
     >
       <div className="sm:h-70 h-48 overflow-hidden">
-        <img
+        <Image
           src={imageUrl}
           alt={title}
+          width={400}
+          height={300}
           className="w-full h-full object-cover"
         />
       </div>

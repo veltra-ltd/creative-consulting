@@ -133,7 +133,7 @@ const HeroSlider = ({
         {currentSlide.image && (
           <Image
             src={currentSlide.image}
-            alt=""
+            alt="image"
             fill
             className="object-cover"
             priority
