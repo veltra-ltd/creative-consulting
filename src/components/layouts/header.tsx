@@ -125,7 +125,7 @@ const Header: FC<{ data: HeaderData; className?: string }> = ({
         className
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container-fluid mx-auto px-4 sm:px-6">
         <Flex
           direction="col"
           className="flex-row items-center sm:justify-between justify-center gap-4"

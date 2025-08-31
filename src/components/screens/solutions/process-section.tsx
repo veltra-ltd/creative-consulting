@@ -336,12 +336,18 @@
 
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useRef } from "react";
-import SectionHeading from "@/components/ui/section-heading";
+import { motion } from "framer-motion";
+import { useState } from "react";
+// import SectionHeading from "@/components/ui/section-heading";
 import { ProcessSectionData } from "@/types/lang";
-import { cn } from "@/lib/utils/cn";
+// import { cn } from "@/lib/utils/cn";
 import { ChevronDown, ChevronUp } from "lucide-react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import { useState, useRef } from "react";
+// import SectionHeading from "@/components/ui/section-heading";
+// import { ProcessSectionData } from "@/types/lang";
+// import { cn } from "@/lib/utils/cn";
+// import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function ProcessSection({ data }: { data: ProcessSectionData }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -396,9 +402,9 @@ function ProcessStep({
   step,
   title,
   description,
-  icon,
+  // icon,
   dittails,
-  index,
+  // index,
   isActive,
   onToggle,
 }: {
